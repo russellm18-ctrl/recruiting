@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  ============================================================================
+  RECRUITING PROFILES — SALES PAGE
+  Russell Moore Photography  ·  russell-moore.com
+  ----------------------------------------------------------------------------
+  This is the page that sells the product to PARENTS. It is the twin of the
+  athlete profile template (same design system) and lives at the root of the
+  recruiting subdomain (recruiting.russell-moore.com).
+
+  WIRED & LIVE (do not touch):
+    - $349  Profile        -> Squarespace product
+    - $700  Profile+Shoot  -> Acuity appointment 94245272
+    - $1,250 All-American   -> Acuity appointment 94245393
+    - $129/yr Season Update -> Squarespace product
+    - Google Tag Manager (GTM-MPGDW4QD) installed; per-tier click events push
+      to dataLayer as event:'recruiting_cta_click' so you can build GA4
+      conversions in GTM with zero extra code.
+
+  >>> CONFIRM BEFORE PUBLISH (search for "CONFIRM"):
+    A. Canonical / OG urls — set to the real published path
+    B. Tier feature bullets — the specifics of what each tier includes
+    C. Shoot-tier turnaround time (Profile-only is 14 days; confirm the rest)
+    D. Sample profile link — point to a REAL published athlete page
+    E. "Other sports" answer in the FAQ
+    F. WIAA credential wording in the trust bar
+    (Keep everything factual — no invented numbers or claims.)
+  ============================================================================
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MPGDW4QD');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- >>> CONFIRM A: SEO -->
+  <title>College Recruiting Profiles for Athletes | Russell Moore Photography</title>
+  <meta name="description" content="Custom recruiting profile pages that get athletes found by college coaches — PRs, film, academics, and contact in one searchable page. Built by a credentialed Washington sports photographer. From $349." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://recruiting.russell-moore.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="College Recruiting Profiles | Russell Moore Photography" />
+  <meta property="og:description" content="A recruiting profile coaches can actually find. PRs, film, academics, and contact in one fast, search-optimized page. From $349." />
+  <meta property="og:image" content="https://static1.squarespace.com/static/65c46be8ea98cb3bb888691a/694327c8b81c15304428e68a/6a272b6e9d129d02efd8430f/1780952512722/russell-moore-class-2027-senior-portrait-gig-harbor-wa-002.webp?format=1500w" />
+  <meta property="og:url" content="https://recruiting.russell-moore.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Service schema with the four offers (matches your technical/SEO approach) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "College athletic recruiting media & profile pages",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Russell Moore Photography LLC",
+      "areaServed": "Pacific Northwest",
+      "email": "russell@russell-moore.com",
+      "url": "https://www.russell-moore.com"
+    },
+    "url": "https://recruiting.russell-moore.com/",
+    "offers": [
+      { "@type": "Offer", "name": "Profile", "price": "349.00", "priceCurrency": "USD", "url": "https://www.russell-moore.com/store/p/recruiting-profile" },
+      { "@type": "Offer", "name": "Profile + Shoot", "price": "700.00", "priceCurrency": "USD", "url": "https://bookrussell.as.me/?appointmentType=94245272" },
+      { "@type": "Offer", "name": "All-American", "price": "1250.00", "priceCurrency": "USD", "url": "https://bookrussell.as.me/?appointmentType=94245393" },
+      { "@type": "Offer", "name": "Season Update", "price": "129.00", "priceCurrency": "USD", "url": "https://www.russell-moore.com/store/p/recruiting-profile-update" }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#08090b; --bg-2:#0f1115; --card:#131519; --line:#23262d;
+      --ink:#f3f3f0; --muted:#8b8f98;
+      --volt:#ccff00; --teal:#19e3c0; --violet:#9b7bff; --warn:#ff5a52;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      background:var(--bg);color:var(--ink);
+      font-family:'Inter',system-ui,sans-serif;line-height:1.6;
+      -webkit-font-smoothing:antialiased;overflow-x:hidden;
+    }
+    body::before{
+      content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+      background:
+        radial-gradient(900px 500px at 85% -5%, rgba(204,255,0,.10), transparent 60%),
+        radial-gradient(700px 600px at -10% 30%, rgba(25,227,192,.07), transparent 55%);
+    }
+    body::after{
+      content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.035;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px}
+    .mono{font-family:'Roboto Mono',monospace}
+    .disp{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.01em}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);background:rgba(8,9,11,.72);border-bottom:1px solid var(--line)}
+    nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+    nav .name{font-family:'Oswald';text-transform:uppercase;font-weight:600;letter-spacing:.08em;font-size:.95rem}
+    nav .name b{color:var(--volt)}
+    nav .links{display:flex;gap:22px;align-items:center}
+    nav .links a{color:var(--muted);text-decoration:none;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;font-family:'Roboto Mono'}
+    nav .links a:hover{color:var(--ink)}
+    nav .links a.navcta{color:var(--volt);border:1px solid var(--volt);border-radius:6px;padding:7px 14px}
+    nav .links a.navcta:hover{background:var(--volt);color:#0a0a0a}
+    @media(max-width:760px){nav .links a:not(.navcta){display:none}}
+
+    /* HERO */
+    header{position:relative;padding:64px 0 36px}
+    .eyebrow{font-family:'Roboto Mono';color:var(--volt);font-size:.72rem;letter-spacing:.30em;text-transform:uppercase;margin-bottom:18px}
+    h1{font-family:'Oswald';font-weight:700;text-transform:uppercase;line-height:.90;letter-spacing:-.01em;font-size:clamp(3.4rem,12vw,7.5rem)}
+    h1 .last{color:var(--volt)}
+    .lead{margin-top:20px;max-width:60ch;color:#d7d9dd;font-size:clamp(1.02rem,2.2vw,1.2rem)}
+    .btn-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;margin-top:14px}
+    @media(max-width:860px){.hero-grid{grid-template-columns:1fr}}
+    .hero-photo{aspect-ratio:4/5;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,#15171c,#0c0d10);position:relative}
+    .hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .hero-photo .credit{position:absolute;bottom:0;left:0;right:0;padding:10px 14px;font-family:'Roboto Mono';font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:linear-gradient(transparent,rgba(0,0,0,.7))}
+
+    /* BUTTONS */
+    .cta{display:inline-flex;align-items:center;gap:10px;background:var(--volt);color:#0a0a0a;font-family:'Oswald';text-transform:uppercase;font-weight:600;letter-spacing:.06em;padding:14px 24px;border-radius:8px;text-decoration:none;font-size:1rem}
+    .cta:hover{filter:brightness(1.08)}
+    .cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+    .cta.ghost:hover{border-color:var(--ink);filter:none}
+
+    /* SECTIONS */
+    section{padding:54px 0;border-top:1px solid var(--line);position:relative}
+    .sec-h{display:flex;align-items:baseline;gap:14px;margin-bottom:26px}
+    .sec-h .num{font-family:'Roboto Mono';font-size:.72rem;color:var(--volt);letter-spacing:.2em}
+    .sec-h h2{font-family:'Oswald';text-transform:uppercase;font-weight:600;font-size:clamp(1.5rem,4vw,2.1rem);letter-spacing:.02em}
+
+    /* WHY */
+    .why p{max-width:68ch;color:#d7d9dd;font-size:1.06rem}
+    .why p + p{margin-top:16px}
+    .why .kick{color:var(--volt);font-family:'Oswald';text-transform:uppercase;font-weight:600;letter-spacing:.02em;font-size:1.2rem;display:block;margin-bottom:6px}
+
+    /* TIERS */
+    .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+    @media(max-width:880px){.tiers{grid-template-columns:1fr}}
+    .tier{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 22px;position:relative;display:flex;flex-direction:column;min-height:100%}
+    .tier.feature{border-color:var(--volt);box-shadow:0 0 0 1px rgba(204,255,0,.25),0 24px 60px -30px rgba(204,255,0,.4)}
+    .ribbon{position:absolute;top:-11px;left:22px;background:var(--volt);color:#0a0a0a;font-family:'Roboto Mono';font-weight:700;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;padding:4px 10px;border-radius:20px}
+    .tier .tname{font-family:'Oswald';text-transform:uppercase;font-weight:600;font-size:1.5rem;letter-spacing:.02em}
+    .tier .ttag{font-family:'Roboto Mono';font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-top:4px}
+    .tier .price{font-family:'Oswald';font-weight:700;font-size:3rem;line-height:1;margin:18px 0 4px}
+    .tier .price small{font-size:1rem;color:var(--muted);font-family:'Inter';font-weight:400}
+    .tier .blurb{color:var(--muted);font-size:.9rem;min-height:38px}
+    .feat{list-style:none;margin:18px 0 24px;display:flex;flex-direction:column;gap:11px;flex:1}
+    .feat li{position:relative;padding-left:24px;font-size:.92rem;color:#d7d9dd}
+    .feat li::before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;border-radius:2px;background:var(--volt)}
+    .feat li.muted{color:var(--muted)}
+    .feat li.muted::before{background:var(--line)}
+    .tier .cta{width:100%;justify-content:center}
+    .tier.feature .cta{box-shadow:0 14px 30px -14px rgba(204,255,0,.7)}
+
+    /* SEASON UPDATE STRIP */
+    .update{margin-top:16px;background:var(--bg-2);border:1px solid var(--line);border-radius:14px;padding:22px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+    .update .ux .un{font-family:'Oswald';text-transform:uppercase;font-weight:600;font-size:1.2rem}
+    .update .ux .ud{color:var(--muted);font-size:.9rem;margin-top:2px}
+    .update .up{font-family:'Oswald';font-weight:700;font-size:1.6rem;white-space:nowrap}
+    .update .up small{font-size:.85rem;color:var(--muted);font-family:'Inter';font-weight:400}
+    .update .cta.small{padding:11px 18px;font-size:.85rem}
+
+    /* STEPS */
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:s}
+    @media(max-width:760px){.steps{grid-template-columns:1fr 1fr}}
+    @media(max-width:460px){.steps{grid-template-columns:1fr}}
+    .step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;position:relative}
+    .step::before{counter-increment:s;content:"0" counter(s);font-family:'Oswald';font-weight:700;font-size:2rem;color:var(--volt);opacity:.55;display:block;margin-bottom:8px}
+    .step h3{font-family:'Oswald';text-transform:uppercase;font-weight:600;font-size:1.05rem;letter-spacing:.02em}
+    .step p{color:var(--muted);font-size:.86rem;margin-top:6px}
+
+    /* TRUST */
+    .trust{display:flex;flex-wrap:wrap;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    .trust > div{background:var(--bg-2);padding:18px 20px;flex:1 1 180px}
+    .trust .k{font-family:'Roboto Mono';font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal)}
+    .trust .v{font-family:'Oswald';font-weight:600;font-size:1.05rem;margin-top:6px;letter-spacing:.01em}
+
+    /* SAMPLE */
+    .sample{background:linear-gradient(135deg,rgba(204,255,0,.06),rgba(25,227,192,.04));border:1px solid var(--line);border-radius:14px;padding:30px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
+    .sample .st{font-family:'Oswald';text-transform:uppercase;font-weight:600;font-size:1.4rem}
+    .sample .sd{color:var(--muted);font-size:.92rem;margin-top:4px;max-width:46ch}
+
+    /* FAQ */
+    .faq{display:flex;flex-direction:column;gap:10px}
+    .faq details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:0 18px}
+    .faq summary{cursor:pointer;list-style:none;padding:18px 0;font-family:'Oswald';text-transform:uppercase;font-weight:500;letter-spacing:.02em;font-size:1.02rem;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:"+";color:var(--volt);font-family:'Roboto Mono';font-size:1.3rem}
+    .faq details[open] summary::after{content:"–"}
+    .faq p{padding:0 0 18px;color:#d7d9dd;font-size:.95rem;max-width:70ch}
+
+    /* FINAL CTA */
+    .final{text-align:center;padding:64px 0}
+    .final h2{font-family:'Oswald';text-transform:uppercase;font-weight:700;font-size:clamp(2rem,6vw,3.4rem);line-height:1}
+    .final h2 .v{color:var(--volt)}
+    .final p{color:var(--muted);margin:14px auto 28px;max-width:48ch}
+    .final .btn-row{justify-content:center}
+
+    /* FOOTER */
+    footer{border-top:1px solid var(--line);padding:36px 0 60px}
+    footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+    footer .by{font-family:'Roboto Mono';font-size:.74rem;letter-spacing:.06em;color:var(--muted)}
+    footer .by b{color:var(--volt)}
+    footer .fl{display:flex;gap:18px;flex-wrap:wrap}
+    footer .fl a{color:var(--muted);text-decoration:none;font-family:'Roboto Mono';font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}
+    footer .fl a:hover{color:var(--ink)}
+
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.in{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPGDW4QD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <nav>
+    <div class="wrap">
+      <div class="name">Russell <b>Moore</b> · Recruiting</div>
+      <div class="links">
+        <a href="#why">Why</a>
+        <a href="#tiers">Tiers</a>
+        <a href="#sample">Sample</a>
+        <a href="#faq">FAQ</a>
+        <a href="#tiers" class="navcta">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div class="wrap">
+      <div class="eyebrow">College Recruiting Media · Washington Endurance</div>
+      <div class="hero-grid">
+        <div>
+          <h1>Get<br><span class="last">Seen.</span></h1>
+          <p class="lead">A recruiting profile coaches can actually find. PRs, film, academics, and contact — one fast, search-optimized page, built by a photographer credentialed on the infield of Washington's biggest meets.</p>
+          <div class="btn-row">
+            <a href="#tiers" class="cta">See the Tiers ↓</a>
+            <!-- >>> CONFIRM D: real sample profile url -->
+            <a href="#sample" class="cta ghost">View a Sample →</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="https://static1.squarespace.com/static/65c46be8ea98cb3bb888691a/694327c8b81c15304428e68a/6a272b6e9d129d02efd8430f/1780952512722/russell-moore-class-2027-senior-portrait-gig-harbor-wa-002.webp?format=1500w" alt="A Washington high school athlete photographed by Russell Moore" onerror="this.style.display='none';this.parentNode.style.background='linear-gradient(135deg,#1a1d22,#0b0c0f)'" />
+          <div class="credit">Photo · Russell Moore Photography</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- WHY -->
+  <section id="why" class="why reveal">
+    <div class="wrap">
+      <div class="sec-h"><span class="num">01</span><h2>A Snapshot Isn't a Profile</h2></div>
+      <p><span class="kick">Coaches shortlist online — before they ever reply.</span>If a coach can't find an athlete in one place — marks, film, academics, and contact, in a page that actually shows up in search — that athlete is invisible, no matter how fast they are. A phone photo and a PR in a DM doesn't survive that process.</p>
+      <p>This isn't a studio guessing at sports. I shoot DyeStat and WestcoastXC events, I'm on the infield at the meets that matter, and I build every page with the same structured data and SEO work that gets an athlete surfaced when a coach Googles their name. Credentialed access plus the technical backend — that's the whole point.</p>
+    </div>
+  </section>
+
+  <!-- TIERS -->
+  <section id="tiers" class="reveal">
+    <div class="wrap">
+      <div class="sec-h"><span class="num">02</span><h2>Choose Your Tier</h2></div>
+
+      <!-- >>> CONFIRM B & C: feature bullets + turnaround per tier -->
+      <div class="tiers">
+
+        <!-- PROFILE $349 -->
+        <div class="tier">
+          <div class="tname">Profile</div>
+          <div class="ttag">The Page</div>
+          <div class="price">$349</div>
+          <div class="blurb">Built from photos you already have.</div>
+          <ul class="feat">
+            <li>Custom page at recruiting.russell-moore.com/yourname</li>
+            <li>PRs, film, academics &amp; target schools</li>
+            <li>Search-optimized schema so coaches find you</li>
+            <li>Coach &amp; athlete contact built in</li>
+            <li>Live within 14 days</li>
+          </ul>
+          <a class="cta" href="https://www.russell-moore.com/store/p/recruiting-profile"
+             data-tier="profile" data-value="349">Start Your Profile</a>
+        </div>
+
+        <!-- PROFILE + SHOOT $700 (recommended) -->
+        <div class="tier feature">
+          <span class="ribbon">Recommended</span>
+          <div class="tname">Profile + Shoot</div>
+          <div class="ttag">The Page + The Shoot</div>
+          <div class="price">$700</div>
+          <div class="blurb">Fresh, recruiting-grade imagery.</div>
+          <ul class="feat">
+            <li>Everything in Profile</li>
+            <li>A dedicated recruiting shoot <em>(CONFIRM length/location)</em></li>
+            <li>Action + portrait coverage <em>(CONFIRM # of edited images)</em></li>
+            <li>Imagery built for coaches, social &amp; the page</li>
+          </ul>
+          <a class="cta" href="https://bookrussell.as.me/?appointmentType=94245272"
+             data-tier="profile_shoot" data-value="700">Book Profile + Shoot</a>
+        </div>
+
+        <!-- ALL-AMERICAN $1,250 -->
+        <div class="tier">
+          <div class="tname">All-American</div>
+          <div class="ttag">The Works</div>
+          <div class="price">$1,250</div>
+          <div class="blurb">The full recruiting package.</div>
+          <ul class="feat">
+            <li>Everything in Profile + Shoot</li>
+            <li class="muted">Extended / premium shoot <em>(CONFIRM)</em></li>
+            <li class="muted">Highlight film <em>(CONFIRM)</em></li>
+            <li class="muted">Priority delivery &amp; extras <em>(CONFIRM)</em></li>
+          </ul>
+          <a class="cta" href="https://bookrussell.as.me/?appointmentType=94245393"
+             data-tier="all_american" data-value="1250">Book All-American</a>
+        </div>
+      </div>
+
+      <!-- SEASON UPDATE -->
+      <div class="update">
+        <div class="ux">
+          <div class="un">Season Update</div>
+          <div class="ud">Refresh PRs, film &amp; schedule every new season. Renewed annually.</div>
+        </div>
+        <div class="up">$129<small> / yr</small></div>
+        <a class="cta small" href="https://www.russell-moore.com/store/p/recruiting-profile-update"
+           data-tier="season_update" data-value="129">Add Season Update</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="reveal">
+    <div class="wrap">
+      <div class="sec-h"><span class="num">03</span><h2>How It Works</h2></div>
+      <div class="steps">
+        <div class="step"><h3>Choose a Tier</h3><p>Pick the package that fits — page only, page + shoot, or the works.</p></div>
+        <div class="step"><h3>Shoot or Send</h3><p>Book your shoot, or send the photos you already have.</p></div>
+        <div class="step"><h3>I Build It</h3><p>I design, write, and optimize your page for coach search.</p></div>
+        <div class="step"><h3>Go Live</h3><p>Live within 14 days at your own URL. Share it with every coach.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section id="trust" class="reveal">
+    <div class="wrap">
+      <div class="sec-h"><span class="num">04</span><h2>Why Me</h2></div>
+      <div class="trust">
+        <!-- >>> CONFIRM F: WIAA wording -->
+        <div><div class="k">Credentialed</div><div class="v">DyeStat · WestcoastXC</div></div>
+        <div><div class="k">Athlete Safety</div><div class="v">SafeSport Trained</div></div>
+        <div><div class="k">Coverage</div><div class="v">$1M Liability</div></div>
+        <div><div class="k">Built for Search</div><div class="v">GA4 Certified</div></div>
+        <div><div class="k">Environment</div><div class="v">Queer-Owned · Identity-Aligned</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAMPLE -->
+  <section id="sample" class="reveal">
+    <div class="wrap">
+      <div class="sec-h"><span class="num">05</span><h2>See a Real Profile</h2></div>
+      <div class="sample">
+        <div>
+          <div class="st">Walk through a live page</div>
+          <div class="sd">PRs, film, academics, schedule, and coach contact — exactly what a college coach sees when they open your athlete's link.</div>
+        </div>
+        <!-- >>> CONFIRM D: replace # with a real published athlete profile URL -->
+        <a class="cta" href="#" data-tier="view_sample" data-value="0">View a Sample Profile →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="reveal">
+    <div class="wrap">
+      <div class="sec-h"><span class="num">06</span><h2>Questions</h2></div>
+      <div class="faq">
+        <details>
+          <summary>We don't have recent photos — can you still build it?</summary>
+          <p>Yes. That's exactly what the Profile tier is for — a complete, optimized page built from photos you already have. If you want fresh action and portrait imagery, choose Profile + Shoot.</p>
+        </details>
+        <details>
+          <summary>How fast does it go live?</summary>
+          <p>Profile pages are live within 14 days. <em>(CONFIRM turnaround for the shoot tiers.)</em></p>
+        </details>
+        <details>
+          <summary>Will coaches actually find it?</summary>
+          <p>That's the entire point. Every page is built with structured data and SEO so it surfaces when a coach searches the athlete's name — not buried in a DM or a PDF. It's the same technical work I use across my own sites.</p>
+        </details>
+        <details>
+          <summary>Do you only shoot distance and track?</summary>
+          <!-- >>> CONFIRM E -->
+          <p>Endurance — track, cross country, and distance — is home base. <em>(CONFIRM how you want to handle other sports.)</em></p>
+        </details>
+        <details>
+          <summary>Can we update it later?</summary>
+          <p>Yes. The $129/yr Season Update refreshes marks, film, and schedule each season so the page never goes stale during recruiting.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <div class="wrap">
+      <h2>Put Your Athlete <span class="v">On the Radar.</span></h2>
+      <p>Built by someone on the infield, optimized to be found, live in 14 days.</p>
+      <div class="btn-row">
+        <a href="#tiers" class="cta">Choose Your Tier ↑</a>
+        <a href="mailto:russell@russell-moore.com?subject=Recruiting%20Profile%20Question" class="cta ghost">Ask a Question</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="by">A service of <b>Russell Moore Photography</b> · russell-moore.com</div>
+      <div class="fl">
+        <a href="https://www.russell-moore.com/olympia-senior-portraits">Seniors &amp; Athletes</a>
+        <a href="https://www.russell-moore.com/sports">Game Day</a>
+        <a href="https://www.russell-moore.com/contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // scroll reveal
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+    // per-tier conversion tracking -> GTM/GA4
+    document.querySelectorAll('[data-tier]').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        window.dataLayer=window.dataLayer||[];
+        window.dataLayer.push({
+          event:'recruiting_cta_click',
+          tier:this.getAttribute('data-tier'),
+          value:Number(this.getAttribute('data-value'))||0
+        });
+      });
+    });
+  </script>
+</body>
+</html>

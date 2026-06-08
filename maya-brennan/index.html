@@ -2,13 +2,21 @@
 <html lang="en">
 <!--
   ============================================================================
-  ATHLETE RECRUITING PROFILE — TEMPLATE v1
+  ATHLETE RECRUITING PROFILE — TEMPLATE v2
   Russell Moore Photography  ·  russell-moore.com
   ----------------------------------------------------------------------------
+  NEW IN v2 (already wired — leave it in for every athlete):
+    - Google Tag Manager (GTM-MPGDW4QD) so profile pages are tracked.
+    - Footer "Get your athlete's recruiting profile" link -> the sales page.
+      (Every page you deploy becomes a quiet ad for the product = growth loop.)
+    - Click tracking: "Contact for Recruiting" and the footer link push events
+      to the dataLayer (coach_contact_click / profile_to_sales) for GA4.
+
   HOW TO USE (template-first):
   All sample data below is FICTIONAL. To build a real athlete page, swap the
-  values marked >>> in the SWAP LIST. Then save as /recruiting/firstname-lastname.html
-  and point a Squarespace Code Block iframe (or GitHub Pages URL) at it.
+  values marked >>> in the SWAP LIST. Then save as a folder
+  /firstname-lastname/index.html so it serves at
+  recruiting.russell-moore.com/firstname-lastname
 
   >>> SWAP LIST (search the file for each token-area):
     1.  <title> + meta description + og: tags  (top of <head>)
@@ -28,6 +36,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MPGDW4QD');</script>
+  <!-- End Google Tag Manager -->
 
   <!-- >>> SWAP 1: SEO -->
   <title>Maya Brennan — Cascade Ridge HS Distance Recruiting Profile | Class of 2026</title>
@@ -232,6 +248,8 @@
     footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
     footer .by{font-family:'Roboto Mono';font-size:.74rem;letter-spacing:.06em;color:var(--muted)}
     footer .by b{color:var(--volt)}
+    footer .getyours{font-family:'Roboto Mono';font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--volt);text-decoration:none;border:1px solid var(--line);border-radius:6px;padding:9px 15px;transition:border-color .18s}
+    footer .getyours:hover{border-color:var(--volt)}
     footer .updated{font-family:'Roboto Mono';font-size:.66rem;color:var(--muted);letter-spacing:.1em}
 
     /* reveal */
@@ -240,6 +258,9 @@
   </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPGDW4QD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <nav>
     <div class="wrap">
@@ -397,13 +418,14 @@
           <a href="mailto:club@example.com">club@example.com</a>
         </div>
       </div>
-      <a class="cta" href="mailto:athlete@example.com?subject=Recruiting%20Inquiry%20—%20Maya%20Brennan">Contact for Recruiting →</a>
+      <a class="cta" href="mailto:athlete@example.com?subject=Recruiting%20Inquiry%20—%20Maya%20Brennan" data-evt="coach_contact_click">Contact for Recruiting →</a>
     </div>
   </section>
 
   <footer>
     <div class="wrap">
       <div class="by">Profile &amp; photography by <b>Russell Moore Photography</b> · russell-moore.com</div>
+      <a class="getyours" href="https://recruiting.russell-moore.com/" data-evt="profile_to_sales">Get your athlete's recruiting profile →</a>
       <div class="updated">Last updated: APR 2026</div>
     </div>
   </footer>
@@ -414,6 +436,14 @@
       entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
     },{threshold:.12});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // click tracking -> GTM/GA4
+    document.querySelectorAll('[data-evt]').forEach((el)=>{
+      el.addEventListener('click',()=>{
+        window.dataLayer=window.dataLayer||[];
+        window.dataLayer.push({event:el.getAttribute('data-evt')});
+      });
+    });
   </script>
 </body>
 </html>

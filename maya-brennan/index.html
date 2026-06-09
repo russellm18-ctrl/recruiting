@@ -1,143 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-  ============================================================================
-  ATHLETE RECRUITING PROFILE — TEMPLATE v2
-  Russell Moore Photography  ·  russell-moore.com
-  ----------------------------------------------------------------------------
-  NEW IN v2 (already wired — leave it in for every athlete):
-    - Google Tag Manager (GTM-MPGDW4QD) so profile pages are tracked.
-    - Footer "Get your athlete's recruiting profile" link -> the sales page.
-      (Every page you deploy becomes a quiet ad for the product = growth loop.)
-    - Click tracking: "Contact for Recruiting" and the footer link push events
-      to the dataLayer (coach_contact_click / profile_to_sales) for GA4.
-
-  HOW TO USE (template-first):
-  All sample data below is FICTIONAL. To build a real athlete page, swap the
-  values marked >>> in the SWAP LIST. Then save as a folder
-  /firstname-lastname/index.html so it serves at
-  recruiting.russell-moore.com/firstname-lastname
-
-  >>> SWAP LIST (search the file for each token-area):
-    1.  <title> + meta description + og: tags  (top of <head>)
-    2.  JSON-LD schema block  (name, school, team, image, sameAs socials)
-    3.  HERO: athlete name, class year, school, events, height, club, hero photo
-    4.  HEADLINE STATS: the 2–3 marquee PRs coaches see first
-    5.  CREDENTIAL BAR: GPA, NCAA ID, grad year, intended major
-    6.  PERSONAL RECORDS table rows  (event / mark / date / meet)
-    7.  FILM: replace the YouTube/Hudl embed src
-    8.  ABOUT: bio paragraph
-    9.  ACADEMICS: GPA, test scores, major, eligibility note
-    10. SCHEDULE: upcoming meet rows (so coaches can come watch)
-    11. GALLERY: replace the 4 image src values with your CDN images
-    12. CONTACT: athlete email, HS coach, club coach + references
-  ============================================================================
--->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-MPGDW4QD');</script>
-  <!-- End Google Tag Manager -->
-
-  <!-- >>> SWAP 1: SEO -->
-  <title>Maya Brennan — Cascade Ridge HS Distance Recruiting Profile | Class of 2026</title>
-  <meta name="description" content="Maya Brennan, Class of 2026 distance runner at Cascade Ridge High School (WA). PRs: 800m 2:09.4, 1600m 4:48.1, 3200m 10:22.7. Film, academics, and coach contact for college recruiting." />
-  <meta name="robots" content="index, follow" />
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MPGDW4QD');</script>
+  <title>Maya Brennan — Cascade Ridge HS Distance Recruiting Profile | Class of 2026 [SAMPLE]</title>
+  <meta name="description" content="SAMPLE PROFILE — Maya Brennan, fictional Class of 2026 distance runner. See what a Russell Moore Photography recruiting profile looks like." />
+  <meta name="robots" content="noindex, follow" />
   <link rel="canonical" href="https://recruiting.russell-moore.com/maya-brennan" />
-
-  <!-- Open Graph (controls the link preview coaches see when shared) -->
   <meta property="og:type" content="profile" />
-  <meta property="og:title" content="Maya Brennan — Class of 2026 Distance | Cascade Ridge HS" />
-  <meta property="og:description" content="Recruiting profile: PRs, film, academics, and coach contact." />
-  <meta property="og:image" content="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/og-maya-brennan.jpg" />
+  <meta property="og:title" content="Sample Recruiting Profile — Russell Moore Photography" />
+  <meta property="og:description" content="See what a recruiting profile looks like before you order." />
   <meta property="og:url" content="https://recruiting.russell-moore.com/maya-brennan" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-
-  <!-- >>> SWAP 2: STRUCTURED DATA — this is what makes a coach's Google search surface this page.
-       Keep it valid: name, school (alumniOf), team (memberOf), photo (image), socials (sameAs). -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Maya Brennan",
-    "givenName": "Maya",
-    "familyName": "Brennan",
-    "gender": "Female",
-    "nationality": "American",
-    "description": "Class of 2026 distance runner specializing in the 800m, 1600m, and 3200m, and cross country, at Cascade Ridge High School in Washington State.",
-    "image": "https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/maya-brennan-hero.jpg",
-    "url": "https://recruiting.russell-moore.com/maya-brennan",
-    "alumniOf": {
-      "@type": "HighSchool",
-      "name": "Cascade Ridge High School",
-      "address": { "@type": "PostalAddress", "addressRegion": "WA", "addressCountry": "US" }
-    },
-    "memberOf": {
-      "@type": "SportsTeam",
-      "name": "Cascade Ridge Track & Field / Cross Country"
-    },
-    "knowsAbout": ["800 meters", "1600 meters", "3200 meters", "Cross Country"],
-    "sameAs": [
-      "https://www.instagram.com/REPLACE_HANDLE",
-      "https://www.athletic.net/REPLACE_PROFILE"
-    ]
-  }
-  </script>
-
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Maya Brennan","description":"FICTIONAL sample profile for Russell Moore Photography recruiting product.","url":"https://recruiting.russell-moore.com/maya-brennan"}</script>
   <style>
-    :root{
-      --bg:#08090b;
-      --bg-2:#0f1115;
-      --card:#131519;
-      --line:#23262d;
-      --ink:#f3f3f0;
-      --muted:#8b8f98;
-      --volt:#ccff00;
-      --teal:#19e3c0;
-      --violet:#9b7bff;
-      --warn:#ff5a52;
-    }
+    :root{--bg:#08090b;--bg-2:#0f1115;--card:#131519;--line:#23262d;--ink:#f3f3f0;--muted:#8b8f98;--volt:#ccff00;--teal:#19e3c0}
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{
-      background:var(--bg);
-      color:var(--ink);
-      font-family:'Inter',system-ui,sans-serif;
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
-      overflow-x:hidden;
-    }
-    /* atmosphere */
-    body::before{
-      content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
-      background:
-        radial-gradient(900px 500px at 85% -5%, rgba(204,255,0,.10), transparent 60%),
-        radial-gradient(700px 600px at -10% 30%, rgba(25,227,192,.07), transparent 55%);
-    }
-    body::after{
-      content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.035;
-      background-image:url("data:image/svg+xml,%3Csvg xmlns='https://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    }
+    body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(900px 500px at 85% -5%,rgba(204,255,0,.10),transparent 60%),radial-gradient(700px 600px at -10% 30%,rgba(25,227,192,.07),transparent 55%)}
     .wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px}
-    .mono{font-family:'Roboto Mono',monospace}
-    .disp{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.01em}
-
-    /* sticky top nav */
-    nav{
-      position:sticky;top:0;z-index:20;
-      backdrop-filter:blur(12px);
-      background:rgba(8,9,11,.72);
-      border-bottom:1px solid var(--line);
-    }
+    .sample-banner{position:relative;z-index:30;background:var(--volt);color:#0a0a0a;text-align:center;padding:10px 16px;font-family:'Roboto Mono';font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+    .sample-banner a{color:#0a0a0a;text-decoration:underline}
+    nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);background:rgba(8,9,11,.85);border-bottom:1px solid var(--line)}
     nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
     nav .name{font-family:'Oswald';text-transform:uppercase;font-weight:600;letter-spacing:.08em;font-size:.95rem}
     nav .name b{color:var(--volt)}
@@ -145,51 +33,39 @@
     nav .links a{color:var(--muted);text-decoration:none;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;font-family:'Roboto Mono'}
     nav .links a:hover{color:var(--ink)}
     @media(max-width:720px){nav .links{display:none}}
-
-    /* HERO */
     header{position:relative;padding:64px 0 40px}
     .eyebrow{font-family:'Roboto Mono';color:var(--volt);font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;margin-bottom:18px}
-    h1{font-family:'Oswald';font-weight:700;text-transform:uppercase;line-height:.92;letter-spacing:-.01em;
-       font-size:clamp(3.2rem,11vw,7rem);}
+    h1{font-family:'Oswald';font-weight:700;text-transform:uppercase;line-height:.92;letter-spacing:-.01em;font-size:clamp(3.2rem,11vw,7rem)}
     h1 .last{color:var(--volt)}
     .subline{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--muted);font-family:'Roboto Mono';font-size:.82rem;letter-spacing:.04em}
     .subline span{display:inline-flex;align-items:center;gap:8px}
     .subline b{color:var(--ink);font-weight:500}
     .dot{width:5px;height:5px;border-radius:50%;background:var(--teal)}
-
     .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:end;margin-top:36px}
     @media(max-width:820px){.hero-grid{grid-template-columns:1fr}}
-    .hero-photo{
-      aspect-ratio:4/5;border-radius:14px;overflow:hidden;border:1px solid var(--line);
-      background:linear-gradient(135deg,#15171c,#0c0d10);position:relative;
-    }
-    .hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
-    .hero-photo .credit{position:absolute;bottom:0;left:0;right:0;padding:10px 14px;font-family:'Roboto Mono';font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:linear-gradient(transparent,rgba(0,0,0,.7))}
-
-    /* HEADLINE STATS — the first thing a coach reads */
+    .img-placeholder{width:100%;border-radius:14px;border:1px dashed rgba(204,255,0,.3);background:linear-gradient(135deg,#0f1115,#131519);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;position:relative}
+    .img-placeholder.hero-slot{aspect-ratio:4/5}
+    .img-placeholder.gal-slot{aspect-ratio:3/4}
+    .ph-icon{font-size:2rem;opacity:.25}
+    .ph-label{font-family:'Roboto Mono';font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(204,255,0,.45);text-align:center;padding:0 16px;line-height:1.6}
+    .ph-sub{font-family:'Roboto Mono';font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:center;padding:0 16px}
+    .ph-credit{position:absolute;bottom:0;left:0;right:0;padding:10px 14px;font-family:'Roboto Mono';font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:linear-gradient(transparent,rgba(0,0,0,.7))}
     .marquee{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    @media(max-width:820px){.marquee{grid-template-columns:repeat(3,1fr)}}
     @media(max-width:480px){.marquee{grid-template-columns:1fr}}
     .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 16px;position:relative;overflow:hidden}
     .stat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--volt)}
     .stat .ev{font-family:'Roboto Mono';font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
     .stat .mk{font-family:'Oswald';font-weight:700;font-size:2.3rem;line-height:1;margin-top:8px}
     .stat .tag{font-family:'Roboto Mono';font-size:.62rem;color:var(--teal);margin-top:6px;letter-spacing:.08em}
-
-    /* CREDENTIAL BAR */
     .credbar{margin-top:14px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
     @media(max-width:560px){.credbar{grid-template-columns:repeat(2,1fr)}}
     .credbar > div{background:var(--bg-2);padding:14px 16px}
     .credbar .k{font-family:'Roboto Mono';font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
     .credbar .v{font-family:'Oswald';font-weight:600;font-size:1.2rem;margin-top:4px}
-
-    /* SECTIONS */
     section{padding:54px 0;border-top:1px solid var(--line);position:relative}
     .sec-h{display:flex;align-items:baseline;gap:14px;margin-bottom:26px}
     .sec-h .num{font-family:'Roboto Mono';font-size:.72rem;color:var(--volt);letter-spacing:.2em}
     .sec-h h2{font-family:'Oswald';text-transform:uppercase;font-weight:600;font-size:clamp(1.5rem,4vw,2.1rem);letter-spacing:.02em}
-
-    /* PR RESULTS BOARD */
     .board{width:100%;border-collapse:collapse;font-family:'Roboto Mono'}
     .board thead th{text-align:left;font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding:0 14px 12px;font-weight:500}
     .board tbody tr{border-top:1px solid var(--line)}
@@ -199,38 +75,24 @@
     .board .mk{font-weight:700;font-size:1.15rem;color:var(--volt)}
     .board .meta{color:var(--muted);font-size:.8rem}
     .board .pr{display:inline-block;font-size:.58rem;letter-spacing:.12em;color:var(--teal);border:1px solid var(--teal);border-radius:20px;padding:2px 8px;margin-left:8px;vertical-align:middle}
-
-    /* FILM */
     .film{aspect-ratio:16/9;width:100%;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#000}
     .film iframe{width:100%;height:100%;border:0;display:block}
-
-    /* ABOUT */
     .about p{max-width:68ch;color:#d7d9dd;font-size:1.05rem}
     .about p + p{margin-top:16px}
-
-    /* ACADEMICS grid */
     .acad{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     @media(max-width:680px){.acad{grid-template-columns:1fr}}
     .acard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
     .acard .k{font-family:'Roboto Mono';font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
     .acard .v{font-family:'Oswald';font-weight:600;font-size:1.7rem;margin-top:8px}
     .acard .v small{font-size:.8rem;color:var(--muted);font-family:'Inter'}
-
-    /* SCHEDULE */
     .sched{display:flex;flex-direction:column;gap:10px}
     .row{display:grid;grid-template-columns:120px 1fr auto;gap:16px;align-items:center;background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:14px 18px}
     @media(max-width:560px){.row{grid-template-columns:1fr;gap:4px}}
     .row .date{font-family:'Roboto Mono';color:var(--volt);font-size:.82rem;letter-spacing:.06em}
     .row .meet{font-family:'Oswald';text-transform:uppercase;font-weight:500;letter-spacing:.03em}
     .row .loc{font-family:'Roboto Mono';color:var(--muted);font-size:.76rem}
-
-    /* GALLERY */
     .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
     @media(max-width:680px){.gal{grid-template-columns:repeat(2,1fr)}}
-    .gal img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px;border:1px solid var(--line);display:block;transition:transform .4s ease}
-    .gal img:hover{transform:scale(1.03)}
-
-    /* CONTACT */
     .contact{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     @media(max-width:760px){.contact{grid-template-columns:1fr}}
     .ccard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
@@ -239,11 +101,8 @@
     .ccard a{color:var(--volt);text-decoration:none;font-family:'Roboto Mono';font-size:.84rem;word-break:break-all}
     .ccard a:hover{text-decoration:underline}
     .ccard .line{color:var(--muted);font-size:.84rem;margin-top:4px}
-
     .cta{display:inline-flex;align-items:center;gap:10px;margin-top:8px;background:var(--volt);color:#0a0a0a;font-family:'Oswald';text-transform:uppercase;font-weight:600;letter-spacing:.06em;padding:14px 24px;border-radius:8px;text-decoration:none}
     .cta:hover{filter:brightness(1.08)}
-
-    /* FOOTER */
     footer{border-top:1px solid var(--line);padding:36px 0 60px;margin-top:20px}
     footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
     footer .by{font-family:'Roboto Mono';font-size:.74rem;letter-spacing:.06em;color:var(--muted)}
@@ -251,20 +110,19 @@
     footer .getyours{font-family:'Roboto Mono';font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--volt);text-decoration:none;border:1px solid var(--line);border-radius:6px;padding:9px 15px;transition:border-color .18s}
     footer .getyours:hover{border-color:var(--volt)}
     footer .updated{font-family:'Roboto Mono';font-size:.66rem;color:var(--muted);letter-spacing:.1em}
-
-    /* reveal */
     .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
     .reveal.in{opacity:1;transform:none}
   </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPGDW4QD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="sample-banner">
+    Sample Profile — Fictional Athlete &nbsp;·&nbsp; <a href="https://recruiting.russell-moore.com">Get your athlete's profile →</a>
+  </div>
 
   <nav>
     <div class="wrap">
-      <!-- >>> SWAP 3 -->
       <div class="name">Maya <b>Brennan</b> · '26</div>
       <div class="links">
         <a href="#records">Records</a>
@@ -278,26 +136,21 @@
 
   <header>
     <div class="wrap">
-      <div class="eyebrow">College Recruiting Profile · Class of 2026</div>
-      <!-- >>> SWAP 3: name -->
+      <div class="eyebrow">College Recruiting Profile · Class of 2026 · Sample</div>
       <h1>Maya<br><span class="last">Brennan</span></h1>
-      <!-- >>> SWAP 3: identity line -->
       <div class="subline">
         <span><span class="dot"></span> <b>Distance</b> — 800m / 1600m / 3200m / XC</span>
         <span><span class="dot"></span> Cascade Ridge HS, <b>WA</b></span>
         <span><span class="dot"></span> Club: <b>Sound Endurance TC</b></span>
         <span><span class="dot"></span> <b>5'6"</b></span>
       </div>
-
       <div class="hero-grid">
         <div>
-          <!-- >>> SWAP 4: HEADLINE STATS (top 3 marquee PRs) -->
           <div class="marquee">
             <div class="stat"><div class="ev">1600 M</div><div class="mk">4:48.1</div><div class="tag">PR · 2025</div></div>
             <div class="stat"><div class="ev">3200 M</div><div class="mk">10:22.7</div><div class="tag">PR · 2025</div></div>
             <div class="stat"><div class="ev">800 M</div><div class="mk">2:09.4</div><div class="tag">PR · 2026</div></div>
           </div>
-          <!-- >>> SWAP 5: CREDENTIAL BAR -->
           <div class="credbar">
             <div><div class="k">Grad Year</div><div class="v">2026</div></div>
             <div><div class="k">GPA</div><div class="v">3.92</div></div>
@@ -305,20 +158,19 @@
             <div><div class="k">Intended Major</div><div class="v" style="font-size:1rem">Kinesiology</div></div>
           </div>
         </div>
-        <div class="hero-photo">
-          <!-- >>> SWAP 3: hero image -->
-          <img src="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/maya-brennan-hero.jpg" alt="Maya Brennan racing for Cascade Ridge High School" onerror="this.style.display='none';this.parentNode.style.background='linear-gradient(135deg,#1a1d22,#0b0c0f)'" />
-          <div class="credit">Photo · Russell Moore Photography</div>
+        <div class="img-placeholder hero-slot">
+          <div class="ph-icon">📷</div>
+          <div class="ph-label">Hero Action Photo</div>
+          <div class="ph-sub">Your athlete's image here</div>
+          <div class="ph-credit">Photo · Russell Moore Photography</div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- ===================== PERSONAL RECORDS ===================== -->
   <section id="records" class="reveal">
     <div class="wrap">
       <div class="sec-h"><span class="num">01</span><h2>Personal Records</h2></div>
-      <!-- >>> SWAP 6: PR rows -->
       <table class="board">
         <thead><tr><th>Event</th><th>Mark</th><th>Meet</th><th>Date</th></tr></thead>
         <tbody>
@@ -331,32 +183,26 @@
     </div>
   </section>
 
-  <!-- ===================== FILM ===================== -->
   <section id="film" class="reveal">
     <div class="wrap">
       <div class="sec-h"><span class="num">02</span><h2>Film</h2></div>
       <div class="film">
-        <!-- >>> SWAP 7: replace src with the athlete's race footage (YouTube unlisted, Hudl, etc.) -->
-        <iframe src="https://youtu.be/DXkGbpQmsRE" title="Race film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/DXkGbpQmsRE" title="Maya Brennan — Race Film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </section>
 
-  <!-- ===================== ABOUT ===================== -->
   <section id="about" class="about reveal">
     <div class="wrap">
       <div class="sec-h"><span class="num">03</span><h2>About</h2></div>
-      <!-- >>> SWAP 8 -->
       <p>Maya is a Class of 2026 distance runner with a four-year upward trajectory across the 800m through 3200m and cross country. A two-time WIAA State qualifier, she races with consistent negative splits and a strong closing gear, and trains year-round with Sound Endurance TC.</p>
       <p>Off the track she carries a 3.92 GPA, serves as a team captain, and intends to study kinesiology. She is looking for a program where she can contribute across the middle-distance group and continue building toward conference-level competition.</p>
     </div>
   </section>
 
-  <!-- ===================== ACADEMICS ===================== -->
   <section id="academics" class="reveal">
     <div class="wrap">
       <div class="sec-h"><span class="num">04</span><h2>Academics</h2></div>
-      <!-- >>> SWAP 9 -->
       <div class="acad">
         <div class="acard"><div class="k">GPA (Unweighted)</div><div class="v">3.92</div></div>
         <div class="acard"><div class="k">Test Scores</div><div class="v">1340 <small>SAT</small></div></div>
@@ -366,11 +212,9 @@
     </div>
   </section>
 
-  <!-- ===================== SCHEDULE ===================== -->
   <section id="schedule" class="reveal">
     <div class="wrap">
       <div class="sec-h"><span class="num">05</span><h2>Where to Watch</h2></div>
-      <!-- >>> SWAP 10 -->
       <div class="sched">
         <div class="row"><div class="date">JUN 14, 2026</div><div class="meet">Nike Outdoor Nationals</div><div class="loc">Eugene, OR</div></div>
         <div class="row"><div class="date">SEP 06, 2026</div><div class="meet">Sundodger Invitational</div><div class="loc">Seattle, WA</div></div>
@@ -379,46 +223,42 @@
     </div>
   </section>
 
-  <!-- ===================== GALLERY ===================== -->
   <section id="gallery" class="reveal">
     <div class="wrap">
       <div class="sec-h"><span class="num">06</span><h2>Gallery</h2></div>
-      <!-- >>> SWAP 11: your CDN images -->
       <div class="gal">
-        <img src="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/59219caf-19e2-4af3-8cb5-cf07359783a7/track-spike-action-detail-indoor-track-meet-olympia-wa-russell-moore.webp?content-type=image%2Fwebp" alt="Maya Brennan racing" onerror="this.style.background='#16181d';this.removeAttribute('src')" />
-        <img src="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/mb-2.jpg" alt="Maya Brennan finishing kick" onerror="this.style.background='#16181d';this.removeAttribute('src')" />
-        <img src="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/mb-3.jpg" alt="Maya Brennan cross country" onerror="this.style.background='#16181d';this.removeAttribute('src')" />
-        <img src="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/mb-4.jpg" alt="Maya Brennan on the track" onerror="this.style.background='#16181d';this.removeAttribute('src')" />
+        <div class="img-placeholder gal-slot"><div class="ph-icon">📷</div><div class="ph-label">Race Action</div><div class="ph-sub">Meet coverage photo</div></div>
+        <div class="img-placeholder gal-slot"><div class="ph-icon">📷</div><div class="ph-label">Finish Line</div><div class="ph-sub">Meet coverage photo</div></div>
+        <div class="img-placeholder gal-slot"><div class="ph-icon">📷</div><div class="ph-label">Cross Country</div><div class="ph-sub">Meet coverage photo</div></div>
+        <div class="img-placeholder gal-slot"><div class="ph-icon">📷</div><div class="ph-label">Portrait</div><div class="ph-sub">Athlete portrait session</div></div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== CONTACT ===================== -->
   <section id="contact" class="reveal">
     <div class="wrap">
       <div class="sec-h"><span class="num">07</span><h2>Contact</h2></div>
-      <!-- >>> SWAP 12 -->
       <div class="contact">
         <div class="ccard">
           <div class="role">Athlete</div>
           <div class="who">Maya Brennan</div>
           <div class="line">Class of 2026</div>
-          <a href="mailto:athlete@example.com">athlete@example.com</a>
+          <a href="#">athlete@example.com</a>
         </div>
         <div class="ccard">
           <div class="role">Head Coach — Cascade Ridge HS</div>
           <div class="who">Coach Name</div>
           <div class="line">Track &amp; Field / Cross Country</div>
-          <a href="mailto:coach@example.com">coach@example.com</a>
+          <a href="#">coach@example.com</a>
         </div>
         <div class="ccard">
           <div class="role">Club Coach — Sound Endurance TC</div>
           <div class="who">Coach Name</div>
           <div class="line">References available</div>
-          <a href="mailto:club@example.com">club@example.com</a>
+          <a href="#">club@example.com</a>
         </div>
       </div>
-      <a class="cta" href="mailto:athlete@example.com?subject=Recruiting%20Inquiry%20—%20Maya%20Brennan" data-evt="coach_contact_click">Contact for Recruiting →</a>
+      <a class="cta" href="https://recruiting.russell-moore.com" data-evt="coach_contact_click">Get Your Athlete's Profile →</a>
     </div>
   </section>
 
@@ -426,18 +266,15 @@
     <div class="wrap">
       <div class="by">Profile &amp; photography by <b>Russell Moore Photography</b> · russell-moore.com</div>
       <a class="getyours" href="https://recruiting.russell-moore.com/" data-evt="profile_to_sales">Get your athlete's recruiting profile →</a>
-      <div class="updated">Last updated: APR 2026</div>
+      <div class="updated">Sample Profile · Fictional Athlete</div>
     </div>
   </footer>
 
   <script>
-    // lightweight scroll reveal
     const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+      entries.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);} });
     },{threshold:.12});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-    // click tracking -> GTM/GA4
     document.querySelectorAll('[data-evt]').forEach((el)=>{
       el.addEventListener('click',()=>{
         window.dataLayer=window.dataLayer||[];

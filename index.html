@@ -2,28 +2,19 @@
 <html lang="en">
 <!--
   ============================================================================
-  RECRUITING PROFILES — SALES PAGE
-  Russell Moore Photography  ·  russell-moore.com
+  RECRUITING PROFILES — SALES PAGE  (FINAL)
+  Russell Moore Photography · recruiting.russell-moore.com
   ----------------------------------------------------------------------------
-  This is the page that sells the product to PARENTS. It is the twin of the
-  athlete profile template (same design system) and lives at the root of the
-  recruiting subdomain (recruiting.russell-moore.com).
-
-  WIRED & LIVE (do not touch):
-    - $349  Profile        -> Squarespace product
-    - $700  Profile+Shoot  -> Acuity appointment 94245272
-    - $1,250 All-American   -> Acuity appointment 94245393
-    - $129/yr Season Update -> Squarespace product
-    - Google Tag Manager (GTM-MPGDW4QD) installed; per-tier click events push
-      to dataLayer as event:'recruiting_cta_click' so you can build GA4
-      conversions in GTM with zero extra code.
-
-  STATUS: Tiers, FAQ, sample link, and trust bar are finalized with real info.
-  OPTIONAL POLISH (not blocking, do later):
-    - Swap the sample link to a REAL client profile once one is published
-      (it currently points to the maya-brennan demo).
-    - Add a specific shoot-tier turnaround number if you want one stated.
-    - Add WIAA to the credential bar if you want it listed.
+  ALL LINKS WIRED:
+    $349  Profile        -> /recruiting/p/recruiting-profile
+    $700  Profile+Shoot  -> Acuity 94245272
+    $1,250 All-American  -> Acuity 94245393
+    $129  Season Update  -> /recruiting/p/recruiting-profile-update
+    $150  Priority       -> /recruiting/p/priority-deployment
+    $50   Spike Update   -> /recruiting/p/mid-season-spike-update
+    $35   Academic       -> /recruiting/p/academic-upgrade
+    $125  Custom Domain  -> /recruiting/p/custom-domain
+  GTM-MPGDW4QD installed, per-tier click events fire to dataLayer.
   ============================================================================
 -->
 <head>
@@ -38,12 +29,10 @@
   })(window,document,'script','dataLayer','GTM-MPGDW4QD');</script>
   <!-- End Google Tag Manager -->
 
-  <!-- SEO -->
   <title>College Recruiting Profiles for Athletes | Russell Moore Photography</title>
   <meta name="description" content="Custom recruiting profile pages that get athletes found by college coaches — PRs, film, academics, and contact in one searchable page. Built by a credentialed Washington sports photographer. From $349." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://recruiting.russell-moore.com/" />
-
   <meta property="og:type" content="website" />
   <meta property="og:title" content="College Recruiting Profiles | Russell Moore Photography" />
   <meta property="og:description" content="A recruiting profile coaches can actually find. PRs, film, academics, and contact in one fast, search-optimized page. From $349." />
@@ -55,7 +44,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 
-  <!-- Service schema with the four offers (matches your technical/SEO approach) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -70,10 +58,14 @@
     },
     "url": "https://recruiting.russell-moore.com/",
     "offers": [
-      { "@type": "Offer", "name": "Profile", "price": "349.00", "priceCurrency": "USD", "url": "https://www.russell-moore.com/store/p/recruiting-profile" },
-      { "@type": "Offer", "name": "Profile + Shoot", "price": "700.00", "priceCurrency": "USD", "url": "https://bookrussell.as.me/?appointmentType=94245272" },
-      { "@type": "Offer", "name": "All-American", "price": "1250.00", "priceCurrency": "USD", "url": "https://bookrussell.as.me/?appointmentType=94245393" },
-      { "@type": "Offer", "name": "Season Update", "price": "129.00", "priceCurrency": "USD", "url": "https://www.russell-moore.com/store/p/recruiting-profile-update" }
+      { "@type": "Offer", "name": "Profile",           "price": "349.00",  "priceCurrency": "USD", "url": "https://www.russell-moore.com/recruiting/p/recruiting-profile" },
+      { "@type": "Offer", "name": "Profile + Shoot",   "price": "700.00",  "priceCurrency": "USD", "url": "https://bookrussell.as.me/?appointmentType=94245272" },
+      { "@type": "Offer", "name": "All-American",      "price": "1250.00", "priceCurrency": "USD", "url": "https://bookrussell.as.me/?appointmentType=94245393" },
+      { "@type": "Offer", "name": "Season Update",     "price": "129.00",  "priceCurrency": "USD", "url": "https://www.russell-moore.com/recruiting/p/recruiting-profile-update" },
+      { "@type": "Offer", "name": "Priority Deployment","price": "150.00", "priceCurrency": "USD", "url": "https://www.russell-moore.com/recruiting/p/priority-deployment" },
+      { "@type": "Offer", "name": "Mid-Season Spike",  "price": "50.00",   "priceCurrency": "USD", "url": "https://www.russell-moore.com/recruiting/p/mid-season-spike-update" },
+      { "@type": "Offer", "name": "Academic Upgrade",  "price": "35.00",   "priceCurrency": "USD", "url": "https://www.russell-moore.com/recruiting/p/academic-upgrade" },
+      { "@type": "Offer", "name": "Custom Domain",     "price": "125.00",  "priceCurrency": "USD", "url": "https://www.russell-moore.com/recruiting/p/custom-domain" }
     ]
   }
   </script>
@@ -82,28 +74,17 @@
     :root{
       --bg:#08090b; --bg-2:#0f1115; --card:#131519; --line:#23262d;
       --ink:#f3f3f0; --muted:#8b8f98;
-      --volt:#ccff00; --teal:#19e3c0; --violet:#9b7bff; --warn:#ff5a52;
+      --volt:#ccff00; --teal:#19e3c0; --violet:#9b7bff;
     }
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{
-      background:var(--bg);color:var(--ink);
-      font-family:'Inter',system-ui,sans-serif;line-height:1.6;
-      -webkit-font-smoothing:antialiased;overflow-x:hidden;
-    }
-    body::before{
-      content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
-      background:
-        radial-gradient(900px 500px at 85% -5%, rgba(204,255,0,.10), transparent 60%),
-        radial-gradient(700px 600px at -10% 30%, rgba(25,227,192,.07), transparent 55%);
-    }
-    body::after{
-      content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.035;
-      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    }
+    body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+      background:radial-gradient(900px 500px at 85% -5%,rgba(204,255,0,.10),transparent 60%),
+                 radial-gradient(700px 600px at -10% 30%,rgba(25,227,192,.07),transparent 55%)}
+    body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.035;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
     .wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px}
-    .mono{font-family:'Roboto Mono',monospace}
-    .disp{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.01em}
 
     /* NAV */
     nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);background:rgba(8,9,11,.72);border-bottom:1px solid var(--line)}
@@ -135,6 +116,7 @@
     .cta:hover{filter:brightness(1.08)}
     .cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
     .cta.ghost:hover{border-color:var(--ink);filter:none}
+    .cta.small{padding:11px 18px;font-size:.85rem}
 
     /* SECTIONS */
     section{padding:54px 0;border-top:1px solid var(--line);position:relative}
@@ -161,18 +143,25 @@
     .feat{list-style:none;margin:18px 0 24px;display:flex;flex-direction:column;gap:11px;flex:1}
     .feat li{position:relative;padding-left:24px;font-size:.92rem;color:#d7d9dd}
     .feat li::before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;border-radius:2px;background:var(--volt)}
-    .feat li.muted{color:var(--muted)}
-    .feat li.muted::before{background:var(--line)}
     .tier .cta{width:100%;justify-content:center}
     .tier.feature .cta{box-shadow:0 14px 30px -14px rgba(204,255,0,.7)}
 
-    /* SEASON UPDATE STRIP */
+    /* SEASON UPDATE */
     .update{margin-top:16px;background:var(--bg-2);border:1px solid var(--line);border-radius:14px;padding:22px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
     .update .ux .un{font-family:'Oswald';text-transform:uppercase;font-weight:600;font-size:1.2rem}
     .update .ux .ud{color:var(--muted);font-size:.9rem;margin-top:2px}
     .update .up{font-family:'Oswald';font-weight:700;font-size:1.6rem;white-space:nowrap}
     .update .up small{font-size:.85rem;color:var(--muted);font-family:'Inter';font-weight:400}
-    .update .cta.small{padding:11px 18px;font-size:.85rem}
+
+    /* ADD-ONS */
+    .addons{margin-top:12px;background:var(--bg-2);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+    .addons .ao-label{font-family:'Roboto Mono';font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:16px}
+    .addons .ao-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    @media(max-width:680px){.addons .ao-grid{grid-template-columns:1fr}}
+    .ao-item{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:13px 16px;text-decoration:none;transition:border-color .2s}
+    .ao-item:hover{border-color:var(--volt)}
+    .ao-item .ao-name{font-family:'Oswald';text-transform:uppercase;font-weight:500;font-size:.95rem;color:var(--ink)}
+    .ao-item .ao-price{font-family:'Roboto Mono';font-size:.82rem;color:var(--volt);white-space:nowrap}
 
     /* STEPS */
     .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:s}
@@ -224,9 +213,7 @@
   </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPGDW4QD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   <nav>
     <div class="wrap">
@@ -274,11 +261,8 @@
   <section id="tiers" class="reveal">
     <div class="wrap">
       <div class="sec-h"><span class="num">02</span><h2>Choose Your Tier</h2></div>
-
-      <!-- Tier features — finalized -->
       <div class="tiers">
 
-        <!-- PROFILE $349 -->
         <div class="tier">
           <div class="tname">Profile</div>
           <div class="ttag">The Page</div>
@@ -291,11 +275,10 @@
             <li>Coach &amp; athlete contact built in</li>
             <li>Live within 14 days</li>
           </ul>
-          <a class="cta" href="https://www.russell-moore.com/store/p/recruiting-profile"
+          <a class="cta" href="https://www.russell-moore.com/recruiting/p/recruiting-profile"
              data-tier="profile" data-value="349">Start Your Profile</a>
         </div>
 
-        <!-- PROFILE + SHOOT $700 (recommended) -->
         <div class="tier feature">
           <span class="ribbon">Recommended</span>
           <div class="tname">Profile + Shoot</div>
@@ -305,14 +288,13 @@
           <ul class="feat">
             <li>Everything in Profile</li>
             <li>90-minute recruiting shoot</li>
-            <li>Shot for impact — a target of 6 action + 2&ndash;3 portraits</li>
-            <li>Imagery built for coaches, social &amp; the page</li>
+            <li>6 action + 2&ndash;3 portraits, built for coaches</li>
+            <li>Imagery for social &amp; the page</li>
           </ul>
           <a class="cta" href="https://bookrussell.as.me/?appointmentType=94245272"
              data-tier="profile_shoot" data-value="700">Book Profile + Shoot</a>
         </div>
 
-        <!-- ALL-AMERICAN $1,250 -->
         <div class="tier">
           <div class="tname">All-American</div>
           <div class="ttag">The Works</div>
@@ -321,9 +303,9 @@
           <ul class="feat">
             <li>Everything in Profile + Shoot</li>
             <li>Extended 120-minute shoot</li>
-            <li>Short hype clip — ESPN-intro style, athlete posing</li>
+            <li>Short hype clip — ESPN-intro style</li>
             <li>Priority delivery</li>
-            <li>2 free Season Updates during the season</li>
+            <li>2 free Season Updates included</li>
           </ul>
           <a class="cta" href="https://bookrussell.as.me/?appointmentType=94245393"
              data-tier="all_american" data-value="1250">Book All-American</a>
@@ -337,8 +319,35 @@
           <div class="ud">Refresh PRs, film &amp; schedule every new season. Renewed annually.</div>
         </div>
         <div class="up">$129<small> / yr</small></div>
-        <a class="cta small" href="https://www.russell-moore.com/store/p/recruiting-profile-update"
+        <a class="cta small" href="https://www.russell-moore.com/recruiting/p/recruiting-profile-update"
            data-tier="season_update" data-value="129">Add Season Update</a>
+      </div>
+
+      <!-- ADD-ONS -->
+      <div class="addons">
+        <div class="ao-label">Add-Ons — available separately or at checkout</div>
+        <div class="ao-grid">
+          <a class="ao-item" href="https://www.russell-moore.com/recruiting/p/priority-deployment"
+             data-tier="priority_deployment" data-value="150">
+            <span class="ao-name">Priority Deployment</span>
+            <span class="ao-price">$150</span>
+          </a>
+          <a class="ao-item" href="https://www.russell-moore.com/recruiting/p/mid-season-spike-update"
+             data-tier="mid_season_spike" data-value="50">
+            <span class="ao-name">Mid-Season Spike Update</span>
+            <span class="ao-price">$50</span>
+          </a>
+          <a class="ao-item" href="https://www.russell-moore.com/recruiting/p/academic-upgrade"
+             data-tier="academic_upgrade" data-value="35">
+            <span class="ao-name">Academic Upgrade</span>
+            <span class="ao-price">$35</span>
+          </a>
+          <a class="ao-item" href="https://www.russell-moore.com/recruiting/p/custom-domain"
+             data-tier="custom_domain" data-value="125">
+            <span class="ao-name">Custom Domain</span>
+            <span class="ao-price">$125 / yr</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -379,7 +388,8 @@
           <div class="st">Walk through a live page</div>
           <div class="sd">PRs, film, academics, schedule, and coach contact — exactly what a college coach sees when they open your athlete's link. (Sample athlete, sample data.)</div>
         </div>
-        <a class="cta" href="https://recruiting.russell-moore.com/maya-brennan" data-tier="view_sample" data-value="0">View a Sample Profile →</a>
+        <a class="cta" href="https://recruiting.russell-moore.com/maya-brennan"
+           data-tier="view_sample" data-value="0">View a Sample Profile →</a>
       </div>
     </div>
   </section>
@@ -395,7 +405,7 @@
         </details>
         <details>
           <summary>How fast does it go live?</summary>
-          <p>Profile pages are live within 14 days. Shoot-tier pages are built after your session, and All-American includes priority delivery.</p>
+          <p>Profile pages are live within 14 days. Shoot-tier pages are built after your session. All-American includes priority delivery. Need it faster? Add Priority Deployment at checkout.</p>
         </details>
         <details>
           <summary>Will coaches actually find it?</summary>
@@ -407,7 +417,7 @@
         </details>
         <details>
           <summary>Can we update it later?</summary>
-          <p>Yes. The $129/yr Season Update refreshes marks, film, and schedule each season so the page never goes stale during recruiting.</p>
+          <p>Yes. The $129/yr Season Update refreshes marks, film, and schedule each season so the page never goes stale during recruiting. Drop a new PR mid-season? The $50 Spike Update gets it live within 48 hours.</p>
         </details>
       </div>
     </div>
@@ -437,11 +447,9 @@
   </footer>
 
   <script>
-    // scroll reveal
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
     document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 
-    // per-tier conversion tracking -> GTM/GA4
     document.querySelectorAll('[data-tier]').forEach(function(btn){
       btn.addEventListener('click',function(){
         window.dataLayer=window.dataLayer||[];

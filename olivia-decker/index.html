@@ -1,1 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivia Decker - Class of 2029 Athletic Recruiting Profile</title>
+    <style>
+        :root {
+            --primary: #0b3c26; /* Shorewood Storm Green */
+            --accent: #f2c230;  /* Gold */
+            --dark: #111827;
+            --light: #f9fafb;
+            --muted: #6b7280;
+            --border: #e5e7eb;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            color: var(--dark);
+            background-color: var(--light);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 3rem 1.5rem;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .header-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .header-grid {
+                grid-template-columns: 2fr 1fr;
+                align-items: center;
+            }
+        }
+
+        .profile-title h1 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-title .badge {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--primary);
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .profile-title p {
+            font-size: 1.15rem;
+            color: #e5e7eb;
+            max-width: 600px;
+        }
+
+        .quick-contact {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 6px;
+        }
+
+        .quick-contact h3 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+
+        .quick-contact ul {
+            list-style: none;
+        }
+
+        .quick-contact li {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            color: #f3f4f6;
+        }
+
+        .quick-contact a {
+            color: white;
+            text-decoration: underline;
+            text-decoration-color: var(--accent);
+        }
+
+        main {
+            padding: 3rem 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 992px) {
+            main {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: var(--primary);
+            margin-bottom: 1.25rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            background: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background-color: #f3f4f6;
+            color: var(--dark);
+            font-weight: 600;
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        td {
+            padding: 0.85rem 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        .mark-highlight {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .sidebar-box {
+            background-color: white;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-box h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .rank-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+
+        .rank-item {
+            background: var(--light);
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .rank-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--muted);
+            display: block;
+        }
+
+        .rank-value {
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .coach-card {
+            border-bottom: 1px dashed var(--border);
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .coach-card:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .coach-name {
+            font-weight: 600;
+            display: block;
+        }
+
+        .coach-team {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-bottom: 0.25rem;
+        }
+
+        .placeholder-gallery {
+            background: #f3f4f6;
+            border: 2px dashed #d1d5db;
+            border-radius: 6px;
+            padding: 4rem 2rem;
+            text-align: center;
+            color: var(--muted);
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-grid">
+            <div class="profile-title">
+                <span class="badge">Class of 2029</span>
+                <h1>Olivia Decker</h1>
+                <p>Standout distance competitor for Shorewood High School and Bryant Bandits. National-level indoor qualifier and state finalist tracking toward NCAA Division 1 competition.</p>
+            </div>
+            <div class="quick-contact">
+                <h3>Recruitment Hub</h3>
+                <ul>
+                    <li><strong>Target:</strong> NCAA Division I</li>
+                    <li><strong>Email:</strong> <a href="mailto:Oliviaquinnart@gmail.com">Oliviaquinnart@gmail.com</a></li>
+                    <li><strong>Instagram:</strong> <a href="https://instagram.com/decker_swift_runner" target="_blank">@decker_swift_runner</a></li>
+                    <li><strong>Athletic.net:</strong> <a href="https://www.athletic.net/athlete/25376852/track-and-field/all" target="_blank">Profile #25376852</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <div class="content-area">
+                
+                <section id="media">
+                    <h2 class="section-title">Media & Action Galleries</h2>
+                    <div class="placeholder-gallery">
+                        <strong>Raw Assets Unloaded</strong><br>
+                        Lightroom Classic injection package pending overnight baseline syncing.
+                    </div>
+                </section>
+
+                <section id="track-bests">
+                    <h2 class="section-title">Personal Bests: Track & Field</h2>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Discipline</th>
+                                    <th>Mark</th>
+                                    <th>Year</th>
+                                    <th>Meet Location / Event</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>3,200 Meters</td>
+                                    <td class="mark-highlight">11:12.40</td>
+                                    <td>2026</td>
+                                    <td>WIAA State Championships (3A)</td>
+                                </tr>
+                                <tr>
+                                    <td>1,600 Meters</td>
+                                    <td class="mark-highlight">5:13.92</td>
+                                    <td>2026</td>
+                                    <td>Birger Solberg Invitational</td>
+                                </tr>
+                                <tr>
+                                    <td>3,000 Meters</td>
+                                    <td class="mark-highlight">10:53.40</td>
+                                    <td>2026</td>
+                                    <td>Oregon Relays</td>
+                                </tr>
+                                <tr>
+                                    <td>2 Miles</td>
+                                    <td class="mark-highlight">11:38.24</td>
+                                    <td>2026</td>
+                                    <td>Oregon Relays</td>
+                                </tr>
+                                <tr>
+                                    <td>1,500 Meters</td>
+                                    <td class="mark-highlight">5:01.76 (i)</td>
+                                    <td>2026</td>
+                                    <td>Nike Indoor Nationals</td>
+                                </tr>
+                                <tr>
+                                    <td>1 Mile</td>
+                                    <td class="mark-highlight">5:22.32 (i)</td>
+                                    <td>2026</td>
+                                    <td>Nike Indoor Nationals</td>
+                                </tr>
+                                <tr>
+                                    <td>800 Meters</td>
+                                    <td class="mark-highlight">2:27.57</td>
+                                    <td>2026</td>
+                                    <td>Shoreline Showdown</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="xc-bests">
+                    <h2 class="section-title">Personal Bests: Cross Country</h2>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Distance</th>
+                                    <th>Mark</th>
+                                    <th>Year</th>
+                                    <th>Meet Location / Event</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>5,000 Meters</td>
+                                    <td class="mark-highlight">19:31.7</td>
+                                    <td>2025</td>
+                                    <td>NXR Northwest Regional Championships</td>
+                                </tr>
+                                <tr>
+                                    <td>4,000 Meters</td>
+                                    <td class="mark-highlight">16:40.2</td>
+                                    <td>2025</td>
+                                    <td>WESCO-Shorewood Quad Meet @ Snohomish</td>
+                                </tr>
+                                <tr>
+                                    <td>3,000 Meters</td>
+                                    <td class="mark-highlight">11:47.0</td>
+                                    <td>2025</td>
+                                    <td>Shorewood 3k Time Trial</td>
+                                </tr>
+                                <tr>
+                                    <td>2 Miles</td>
+                                    <td class="mark-highlight">12:54.8</td>
+                                    <td>2025</td>
+                                    <td>GearUp Northwest XC Preview</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="relays">
+                    <h2 class="section-title">Relay Performance Record</h2>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Discipline</th>
+                                    <th>Best Split / Mark</th>
+                                    <th>Year</th>
+                                    <th>Team Split Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4x800 Relay</td>
+                                    <td class="mark-highlight">10:13.65</td>
+                                    <td>2026</td>
+                                    <td>Shorewood HS (Team Total)</td>
+                                </tr>
+                                <tr>
+                                    <td>800m Split</td>
+                                    <td class="mark-highlight">2:29.3h</td>
+                                    <td>2026</td>
+                                    <td>Shorewood HS (Oregon Relays)</td>
+                                </tr>
+                                <tr>
+                                    <td>4x400 Relay</td>
+                                    <td class="mark-highlight">4:25.71</td>
+                                    <td>2026</td>
+                                    <td>Shorewood HS (Team Total)</td>
+                                </tr>
+                                <tr>
+                                    <td>400m Split</td>
+                                    <td class="mark-highlight">1:07.2h</td>
+                                    <td>2026</td>
+                                    <td>WESCO League Split</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="milestones">
+                    <h2 class="section-title">Championship Milestones & National Appearances</h2>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Event</th>
+                                    <th>Discipline</th>
+                                    <th>Result / Placement</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2026</td>
+                                    <td>WIAA 3A State Track Championships</td>
+                                    <td>3200m</td>
+                                    <td><strong>10th Place</strong> (11:12.40)</td>
+                                </tr>
+                                <tr>
+                                    <td>2026</td>
+                                    <td>Nike Indoor Nationals</td>
+                                    <td>1 Mile</td>
+                                    <td>23rd Place (5:22.32)</td>
+                                </tr>
+                                <tr>
+                                    <td>2026</td>
+                                    <td>Nike Indoor Nationals</td>
+                                    <td>1500m</td>
+                                    <td>25th Place (5:01.76)</td>
+                                </tr>
+                                <tr>
+                                    <td>2026</td>
+                                    <td>3A District 1 - NW Championships</td>
+                                    <td>3200m</td>
+                                    <td><strong>2nd Place</strong> (11:13.25)</td>
+                                </tr>
+                                <tr>
+                                    <td>2025</td>
+                                    <td>WIAA 3A State XC Championships</td>
+                                    <td>5000m</td>
+                                    <td>46th Place (19:59.1)</td>
+                                </tr>
+                                <tr>
+                                    <td>2025</td>
+                                    <td>District 1/2 XC Championships</td>
+                                    <td>5000m</td>
+                                    <td><strong>8th Place</strong> (19:48.9)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="sidebar">
+                
+                <div class="sidebar-box">
+                    <h3>3,200M Regional Ranks</h3>
+                    <div class="rank-grid">
+                        <div class="rank-item"><span class="rank-label">Team</span><span class="rank-value">#1</span></div>
+                        <div class="rank-item"><span class="rank-label">Wesco</span><span class="rank-value">#2</span></div>
+                        <div class="rank-item"><span class="rank-label">District 1</span><span class="rank-value">#3</span></div>
+                        <div class="rank-item"><span class="rank-label">3A Class</span><span class="rank-value">#16</span></div>
+                    </div>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>1,600M Regional Ranks</h3>
+                    <div class="rank-grid">
+                        <div class="rank-item"><span class="rank-label">Team</span><span class="rank-value">#1</span></div>
+                        <div class="rank-item"><span class="rank-label">Wesco</span><span class="rank-value">#5</span></div>
+                        <div class="rank-item"><span class="rank-label">District 1</span><span class="rank-value">#6</span></div>
+                        <div class="rank-item"><span class="rank-label">Washington</span><span class="rank-value">#100</span></div>
+                    </div>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>5,000M XC Ranks</h3>
+                    <div class="rank-grid">
+                        <div class="rank-item"><span class="rank-label">Team</span><span class="rank-value">#2</span></div>
+                        <div class="rank-item"><span class="rank-label">Wesco</span><span class="rank-value">#9</span></div>
+                        <div class="rank-item"><span class="rank-label">District 1</span><span class="rank-value">#9</span></div>
+                        <div class="rank-item"><span class="rank-label">3A Class</span><span class="rank-value">#60</span></div>
+                    </div>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Coaching & References</h3>
+                    
+                    <div class="coach-card">
+                        <span class="coach-name">Paul Villanueva / Joel Reese</span>
+                        <span class="coach-team">Shorewood High School</span>
+                        <span class="coach-team">Phone: +1 206.393.4372</span>
+                    </div>
+
+                    <div class="coach-card">
+                        <span class="coach-name">Matt Koenigs</span>
+                        <span class="coach-team">Bryant Bandits Club</span>
+                        <span class="coach-team">Email: bryantbandits@gmail.com</span>
+                        <span class="coach-team">Phone: +1 360.812.1459</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Program Affiliations</h3>
+                    <table style="font-size: 0.85rem;">
+                        <thead>
+                            <tr>
+                                <th>Level</th>
+                                <th>Program</th>
+                                <th>Years</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>High School</td>
+                                <td>Shorewood HS</td>
+                                <td>2025–Pres.</td>
+                            </tr>
+                            <tr>
+                                <td>Club</td>
+                                <td>Bryant Bandits</td>
+                                <td>2025–2026</td>
+                            </tr>
+                            <tr>
+                                <td>Middle School</td>
+                                <td>Einstein MS</td>
+                                <td>2024–2025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

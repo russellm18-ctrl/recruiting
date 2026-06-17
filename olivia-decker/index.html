@@ -67,11 +67,11 @@
     --black:#050505;
     --black-2:#0a0a0a;
     --white:#f5f5f3;
-    --volt:#0B3C26; 
-    --accent:#0033A0; 
+    --volt:#34D399; 
+    --accent:#60A5FA; 
     --gold:#FFD700; 
     --line:#1c1c1c;
-    --muted:#7a7a7a;
+    --muted:#9a9a9a;
   }
 
   *{margin:0;padding:0;box-sizing:border-box;}
@@ -138,8 +138,9 @@
   /* ---------------- fixed HUD chrome ---------------- */
   .chrome{
     position:fixed;z-index:500;font-family:'Roboto Mono';font-size:.66rem;
-    letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
-    mix-blend-mode:difference;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--white);
+    background:rgba(5,5,5,.8);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+    border:1px solid rgba(245,245,243,.12);border-radius:3px;padding:7px 12px;
   }
   .chrome-tl{top:22px;left:22px;display:flex;align-items:center;gap:8px;}
   .chrome-tl b{color:var(--volt);}
@@ -155,24 +156,27 @@
   #webgl-canvas{position:absolute;inset:0;width:100%;height:100%;}
   .hero-overlay{
     position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;
-    padding:0 5vw;mix-blend-mode:difference;pointer-events:none;
+    padding:0 5vw;pointer-events:none;
     z-index: 10;
   }
-  .hero-eyebrow{font-family:'Roboto Mono';color:var(--white);font-size:.7rem;letter-spacing:.34em;margin-bottom:20px;}
+  .hero-eyebrow{font-family:'Roboto Mono';color:var(--white);font-size:.7rem;letter-spacing:.34em;margin-bottom:20px;text-shadow:0 2px 18px rgba(0,0,0,.85),0 1px 2px rgba(0,0,0,.9);}
   .kinetic-wrap{display:flex;flex-direction:column;line-height:.84;}
   .kinetic{
     font-family:'Oswald';font-weight:700;text-transform:uppercase;letter-spacing:-.01em;
     font-size:clamp(3.2rem,13.5vw,9.5rem);color:var(--white);
     will-change:transform;transform-origin:center left;
+    text-shadow:0 4px 28px rgba(0,0,0,.8),0 2px 6px rgba(0,0,0,.9);
   }
   .hero-meta{
     margin-top:28px;display:flex;flex-wrap:wrap;gap:10px;
     font-family:'Roboto Mono';font-size:.78rem;letter-spacing:.06em;color:var(--white);
+    text-shadow:0 2px 14px rgba(0,0,0,.85),0 1px 2px rgba(0,0,0,.9);
   }
   .hero-meta .sep{color:var(--gold);}
   .scroll-cue{
-    position:absolute;bottom:26px;left:50%;transform:translateX(-50%);
-    font-family:'Roboto Mono';font-size:.64rem;letter-spacing:.34em;color:var(--muted);
+    position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:10;
+    font-family:'Roboto Mono';font-size:.64rem;letter-spacing:.34em;color:var(--white);
+    text-shadow:0 2px 10px rgba(0,0,0,.9),0 1px 2px rgba(0,0,0,.95);
     animation:bob 2.4s ease-in-out infinite;pointer-events:none;
   }
   @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,7px)}}
@@ -183,14 +187,14 @@
   .sec-h{font-family:'Oswald';text-transform:uppercase;font-weight:600;font-size:clamp(1.8rem,4.4vw,3rem);letter-spacing:-.01em; margin-bottom: 50px;}
 
   /* ---------------- quick stats grid ---------------- */
-  .profile-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 60px 40px 0; position:relative; z-index: 20;}
+  .profile-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 0 40px 0; position:relative; z-index: 20;}
   .profile-card { background: var(--black-2); padding: 24px 28px; }
   .profile-k { font-family: 'Roboto Mono'; font-size: 0.64rem; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 8px; text-transform: uppercase; }
   .profile-v { font-family: 'Inter'; font-weight: 500; font-size: 1.1rem; color: var(--white); }
 
   /* ---------------- top telemetry ---------------- */
   #data{
-    padding-top: 80px;
+    padding-top: 110px;
     background: repeating-linear-gradient(0deg, rgba(255,255,255,.014) 0px, rgba(255,255,255,.014) 1px, transparent 1px, transparent 3px), var(--black);
   }
   .hud-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
@@ -210,6 +214,16 @@
   .data-table tr:last-child td { border-bottom: none; }
   .data-table tr:hover td { background: rgba(255,255,255,0.02); }
   .data-table td:first-child { color: var(--gold); font-weight: 700; }
+  .data-table td:nth-child(2), .data-table th:nth-child(2) { font-variant-numeric: tabular-nums; text-align: right; }
+  .data-table .group-row th { background:#111; color:var(--white); font-size:.7rem; letter-spacing:.18em; font-weight:600; border-top:1px solid var(--line); }
+  .data-table .group-row:first-of-type th { border-top:none; }
+  .rec-tag{
+    display:inline-block; margin-left:10px; font-family:'Roboto Mono'; font-size:.6rem;
+    letter-spacing:.1em; text-transform:uppercase; padding:3px 8px; border:1px solid currentColor;
+    vertical-align:middle; font-weight:400;
+  }
+  .rec-tag--championship{ color:var(--gold); }
+  .rec-tag--showcase{ color:var(--accent); }
 
   /* ---------------- media pipeline ---------------- */
   #media{background:var(--black); padding: 0;}
@@ -226,8 +240,8 @@
   }
   .media-plate .corner-tag{
     position:absolute;top:14px;left:14px;font-family:'Roboto Mono';font-size:.6rem;
-    letter-spacing:.16em;color:rgba(245,245,243,.8);
-    background: rgba(5,5,5,0.6); padding: 4px 8px; backdrop-filter: blur(4px);
+    letter-spacing:.16em;color:var(--white);
+    background: rgba(5,5,5,0.85); padding: 4px 8px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
   }
   .media-info{margin-top:16px;display:flex;flex-direction:column;gap:6px;}
   .media-type{font-family:'Roboto Mono';font-size:.64rem;letter-spacing:.22em;color:var(--volt);}
@@ -242,7 +256,7 @@
   .acad-k { font-family: 'Roboto Mono'; font-size: 0.7rem; color: var(--muted); margin-bottom: 8px; letter-spacing: 0.1em; text-transform: uppercase; }
   .acad-v { font-family: 'Inter'; font-size: 1.25rem; font-weight: 500; color: var(--white);}
   
-  .schedule-container { max-height: 520px; overflow-y: auto; padding-right: 14px; border-right: 1px solid var(--line); }
+  .schedule-container { padding-right: 14px; border-right: 1px solid var(--line); }
   .schedule-item { padding-left: 24px; border-left: 1px solid var(--line); position: relative; margin-bottom: 32px; }
   .schedule-item:last-child { border-left-color: transparent; margin-bottom: 0; }
   .schedule-item::before { content: ''; position: absolute; top: 0; left: -4px; width: 7px; height: 7px; background: var(--gold); border-radius: 50%; }
@@ -283,6 +297,45 @@
   @media (prefers-reduced-motion: reduce){
     .scroll-cue, .chrome-dot{animation:none;}
   }
+
+  /* ---------------- vitals label ---------------- */
+  .vitals-eyebrow{
+    font-family:'Roboto Mono';color:var(--volt);font-size:.7rem;letter-spacing:.32em;
+    text-transform:uppercase;margin:70px 40px 14px;
+  }
+
+  /* ---------------- section subtext ---------------- */
+  .sec-sub{
+    font-family:'Inter';font-size:.95rem;color:var(--muted);max-width:560px;
+    margin:-32px 0 40px;line-height:1.5;
+  }
+
+  /* ---------------- supplementary records disclosure ---------------- */
+  .records-disclosure{margin-top:54px;padding-top:30px;border-top:1px dashed var(--line);}
+  .records-disclosure summary{
+    cursor:pointer;list-style:none;font-family:'Roboto Mono';font-size:.68rem;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);padding-left:2px;margin-bottom:18px;
+    display:flex;align-items:center;gap:8px;
+  }
+  .records-disclosure summary::-webkit-details-marker{display:none;}
+  .records-disclosure summary::before{content:'+';color:var(--volt);font-size:.95rem;line-height:1;}
+  .records-disclosure[open] summary::before{content:'\2212';}
+  .records-disclosure .data-table td:first-child{color:var(--muted);font-weight:500;}
+  .records-note{
+    margin-top:14px;font-family:'Roboto Mono';font-size:.68rem;color:var(--muted);letter-spacing:.04em;
+  }
+
+  /* ---------------- schedule tiers ---------------- */
+  .sch-tag{
+    display:inline-block;margin-left:10px;font-family:'Roboto Mono';font-size:.58rem;
+    letter-spacing:.12em;text-transform:uppercase;vertical-align:middle;
+    padding:3px 8px;border:1px solid currentColor;
+  }
+  .schedule-item.tier-showcase .sch-tag{color:var(--accent);border-color:rgba(96,165,250,.4);}
+  .schedule-item.tier-postseason .sch-tag{color:var(--gold);border-color:rgba(255,215,0,.4);}
+  .schedule-item.tier-postseason::before{
+    background:var(--gold);width:9px;height:9px;left:-5.5px;box-shadow:0 0 0 3px rgba(255,215,0,.15);
+  }
 </style>
 </head>
 <body>
@@ -321,6 +374,8 @@
       <span class="kinetic">DECKER</span>
     </h1>
     <div class="hero-meta">
+      <span>CLASS OF 2029</span>
+      <span class="sep">·</span>
       <span>DISTANCE / XC / T&F RELAYS</span>
       <span class="sep">·</span>
       <span>SHOREWOOD HS, WA</span>
@@ -331,28 +386,10 @@
   <div class="scroll-cue">[ SCROLL ]</div>
 </section>
 
-<div class="profile-grid">
-  <div class="profile-card">
-    <div class="profile-k">Grad Year</div>
-    <div class="profile-v">2029</div>
-  </div>
-  <div class="profile-card">
-    <div class="profile-k">GPA</div>
-    <div class="profile-v">4.0</div>
-  </div>
-  <div class="profile-card">
-    <div class="profile-k">NCAA ID</div>
-    <div class="profile-v">TBD</div>
-  </div>
-  <div class="profile-card">
-    <div class="profile-k">Intended Major</div>
-    <div class="profile-v">Pre-Med</div>
-  </div>
-</div>
-
 <section id="data" class="sec">
   <div class="sec-eyebrow">[ 01 · TELEMETRY ]</div>
   <h2 class="sec-h">TOP PERFORMANCES</h2>
+  <p class="sec-sub">The three marks that define recruiting range — mile speed, two-mile strength, 5K endurance.</p>
   <div class="hud-grid">
     <div class="hud-card" data-final="672.4" data-label="11:12.40">
       <div class="hud-k">3200 M</div>
@@ -372,48 +409,59 @@
   </div>
 </section>
 
+<div class="vitals-eyebrow">[ VITALS ]</div>
+<div class="profile-grid">
+  <div class="profile-card">
+    <div class="profile-k">Grad Year</div>
+    <div class="profile-v">2029</div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-k">NCAA Eligibility</div>
+    <div class="profile-v">Eligible</div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-k">GPA</div>
+    <div class="profile-v">4.0</div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-k">Intended Major</div>
+    <div class="profile-v">Pre-Med</div>
+  </div>
+</div>
+
 <section id="records" class="sec">
   <div class="sec-eyebrow">[ 02 · DATABASE ]</div>
-  <h2 class="sec-h">FULL PERSONAL RECORDS</h2>
+  <h2 class="sec-h">FULL PERFORMANCE RECORDS</h2>
+  <p class="sec-sub">Open marks only, one table, tagged where the mark came at a state, regional, or national-showcase meet. Relay legs and hand-timed splits are filed below for context.</p>
+
   <div class="table-wrap">
     <table class="data-table">
       <thead>
         <tr>
-          <th>Event</th>
-          <th>Mark</th>
-          <th>Meet</th>
-          <th>Date</th>
+          <th scope="col">Event</th>
+          <th scope="col">Mark</th>
+          <th scope="col">Meet</th>
+          <th scope="col">Date</th>
         </tr>
       </thead>
       <tbody>
+        <tr class="group-row"><th colspan="4" scope="rowgroup">Outdoor Track</th></tr>
         <tr>
-          <td>3,000 Meters (Track)</td>
+          <td>3,200 Meters</td>
+          <td>11:12.40</td>
+          <td>WIAA State Championships (3A) <span class="rec-tag rec-tag--championship">State</span></td>
+          <td>2026</td>
+        </tr>
+        <tr>
+          <td>3,000 Meters</td>
           <td>10:53.40</td>
           <td>Oregon Relays</td>
           <td>2026</td>
         </tr>
         <tr>
-          <td>3,200 Meters</td>
-          <td>11:12.40</td>
-          <td>WIAA State Championships (3A)</td>
-          <td>2026</td>
-        </tr>
-        <tr>
-          <td>2 Miles (Track)</td>
+          <td>2 Miles</td>
           <td>11:38.24</td>
           <td>Oregon Relays</td>
-          <td>2026</td>
-        </tr>
-        <tr>
-          <td>1,500 Meters</td>
-          <td>5:01.76 (i)</td>
-          <td>Nike Indoor Nationals</td>
-          <td>2026</td>
-        </tr>
-        <tr>
-          <td>1 Mile</td>
-          <td>5:22.32 (i)</td>
-          <td>Nike Indoor Nationals</td>
           <td>2026</td>
         </tr>
         <tr>
@@ -428,44 +476,36 @@
           <td>Shoreline Showdown</td>
           <td>2026</td>
         </tr>
+
+        <tr class="group-row"><th colspan="4" scope="rowgroup">Indoor Track</th></tr>
         <tr>
-          <td>4x800 Relay (Team)</td>
-          <td>10:13.65</td>
-          <td>Shorewood HS</td>
+          <td>1 Mile</td>
+          <td>5:22.32 (i)</td>
+          <td>Nike Indoor Nationals <span class="rec-tag rec-tag--showcase">National</span></td>
           <td>2026</td>
         </tr>
         <tr>
-          <td>800m Split</td>
-          <td>2:29.3h</td>
-          <td>Oregon Relays (Shorewood HS)</td>
+          <td>1,500 Meters</td>
+          <td>5:01.76 (i)</td>
+          <td>Nike Indoor Nationals <span class="rec-tag rec-tag--showcase">National</span></td>
           <td>2026</td>
         </tr>
+
+        <tr class="group-row"><th colspan="4" scope="rowgroup">Cross Country</th></tr>
         <tr>
-          <td>4x400 Relay (Team)</td>
-          <td>4:25.71</td>
-          <td>Shorewood HS</td>
-          <td>2026</td>
-        </tr>
-        <tr>
-          <td>400m Split</td>
-          <td>1:07.2h</td>
-          <td>WESCO League Split</td>
-          <td>2026</td>
-        </tr>
-        <tr>
-          <td>5,000 Meters (XC)</td>
+          <td>5,000 Meters</td>
           <td>19:31.7</td>
-          <td>NXR Northwest Regional</td>
+          <td>NXR Northwest Regional <span class="rec-tag rec-tag--championship">Regional</span></td>
           <td>2025</td>
         </tr>
         <tr>
-          <td>4,000 Meters (XC)</td>
+          <td>4,000 Meters</td>
           <td>16:40.2</td>
           <td>WESCO-Shorewood Quad @ Snohomish</td>
           <td>2025</td>
         </tr>
         <tr>
-          <td>2 Miles (XC)</td>
+          <td>2 Miles</td>
           <td>12:54.8</td>
           <td>GearUp Northwest Preview</td>
           <td>2025</td>
@@ -473,6 +513,49 @@
       </tbody>
     </table>
   </div>
+
+  <details class="records-disclosure">
+    <summary>Relay Legs &amp; Hand-Timed Splits — supplementary context</summary>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th scope="col">Event</th>
+            <th scope="col">Mark</th>
+            <th scope="col">Meet</th>
+            <th scope="col">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>4x800 Relay (Team)</td>
+            <td>10:13.65</td>
+            <td>Shorewood HS</td>
+            <td>2026</td>
+          </tr>
+          <tr>
+            <td>800m Split</td>
+            <td>2:29.3h</td>
+            <td>Oregon Relays (Shorewood HS)</td>
+            <td>2026</td>
+          </tr>
+          <tr>
+            <td>4x400 Relay (Team)</td>
+            <td>4:25.71</td>
+            <td>Shorewood HS</td>
+            <td>2026</td>
+          </tr>
+          <tr>
+            <td>400m Split</td>
+            <td>1:07.2h</td>
+            <td>WESCO League Split</td>
+            <td>2026</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="records-note">(h) denotes a hand-timed split — accurate for internal pacing context, but not directly comparable to the fully automatic (FAT) open marks above.</div>
+  </details>
 </section>
 
 <section id="media" class="sec">
@@ -489,16 +572,16 @@
         <div class="media-info"><span class="media-type">GALLERY</span><span class="media-title">WIAA State 1600m — Frame 8</span></div>
       </article>
       <article class="media-card">
-        <div class="media-plate" data-kind="image" style="background-image: url('https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/0f4cc6c2-0b72-4cea-81ff-933e443816da/Olivia-decker-shorewood-wiaa-state-1600m_-10.webp');">
+        <div class="media-plate" data-kind="image" style="background-image: url('https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4da2aabd-35e7-4b66-95ed-5bd0254b7454/Olivia-decker-shorewood-wiaa-state-1600m_-9.webp');">
           <span class="corner-tag">IMAGE · 02</span>
         </div>
-        <div class="media-info"><span class="media-type">GALLERY</span><span class="media-title">WIAA State 1600m — Frame 10</span></div>
+        <div class="media-info"><span class="media-type">GALLERY</span><span class="media-title">WIAA State 1600m — Frame 9</span></div>
       </article>
       <article class="media-card">
-        <div class="media-plate" data-kind="image" style="background-image: url('https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4da2aabd-35e7-4b66-95ed-5bd0254b7454/Olivia-decker-shorewood-wiaa-state-1600m_-9.webp');">
+        <div class="media-plate" data-kind="image" style="background-image: url('https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/0f4cc6c2-0b72-4cea-81ff-933e443816da/Olivia-decker-shorewood-wiaa-state-1600m_-10.webp');">
           <span class="corner-tag">IMAGE · 03</span>
         </div>
-        <div class="media-info"><span class="media-type">GALLERY</span><span class="media-title">WIAA State 1600m — Frame 9</span></div>
+        <div class="media-info"><span class="media-type">GALLERY</span><span class="media-title">WIAA State 1600m — Frame 10</span></div>
       </article>
     </div>
   </div>
@@ -523,71 +606,46 @@
         <div class="acad-k">NCAA Eligibility</div>
         <div class="acad-v">Eligible</div>
       </div>
+      <div class="acad-item">
+        <div class="acad-k">NCAA ID</div>
+        <div class="acad-v">TBD</div>
+      </div>
     </div>
 
     <div class="split-col">
       <div class="sec-eyebrow">[ 05 · LOGISTICS ]</div>
       <h2 class="sec-h">2026 XC SCHEDULE</h2>
-      
+      <p class="sec-sub">Championship and national-showcase tier only — full WESCO dual/league calendar available on request.</p>
+
       <div class="schedule-container">
-        <div class="schedule-item">
-          <div class="sch-date">Wed, Sep 16, 2026</div>
-          <div class="sch-name">GearUp NW XC Preview</div>
-          <div class="sch-loc">Hosted by Sehome High School</div>
-        </div>
-        <div class="schedule-item">
-          <div class="sch-date">Fri, Sep 25, 2026</div>
-          <div class="sch-name">WESCO XC League Quad</div>
-          <div class="sch-loc">EW, GP, SW @ Mountlake Terrace</div>
-        </div>
-        <div class="schedule-item">
-          <div class="sch-date">Sep 25 – Sep 26, 2026</div>
-          <div class="sch-name">Travel Invitational</div>
-          <div class="sch-loc">The Course @ Spokane Valley</div>
-        </div>
-        <div class="schedule-item">
+        <div class="schedule-item tier-showcase">
           <div class="sch-date">Wed, Sep 30, 2026</div>
-          <div class="sch-name">Nike Bob Firman Invitational</div>
+          <div class="sch-name">Nike Bob Firman Invitational <span class="sch-tag">Showcase</span></div>
           <div class="sch-loc">Championship Field Elite Tier</div>
         </div>
-        <div class="schedule-item">
-          <div class="sch-date">Wed, Sep 30, 2026</div>
-          <div class="sch-name">Glacier Peak League Meet</div>
-          <div class="sch-loc">Valley View MS (Snohomish)</div>
-        </div>
-        <div class="schedule-item">
-          <div class="sch-date">Sat, Oct 10, 2026</div>
-          <div class="sch-name">WESCO League Tri Meet</div>
-          <div class="sch-loc">Shorewood, Mariner, Everett @ GP</div>
-        </div>
-        <div class="schedule-item">
+        <div class="schedule-item tier-showcase">
           <div class="sch-date">Wed, Oct 14, 2026</div>
-          <div class="sch-name">Hole In The Wall Invitational</div>
+          <div class="sch-name">Hole In The Wall Invitational <span class="sch-tag">Showcase</span></div>
           <div class="sch-loc">Nike Premier Regional Showcase</div>
         </div>
-        <div class="schedule-item">
-          <div class="sch-date">Sat, Oct 24, 2026</div>
-          <div class="sch-name">WESCO Hamlink Park League Meet</div>
-          <div class="sch-loc">Snohomish, Monroe, Shorecrest @ SW</div>
-        </div>
-        <div class="schedule-item">
+        <div class="schedule-item tier-postseason">
           <div class="sch-date">Sat, Oct 31, 2026</div>
-          <div class="sch-name">Wesco League Championships</div>
+          <div class="sch-name">Wesco League Championships <span class="sch-tag">Postseason</span></div>
           <div class="sch-loc">Varsity Postseason Seedings</div>
         </div>
-        <div class="schedule-item">
+        <div class="schedule-item tier-postseason">
           <div class="sch-date">Sat, Oct 31, 2026</div>
-          <div class="sch-name">District 1/2 XC Championships</div>
+          <div class="sch-name">District 1/2 XC Championships <span class="sch-tag">Postseason</span></div>
           <div class="sch-loc">WIAA State Championship Qualifier</div>
         </div>
-        <div class="schedule-item">
+        <div class="schedule-item tier-postseason">
           <div class="sch-date">Sat, Nov 7, 2026</div>
-          <div class="sch-name">NW District 1 Championships</div>
+          <div class="sch-name">NW District 1 Championships <span class="sch-tag">Postseason</span></div>
           <div class="sch-loc">Postseason Championship Tier</div>
         </div>
-        <div class="schedule-item">
+        <div class="schedule-item tier-postseason">
           <div class="sch-date">Nov 2026 (TBD)</div>
-          <div class="sch-name">WIAA State XC Championships</div>
+          <div class="sch-name">WIAA State XC Championships <span class="sch-tag">State Championship</span></div>
           <div class="sch-loc">Sun Willows Golf Course (Pasco)</div>
         </div>
       </div>

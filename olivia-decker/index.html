@@ -13,6 +13,12 @@
   "name": "Olivia Decker",
   "jobTitle": "High School Distance Runner",
   "description": "Elite high school distance runner and cross country athlete for Shorewood High School and Bryant Bandits. Class of 2029.",
+  "image": "https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/8928e12c-6a01-4560-b72f-2f974a910d8b/Olivia-decker-shorewood-wiaa-state-1600m_-7.webp",
+  "url": "https://recruiting.russell-moore.com/olivia-decker/",
+  "sameAs": [
+    "https://www.athletic.net/athlete/25376852/track-and-field/all",
+    "https://wa.milesplit.com/athletes/17049364-olivia-decker"
+  ],
   "alumniOf": {
     "@type": "HighSchool",
     "name": "Shorewood High School",
@@ -32,7 +38,15 @@
     }
   ],
   "knowsAbout": ["Cross Country Running", "Track and Field", "1600m", "3200m", "5000m XC", "NCAA Recruiting"],
-  "url": "https://recruiting.russell-moore.com/olivia-decker/"
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://recruiting.russell-moore.com/olivia-decker/"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "Russell Moore Photography",
+    "url": "https://www.russell-moore.com"
+  }
 }
 </script>
 
@@ -44,8 +58,9 @@
     --black:#050505;
     --black-2:#0a0a0a;
     --white:#f5f5f3;
-    --volt:#2ECC71; /* Shorewood Forest Green - brightened for legibility on dark UI */
-    --accent:#0033A0; /* Shorewood Royal Blue - Used for subtle structure & cursor */
+    --volt:#0B3C26; 
+    --accent:#0033A0; 
+    --gold:#FFD700; 
     --line:#1c1c1c;
     --muted:#7a7a7a;
   }
@@ -60,7 +75,7 @@
     line-height:1.5;
     -webkit-font-smoothing:antialiased;
   }
-  ::selection{background:var(--volt);color:#050505;}
+  ::selection{background:var(--gold);color:#050505;}
   a{color:inherit;text-decoration:none;}
   img,canvas{display:block;max-width:100%;}
 
@@ -96,7 +111,7 @@
   #preloader .bar{width:240px;height:2px;background:#161616;margin-top:4px;overflow:hidden;}
   #preloader .bar-fill{height:100%;width:0%;background:var(--volt);}
 
-  /* ---------------- custom cursor (Refined Volume) ---------------- */
+  /* ---------------- custom cursor ---------------- */
   @media (pointer: fine){
     #cursor-wrap{
       position:fixed;inset:0;z-index:9998;pointer-events:none;
@@ -105,8 +120,7 @@
     #cursor-wrap .blob{
       position:absolute;top:0;left:0;
       width:12px;height:12px;
-      margin:-6px 0 0 -6px;border-radius:50%;
-      background:var(--accent); /* Royal Blue cursor */
+      margin:-6px 0 0 -6px;border-radius:50%;background:var(--gold);
       transition: transform 0.1s ease-out;
     }
   }
@@ -120,7 +134,7 @@
   }
   .chrome-tl{top:22px;left:22px;display:flex;align-items:center;gap:8px;}
   .chrome-tl b{color:var(--volt);}
-  .chrome-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:blink 1.6s ease-in-out infinite;}
+  .chrome-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:blink 1.6s ease-in-out infinite;}
   @keyframes blink{0%,100%{opacity:1}50%{opacity:.15}}
   .chrome-tr{top:20px;right:22px;display:flex;align-items:center;gap:10px;}
 
@@ -146,7 +160,7 @@
     margin-top:28px;display:flex;flex-wrap:wrap;gap:10px;
     font-family:'Roboto Mono';font-size:.78rem;letter-spacing:.06em;color:var(--white);
   }
-  .hero-meta .sep{color:var(--accent);}
+  .hero-meta .sep{color:var(--gold);}
   .scroll-cue{
     position:absolute;bottom:26px;left:50%;transform:translateX(-50%);
     font-family:'Roboto Mono';font-size:.64rem;letter-spacing:.34em;color:var(--muted);
@@ -154,12 +168,12 @@
   }
   @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,7px)}}
 
-  /* ---------------- shared section chrome (Guttered) ---------------- */
+  /* ---------------- shared section chrome ---------------- */
   .sec{position:relative;border-top:1px solid var(--line); padding: 100px 40px;}
   .sec-eyebrow{font-family:'Roboto Mono';color:var(--volt);font-size:.7rem;letter-spacing:.32em;margin-bottom:16px; text-transform:uppercase;}
   .sec-h{font-family:'Oswald';text-transform:uppercase;font-weight:600;font-size:clamp(1.8rem,4.4vw,3rem);letter-spacing:-.01em; margin-bottom: 50px;}
 
-  /* ---------------- quick stats grid (Guttered) ---------------- */
+  /* ---------------- quick stats grid ---------------- */
   .profile-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 60px 40px 0; position:relative; z-index: 20;}
   .profile-card { background: var(--black-2); padding: 24px 28px; }
   .profile-k { font-family: 'Roboto Mono'; font-size: 0.64rem; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 8px; text-transform: uppercase; }
@@ -186,7 +200,7 @@
   .data-table td { padding: 18px 24px; border-bottom: 1px solid var(--line); color: var(--white); }
   .data-table tr:last-child td { border-bottom: none; }
   .data-table tr:hover td { background: rgba(255,255,255,0.02); }
-  .data-table td:first-child { color: var(--volt); font-weight: 700; }
+  .data-table td:first-child { color: var(--gold); font-weight: 700; }
 
   /* ---------------- media pipeline ---------------- */
   #media{background:var(--black); padding: 0;}
@@ -195,18 +209,16 @@
   .media-head .sec-h {margin-bottom: 0;}
   .media-track{display:flex;gap:28px;align-items:stretch;}
   .media-card{flex:0 0 auto;width:min(64vw,440px);display:flex;flex-direction:column;}
-  .media-plate{position:relative;width:100%;aspect-ratio:4/5;background:linear-gradient(160deg,#121212 0%,#020202 75%);border:1px solid var(--line);overflow:hidden;}
+  .media-plate{position:relative;width:100%;aspect-ratio:4/5;background-color:#121212;border:1px solid var(--line);overflow:hidden; background-size:cover; background-position:center;}
   .media-plate::before{
     content:'';position:absolute;inset:0;
     background-image:repeating-linear-gradient(118deg, rgba(238,255,0,.05) 0 2px, transparent 2px 16px);
-  }
-  .media-plate[data-kind="film"] .play-icon{
-    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-    font-size:2.1rem;color:rgba(245,245,243,.55);
+    pointer-events: none;
   }
   .media-plate .corner-tag{
     position:absolute;top:14px;left:14px;font-family:'Roboto Mono';font-size:.6rem;
-    letter-spacing:.16em;color:rgba(245,245,243,.4);
+    letter-spacing:.16em;color:rgba(245,245,243,.8);
+    background: rgba(5,5,5,0.6); padding: 4px 8px; backdrop-filter: blur(4px);
   }
   .media-info{margin-top:16px;display:flex;flex-direction:column;gap:6px;}
   .media-type{font-family:'Roboto Mono';font-size:.64rem;letter-spacing:.22em;color:var(--volt);}
@@ -216,19 +228,18 @@
   .split-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 6vw; }
   .split-col { display: flex; flex-direction: column; }
   
-  /* Academics */
   .acad-item { margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
   .acad-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .acad-k { font-family: 'Roboto Mono'; font-size: 0.7rem; color: var(--muted); margin-bottom: 8px; letter-spacing: 0.1em; text-transform: uppercase; }
   .acad-v { font-family: 'Inter'; font-size: 1.25rem; font-weight: 500; color: var(--white);}
   
-  /* Schedule Timeline */
-  .schedule-item { padding-left: 24px; border-left: 1px solid var(--line); position: relative; margin-bottom: 36px; }
+  .schedule-container { max-height: 520px; overflow-y: auto; padding-right: 14px; border-right: 1px solid var(--line); }
+  .schedule-item { padding-left: 24px; border-left: 1px solid var(--line); position: relative; margin-bottom: 32px; }
   .schedule-item:last-child { border-left-color: transparent; margin-bottom: 0; }
-  .schedule-item::before { content: ''; position: absolute; top: 0; left: -4px; width: 7px; height: 7px; background: var(--volt); border-radius: 50%; }
-  .sch-date { font-family: 'Roboto Mono'; font-size: 0.7rem; color: var(--volt); margin-bottom: 10px; letter-spacing: 0.1em; text-transform: uppercase;}
-  .sch-name { font-family: 'Oswald'; font-size: 1.4rem; font-weight: 500; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.02em;}
-  .sch-loc { font-family: 'Inter'; font-size: 0.9rem; color: var(--muted); }
+  .schedule-item::before { content: ''; position: absolute; top: 0; left: -4px; width: 7px; height: 7px; background: var(--gold); border-radius: 50%; }
+  .sch-date { font-family: 'Roboto Mono'; font-size: 0.7rem; color: var(--gold); margin-bottom: 6px; letter-spacing: 0.1em; text-transform: uppercase;}
+  .sch-name { font-family: 'Oswald'; font-size: 1.25rem; font-weight: 500; text-transform: uppercase; margin-bottom: 4px; letter-spacing: 0.02em;}
+  .sch-loc { font-family: 'Inter'; font-size: 0.85rem; color: var(--muted); }
 
   /* ---------------- contact grid ---------------- */
   .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
@@ -459,30 +470,26 @@
   <div class="media-pin">
     <div class="media-head">
       <div class="sec-eyebrow">[ 03 · ARCHIVE ]</div>
-      <h2 class="sec-h">RACE FILM &amp; GALLERY</h2>
+      <h2 class="sec-h">RACE GALLERY</h2>
     </div>
     <div class="media-track" id="media-track">
       <article class="media-card">
-        <div class="media-plate" data-kind="film">
-          <span class="corner-tag">REEL · 01</span>
-          <span class="play-icon">▶</span>
+        <div class="media-plate" data-kind="image" style="background-image: url('https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/82d78c93-5070-438a-9acd-eab623da6340/Olivia-decker-shorewood-wiaa-state-1600m_-8.webp');">
+          <span class="corner-tag">IMAGE · 01</span>
         </div>
-        <div class="media-info"><span class="media-type">FILM REEL</span><span class="media-title">3200M PB — WIAA 3A State</span></div>
+        <div class="media-info"><span class="media-type">GALLERY</span><span class="media-title">WIAA State 1600m — Frame 8</span></div>
       </article>
       <article class="media-card">
-        <div class="media-plate" data-kind="gallery"><span class="corner-tag">GALLERY · 02</span></div>
-        <div class="media-info"><span class="media-type">GALLERY</span><span class="media-title">NXR Northwest 5K — Course Top 10</span></div>
-      </article>
-      <article class="media-card">
-        <div class="media-plate" data-kind="image"><span class="corner-tag">IMAGE · 03</span></div>
-        <div class="media-info"><span class="media-type">IMAGE</span><span class="media-title">Oregon Relays — 3000m Pack</span></div>
-      </article>
-      <article class="media-card">
-        <div class="media-plate" data-kind="film">
-          <span class="corner-tag">REEL · 04</span>
-          <span class="play-icon">▶</span>
+        <div class="media-plate" data-kind="image" style="background-image: url('https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/0f4cc6c2-0b72-4cea-81ff-933e443816da/Olivia-decker-shorewood-wiaa-state-1600m_-10.webp');">
+          <span class="corner-tag">IMAGE · 02</span>
         </div>
-        <div class="media-info"><span class="media-type">FILM REEL</span><span class="media-title">Season Highlights — Shorewood HS</span></div>
+        <div class="media-info"><span class="media-type">GALLERY</span><span class="media-title">WIAA State 1600m — Frame 10</span></div>
+      </article>
+      <article class="media-card">
+        <div class="media-plate" data-kind="image" style="background-image: url('https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4da2aabd-35e7-4b66-95ed-5bd0254b7454/Olivia-decker-shorewood-wiaa-state-1600m_-9.webp');">
+          <span class="corner-tag">IMAGE · 03</span>
+        </div>
+        <div class="media-info"><span class="media-type">GALLERY</span><span class="media-title">WIAA State 1600m — Frame 9</span></div>
       </article>
     </div>
   </div>
@@ -511,22 +518,69 @@
 
     <div class="split-col">
       <div class="sec-eyebrow">[ 05 · LOGISTICS ]</div>
-      <h2 class="sec-h">WHERE TO WATCH</h2>
+      <h2 class="sec-h">2026 XC SCHEDULE</h2>
       
-      <div class="schedule-item">
-        <div class="sch-date">[INSERT DATE]</div>
-        <div class="sch-name">[INSERT MEET NAME]</div>
-        <div class="sch-loc">[INSERT LOCATION]</div>
-      </div>
-      <div class="schedule-item">
-        <div class="sch-date">[INSERT DATE]</div>
-        <div class="sch-name">[INSERT MEET NAME]</div>
-        <div class="sch-loc">[INSERT LOCATION]</div>
-      </div>
-      <div class="schedule-item">
-        <div class="sch-date">[INSERT DATE]</div>
-        <div class="sch-name">[INSERT MEET NAME]</div>
-        <div class="sch-loc">[INSERT LOCATION]</div>
+      <div class="schedule-container">
+        <div class="schedule-item">
+          <div class="sch-date">Wed, Sep 16, 2026</div>
+          <div class="sch-name">GearUp NW XC Preview</div>
+          <div class="sch-loc">Hosted by Sehome High School</div>
+        </div>
+        <div class="schedule-item">
+          <div class="sch-date">Fri, Sep 25, 2026</div>
+          <div class="sch-name">WESCO XC League Quad</div>
+          <div class="sch-loc">EW, GP, SW @ Mountlake Terrace</div>
+        </div>
+        <div class="schedule-item">
+          <div class="sch-date">Sep 25 – Sep 26, 2026</div>
+          <div class="sch-name">Travel Invitational</div>
+          <div class="sch-loc">The Course @ Spokane Valley</div>
+        </div>
+        <div class="schedule-item">
+          <div class="sch-date">Wed, Sep 30, 2026</div>
+          <div class="sch-name">Nike Bob Firman Invitational</div>
+          <div class="sch-loc">Championship Field Elite Tier</div>
+        </div>
+        <div class="schedule-item">
+          <div class="sch-date">Wed, Sep 30, 2026</div>
+          <div class="sch-name">Glacier Peak League Meet</div>
+          <div class="sch-loc">Valley View MS (Snohomish)</div>
+        </div>
+        <div class="schedule-item">
+          <div class="sch-date">Sat, Oct 10, 2026</div>
+          <div class="sch-name">WESCO League Tri Meet</div>
+          <div class="sch-loc">Shorewood, Mariner, Everett @ GP</div>
+        </div>
+        <div class="schedule-item">
+          <div class="sch-date">Wed, Oct 14, 2026</div>
+          <div class="sch-name">Hole In The Wall Invitational</div>
+          <div class="sch-loc">Nike Premier Regional Showcase</div>
+        </div>
+        <div class="schedule-item">
+          <div class="sch-date">Sat, Oct 24, 2026</div>
+          <div class="sch-name">WESCO Hamlink Park League Meet</div>
+          <div class="sch-loc">Snohomish, Monroe, Shorecrest @ SW</div>
+        </div>
+        <div class="schedule-item">
+          <div class="sch-date">Sat, Oct 31, 2026</div>
+          <div class="sch-name">Wesco League Championships</div>
+          <div class="sch-loc">Varsity Postseason Seedings</div>
+        </div>
+        <div class="schedule-item">
+          <div class="sch-date">Sat, Oct 31, 2026</div>
+          <div class="sch-name">District 1/2 XC Championships</div>
+          <div class="sch-loc">WIAA State Championship Qualifier</div>
+        </div>
+        <div class="schedule-item">
+          <div class="sch-date">Sat, Nov 7, 2026</div>
+          <div class="sch-name">NW District 1 Championships</div>
+          <div class="sch-loc">Postseason Championship Tier</div>
+        </div>
+        <div class="schedule-item">
+          <div class="sch-date">Nov 2026 (TBD)</div>
+          <div class="sch-name">WIAA State XC Championships</div>
+          <div class="sch-loc">Sun Willows Golf Course (Pasco)</div>
+        </div>
       </div>
     </div>
 
@@ -550,6 +604,7 @@
       <div class="c-role">Head Coach</div>
       <div class="c-name">P. Villanueva / J. Reese</div>
       <div class="c-detail">Shorewood High School</div>
+      <div class="c-detail">Office: +1 206.393.4372</div>
       <a href="#" class="c-link">Email TBD →</a>
     </div>
 
@@ -557,6 +612,7 @@
       <div class="c-role">Head Coach (Club)</div>
       <div class="c-name">Matt Koenigs</div>
       <div class="c-detail">Bryant Bandits</div>
+      <div class="c-detail">Office: +1 360.812.1459</div>
       <a href="mailto:bryantbandits@gmail.com" class="c-link">bryantbandits@gmail.com →</a>
     </div>
   </div>
@@ -576,13 +632,16 @@
 (function(){
   'use strict';
 
-  /* ============================================================
-     UTILITIES
-  ============================================================ */
   var clamp = function(v,min,max){ return Math.min(max, Math.max(min, v)); };
   var lerp = function(a,b,t){ return a + (b - a) * t; };
   var isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var pointer = { x: window.innerWidth/2, y: window.innerHeight/2 };
+  window.addEventListener('mousemove', function(e){ pointer.x = e.clientX; pointer.y = e.clientY; }, { passive:true });
+  window.addEventListener('touchmove', function(e){
+    if (e.touches && e.touches[0]) { pointer.x = e.touches[0].clientX; pointer.y = e.touches[0].clientY; }
+  }, { passive:true });
 
   function formatTime(totalSeconds){
     var m = Math.floor(totalSeconds / 60);
@@ -592,23 +651,16 @@
     return m + ':' + sStr;
   }
 
-  /* ============================================================
-     BRAND-MARK TEXTURE — generated, not a real photo.
-     Used as the initial frame before any image has loaded, and
-     as a safe fallback if a real texture fails to fetch.
-  ============================================================ */
   function buildBrandMarkTexture(){
     var size = 1024;
     var c = document.createElement('canvas');
     c.width = c.height = size;
     var ctx = c.getContext('2d');
-
     var g = ctx.createRadialGradient(size*0.5, size*0.38, size*0.05, size*0.5, size*0.55, size*0.78);
     g.addColorStop(0, '#161616');
     g.addColorStop(1, '#040404');
     ctx.fillStyle = g;
     ctx.fillRect(0, 0, size, size);
-
     ctx.save();
     ctx.translate(size*0.5, size*0.46);
     var lines = 56;
@@ -617,7 +669,7 @@
       var pulse = Math.sin(i * 12.9) * 0.5 + 0.5;
       var len = size * 0.2 + size * 0.42 * pulse;
       var x2 = Math.cos(a) * len, y2 = Math.sin(a) * len * 0.62;
-      ctx.strokeStyle = 'rgba(46, 204, 113, ' + (i % 5 === 0 ? 0.11 : 0.035) + ')';
+      ctx.strokeStyle = 'rgba(11, 60, 38, ' + (i % 5 === 0 ? 0.11 : 0.035) + ')';
       ctx.lineWidth = (i % 7 === 0) ? 2 : 1;
       ctx.beginPath();
       ctx.moveTo(Math.cos(a) * size * 0.05, Math.sin(a) * size * 0.05 * 0.62);
@@ -625,7 +677,6 @@
       ctx.stroke();
     }
     ctx.restore();
-
     ctx.save();
     ctx.globalAlpha = 0.92;
     ctx.fillStyle = '#f5f5f3';
@@ -634,179 +685,89 @@
     ctx.textBaseline = 'middle';
     ctx.fillText('OD', size*0.5, size*0.47);
     ctx.restore();
-
     ctx.save();
     ctx.strokeStyle = 'rgba(245,245,243,0.16)';
     ctx.lineWidth = 2;
     ctx.beginPath(); ctx.arc(size*0.5, size*0.46, size*0.29, 0, Math.PI*2); ctx.stroke();
     ctx.beginPath(); ctx.arc(size*0.5, size*0.46, size*0.355, 0, Math.PI*2); ctx.stroke();
     ctx.restore();
-
-    var grainCanvas = document.createElement('canvas');
-    grainCanvas.width = size; grainCanvas.height = size;
-    var gctx = grainCanvas.getContext('2d');
-    var gdata = gctx.createImageData(size, size);
-    for (var p = 0; p < gdata.data.length; p += 4){
-      var v = Math.random() * 255;
-      gdata.data[p] = v; gdata.data[p+1] = v; gdata.data[p+2] = v; gdata.data[p+3] = 255;
-    }
-    gctx.putImageData(gdata, 0, 0);
-    ctx.save();
-    ctx.globalAlpha = 0.05;
-    ctx.globalCompositeOperation = 'overlay';
-    ctx.drawImage(grainCanvas, 0, 0);
-    ctx.restore();
-
-    ctx.save();
-    ctx.fillStyle = 'rgba(245,245,243,0.42)';
-    ctx.font = '600 16px "Roboto Mono", monospace';
-    ctx.textAlign = 'center';
-    ctx.fillText('ATHLETE PHOTO — PLACEHOLDER SLOT', size*0.5, size*0.93);
-    ctx.restore();
-
     return c;
   }
 
-  /* ============================================================
-     THREE.JS HERO — liquid flow-map distortion
-  ============================================================ */
   var renderer, mainScene, mainCamera, heroMat;
-  var rtRead;
   var heroActive = false;
   var heroVisible = true;
 
-  var PASS_VERT = [
-    'varying vec2 vUv;',
-    'void main(){',
-    '  vUv = uv;',
-    '  gl_Position = vec4(position.xy, 0.0, 1.0);',
-    '}'
-  ].join('\n');
-
+  var PASS_VERT = ['varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }'].join('\n');
+  
   var HERO_FRAG = [
     'uniform sampler2D uTexture;',
-    'uniform sampler2D uFlow;',
     'uniform float uTime;',
     'uniform float uGlitch;',
     'uniform vec2 uResolution;',
     'uniform vec2 uImageResolution;',
     'varying vec2 vUv;',
     'void main(){',
-    '  vec2 ratio = vec2(',
-    '    min((uResolution.x/uResolution.y) / (uImageResolution.x/uImageResolution.y), 1.0),',
-    '    min((uResolution.y/uResolution.x) / (uImageResolution.y/uImageResolution.x), 1.0)',
-    '  );',
-    '  vec2 uv = vec2(',
-    '    vUv.x * ratio.x + (1.0 - ratio.x) * 0.5,',
-    '    vUv.y * ratio.y + (1.0 - ratio.y) * 0.5',
-    '  );',
+    '  vec2 ratio = vec2(min((uResolution.x/uResolution.y) / (uImageResolution.x/uImageResolution.y), 1.0), min((uResolution.y/uResolution.x) / (uImageResolution.y/uImageResolution.x), 1.0));',
+    '  vec2 uv = vec2(vUv.x * ratio.x + (1.0 - ratio.x) * 0.5, vUv.y * ratio.y + (1.0 - ratio.y) * 1.0);',
     '  float sliceSeed = fract(sin(floor(vUv.y*46.0)*91.345 + uTime*53.0) * 43758.5453);',
-    '  float sliceMask = step(0.84, sliceSeed) * uGlitch;',
-    '  uv.x += (sliceSeed - 0.5) * 0.06 * sliceMask;',
-    '  vec4 flow = texture2D(uFlow, vUv);',
-    '  vec2 vel = (flow.rg - 0.5) * 2.0;',
-    '  float amt = flow.b;',
-    '  uv += vel * 0.14 * amt;',
-    '  uv += vec2(sin(uv.y*36.0+uTime*1.6), cos(uv.x*36.0+uTime*1.6)) * 0.0014 * amt;',
-    '  float mag = length(vel) * amt;',
-    '  vec2 dir = mag > 0.0001 ? normalize(vel) : vec2(0.0);',
-    '  vec2 liquidOffset = dir * (0.014 * mag);',
+    '  float sliceMask = step(0.84, sliceSeed) * uGlitch; uv.x += (sliceSeed - 0.5) * 0.06 * sliceMask;',
     '  vec2 glitchOffset = vec2(0.05 * uGlitch, 0.0);',
-    '  float r = texture2D(uTexture, clamp(uv+liquidOffset+glitchOffset, 0.0, 1.0)).r;',
-    '  float g = texture2D(uTexture, clamp(uv, 0.0, 1.0)).g;',
-    '  float b = texture2D(uTexture, clamp(uv-liquidOffset-glitchOffset, 0.0, 1.0)).b;',
-    '  vec3 color = vec3(r,g,b);',
-    '  float vig = smoothstep(0.95, 0.35, length(vUv-0.5));',
-    '  color *= mix(0.5, 1.0, vig);',
-    '  color = mix(color, vec3(dot(color, vec3(0.299,0.587,0.114))), sliceMask*0.6);',
-    '  float grain = fract(sin(dot(vUv*uTime*0.31+uTime, vec2(12.9898,78.233))) * 43758.5453);',
-    '  color += (grain - 0.5) * 0.025;',
-    '  gl_FragColor = vec4(color, 1.0);',
+    '  float r = texture2D(uTexture, clamp(uv+glitchOffset, 0.0, 1.0)).r; float g = texture2D(uTexture, clamp(uv, 0.0, 1.0)).g; float b = texture2D(uTexture, clamp(uv-glitchOffset, 0.0, 1.0)).b;',
+    '  vec3 color = vec3(r,g,b); float vig = smoothstep(0.95, 0.35, length(vUv-0.5)); color *= mix(0.5, 1.0, vig); color = mix(color, vec3(dot(color, vec3(0.299,0.587,0.114))), sliceMask*0.6);',
+    '  float grain = fract(sin(dot(vUv*uTime*0.31+uTime, vec2(12.9898,78.233))) * 43758.5453); color += (grain - 0.5) * 0.025; gl_FragColor = vec4(color, 1.0);',
     '}'
   ].join('\n');
 
-  /* ============================================================
-     ASSETS — B-roll inherited from Catherine Harju's profile
-     (temporary pool for the mosh/glitch preloader cycle only;
-     the settled hero frame below is Olivia's own image)
-  ============================================================ */
   var bRollUrls = [
-    'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/0203d110-79e1-4840-93b3-e804a7c7e6b8/06.jpg?content-type=image%2Fjpeg',
-    'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/06d1d518-b618-4643-8d3f-bf409e655090/09.jpg?content-type=image%2Fjpeg',
-    'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/69e436e8-bb9e-476f-a213-359639c0564a/04.jpg?content-type=image%2Fjpeg',
-    'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4c00c196-08e8-46b1-85b2-e6d2bd51c802/07.jpg?content-type=image%2Fjpeg',
-    'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/b3834e18-a7b3-4cf7-887c-5b40df4a86ff/05.jpg?content-type=image%2Fjpeg',
-    'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/1ee5b279-f6f7-49cb-be7b-3cd67345ea06/08.jpg?content-type=image%2Fjpeg'
+    'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/0203d110-79e1-4840-93b3-e804a7c7e6b8/06.jpg',
+    'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/06d1d518-b618-4643-8d3f-bf409e655090/09.jpg',
+    'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/69e436e8-bb9e-476f-a213-359639c0564a/04.jpg',
+    'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4c00c196-08e8-46b1-85b2-e6d2bd51c802/07.jpg',
+    'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/b3834e18-a7b3-4cf7-887c-5b40df4a86ff/05.jpg',
+    'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/1ee5b279-f6f7-49cb-be7b-3cd67345ea06/08.jpg'
   ];
-  var heroUrl = 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/8928e12c-6a01-4560-b72f-2f974a910d8b/Olivia-decker-shorewood-wiaa-state-1600m_-7.webp?content-type=image%2Fwebp';
+  var heroUrl = 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/8928e12c-6a01-4560-b72f-2f974a910d8b/Olivia-decker-shorewood-wiaa-state-1600m_-7.webp';
 
   var bRollPool = [];
   var heroTexture = null;
   var brandMarkTexture = null;
   var moshTween = null;
-  var moshInterval = null;
 
   function initHero(){
     var canvas = document.getElementById('webgl-canvas');
     renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, powerPreference: 'high-performance' });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, isCoarsePointer ? 1.5 : 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     renderer.setSize(window.innerWidth, window.innerHeight, false);
-    renderer.setClearColor(0x050505, 1);
-
+    
     mainScene = new THREE.Scene();
     mainCamera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
-
+    
     brandMarkTexture = new THREE.CanvasTexture(buildBrandMarkTexture());
-    brandMarkTexture.minFilter = THREE.LinearFilter;
-    brandMarkTexture.magFilter = THREE.LinearFilter;
-    brandMarkTexture.wrapS = THREE.ClampToEdgeWrapping;
-    brandMarkTexture.wrapT = THREE.ClampToEdgeWrapping;
-
     heroMat = new THREE.ShaderMaterial({
-      uniforms: {
-        uTexture: { value: brandMarkTexture },
-        uFlow: { value: null },
-        uTime: { value: 0 },
-        uGlitch: { value: 0 },
-        uResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
-        uImageResolution: { value: new THREE.Vector2(1024, 1024) }
+      uniforms: { 
+        uTexture: { value: brandMarkTexture }, 
+        uTime: { value: 0 }, 
+        uGlitch: { value: 0 }, 
+        uResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) }, 
+        uImageResolution: { value: new THREE.Vector2(1024, 1024) } 
       },
-      vertexShader: PASS_VERT,
-      fragmentShader: HERO_FRAG
+      vertexShader: PASS_VERT, fragmentShader: HERO_FRAG
     });
+    
     mainScene.add(new THREE.Mesh(new THREE.PlaneGeometry(2, 2), heroMat));
-
-    // Hover/liquid distortion permanently disabled at the source: rtRead is
-    // a 4x4 target cleared ONCE to a neutral value (zero velocity, zero
-    // intensity) and never written to again. There is no simulation pass,
-    // no ping-pong, and no feedback loop -- so the hero image cannot wobble
-    // or distort, regardless of cursor position, ever.
-    rtRead = new THREE.WebGLRenderTarget(4, 4);
-    var neutral = new THREE.Color(0.5, 0.5, 0.0);
-    var prevClear = new THREE.Color();
-    renderer.getClearColor(prevClear);
-    renderer.setClearColor(neutral, 1);
-    renderer.setRenderTarget(rtRead); renderer.clear();
-    renderer.setRenderTarget(null);
-    renderer.setClearColor(prevClear, 1);
-
-    heroMat.uniforms.uFlow.value = rtRead.texture;
-
     heroActive = true;
   }
 
   function initHeroVisibility(){
     if (!('IntersectionObserver' in window)) return;
     var heroEl = document.getElementById('hero');
-    if (!heroEl) return;
-    var observer = new IntersectionObserver(function(entries){
-      heroVisible = entries[0].isIntersecting;
-    }, { threshold: 0 });
+    var observer = new IntersectionObserver(function(entries){ heroVisible = entries[0].isIntersecting; }, { threshold: 0 });
     observer.observe(heroEl);
   }
 
   function resizeHero(){
-    if (!heroActive) return;
+    if(!heroActive) return;
     renderer.setSize(window.innerWidth, window.innerHeight, false);
     heroMat.uniforms.uResolution.value.set(window.innerWidth, window.innerHeight);
   }
@@ -814,171 +775,54 @@
   function tickHero(elapsedSeconds){
     if (!heroActive || !heroVisible) return;
     heroMat.uniforms.uTime.value = elapsedSeconds;
-
-    // No simulation pass runs here on purpose. uFlow stays locked to the
-    // neutral target cleared once in initHero, so vel/amt are always
-    // exactly zero in HERO_FRAG -- no liquid offset, no sine/cosine wobble,
-    // no dependency on mouse position. The preload mosh/glitch cycle is
-    // driven entirely by uTime/uGlitch below, untouched by this change.
     renderer.render(mainScene, mainCamera);
   }
 
   function applyTexture(tex){
-    if (!heroActive || !tex) return;
+    if(!heroActive || !tex) return;
     heroMat.uniforms.uTexture.value = tex;
-    var w = (tex.image && tex.image.width) ? tex.image.width : 1024;
-    var h = (tex.image && tex.image.height) ? tex.image.height : 1024;
-    heroMat.uniforms.uImageResolution.value.set(w, h);
-  }
-
-  function pulseGlitch(){
-    if (!heroActive) return;
-    if (window.gsap){
-      gsap.killTweensOf(heroMat.uniforms.uGlitch);
-      heroMat.uniforms.uGlitch.value = 1;
-      gsap.to(heroMat.uniforms.uGlitch, { value: 0, duration: 0.14, ease: 'power3.out' });
-    } else {
-      heroMat.uniforms.uGlitch.value = 1;
-      setTimeout(function(){ if (heroActive) heroMat.uniforms.uGlitch.value = 0; }, 90);
-    }
+    heroMat.uniforms.uImageResolution.value.set(tex.image.width, tex.image.height);
   }
 
   function moshStep(){
-    if (!heroActive || !bRollPool.length) return;
+    if(!bRollPool.length) return;
     var tex = bRollPool[Math.floor(Math.random() * bRollPool.length)];
     applyTexture(tex);
-    pulseGlitch();
+    heroMat.uniforms.uGlitch.value = 1;
+    gsap.to(heroMat.uniforms.uGlitch, { value: 0, duration: 0.14 });
   }
 
-  function startMosh(){
-    if (window.gsap){
-      moshTween = gsap.to({}, { duration: 0.09, repeat: -1, onRepeat: moshStep });
-    } else {
-      moshInterval = setInterval(moshStep, 90);
-    }
-  }
+  function startMosh(){ moshTween = gsap.to({}, { duration: 0.09, repeat: -1, onRepeat: moshStep }); }
 
-  function stopMosh(){
-    if (moshTween) { moshTween.kill(); moshTween = null; }
-    if (moshInterval) { clearInterval(moshInterval); moshInterval = null; }
-  }
-
-  /* ============================================================
-     PRELOADER — Controlled Cinematic Timing
-  ============================================================ */
   function runPreloader(onAllLoaded){
-    var pctEl = document.getElementById('pre-pct');
-    var barEl = document.getElementById('pre-bar');
-
-    if (!window.THREE || !window.gsap){
-      pctEl.textContent = '100';
-      barEl.style.width = '100%';
-      setTimeout(onAllLoaded, 300);
-      return;
-    }
-
-    var displayPct = { v: 0 };
-    gsap.to(displayPct, {
-      v: 100,
-      duration: 2.2,
-      ease: 'power2.inOut',
-      onUpdate: function(){ 
-        var val = Math.floor(displayPct.v);
-        pctEl.textContent = val;
-        barEl.style.width = val + '%';
-      }
-    });
-
-    function finish(){
-      stopMosh();
-      if (heroActive) {
-        gsap.killTweensOf(heroMat.uniforms.uGlitch);
-        heroMat.uniforms.uGlitch.value = 2.0; 
-        applyTexture(heroTexture || brandMarkTexture);
-        gsap.to(heroMat.uniforms.uGlitch, { value: 0, duration: 1.0, ease: 'power3.out' });
-      } else {
-        applyTexture(heroTexture || brandMarkTexture);
-      }
-      onAllLoaded();
-    }
-
+    var pctEl = document.getElementById('pre-pct'), barEl = document.getElementById('pre-bar');
+    gsap.to({ v: 0 }, { v: 100, duration: 2.2, ease: 'power2.inOut', onUpdate: function(a){ pctEl.textContent = Math.floor(this.targets()[0].v); barEl.style.width = this.targets()[0].v + '%'; } });
     var loader = new THREE.TextureLoader();
     loader.crossOrigin = 'anonymous';
-
-    var bRollPromises = bRollUrls.map(function(url){
-      return new Promise(function(resolve){
-        loader.load(
-          url, 
-          function(tex){
-            tex.minFilter = THREE.LinearFilter;
-            tex.magFilter = THREE.LinearFilter;
-            bRollPool.push(tex);
-            resolve(tex);
-          }, 
-          undefined, 
-          function(err){ resolve(null); }
-        );
-      });
-    });
-
-    var heroPromise = new Promise(function(resolve){
-      loader.load(
-        heroUrl, 
-        function(tex){
-          tex.minFilter = THREE.LinearFilter;
-          tex.magFilter = THREE.LinearFilter;
-          heroTexture = tex;
-          resolve(tex);
-        }, 
-        undefined, 
-        function(err){ resolve(null); }
-      );
-    });
-
+    var bRollPromises = bRollUrls.map(function(url){ return new Promise(function(resolve){ loader.load(url, function(tex){ bRollPool.push(tex); resolve(tex); }, null, function(){ resolve(null); }); }); });
+    var heroPromise = new Promise(function(resolve){ loader.load(heroUrl, function(tex){ heroTexture = tex; resolve(tex); }, null, function(){ resolve(null); }); });
     startMosh();
-    var minTimePromise = new Promise(function(resolve) { setTimeout(resolve, 2200); });
-    Promise.all(bRollPromises.concat([heroPromise, minTimePromise])).then(finish);
-  }
-
-  function revealPreloaderFallback(){
-    var pre = document.getElementById('preloader');
-    if (pre) pre.style.display = 'none';
-    document.body.classList.add('loaded');
+    Promise.all(bRollPromises.concat([heroPromise, new Promise(function(r) { setTimeout(r, 2200); })])).then(function(){
+      if(moshTween) moshTween.kill();
+      applyTexture(heroTexture || brandMarkTexture);
+      heroMat.uniforms.uGlitch.value = 2; gsap.to(heroMat.uniforms.uGlitch, { value: 0, duration: 1 });
+      onAllLoaded();
+    });
   }
 
   function openShutter(){
     var pre = document.getElementById('preloader');
-    if (!window.gsap) { revealPreloaderFallback(); return; }
     var flash = pre.querySelector('.flash');
-    var tl = gsap.timeline({
-      onComplete: function(){
-        pre.style.display = 'none';
-        document.body.classList.add('loaded');
-        if (window.ScrollTrigger) ScrollTrigger.refresh();
-      }
-    });
-    tl.to(flash, { opacity: 1, duration: 0.06 })
-      .to(flash, { opacity: 0, duration: 0.18 })
-      .to(pre, {
-        clipPath: 'polygon(0% 0%,100% 0%,100% 0%,0% 0%)',
-        duration: reducedMotion ? 0.35 : 0.7,
-        ease: 'power4.in'
-      }, '-=0.04');
+    gsap.timeline({ onComplete: function(){ pre.style.display = 'none'; } }).to(flash, { opacity: 1, duration: 0.06 }).to(flash, { opacity: 0, duration: 0.18 }).to(pre, { clipPath: 'polygon(0% 0%,100% 0%,100% 0%,0% 0%)', duration: 0.7, ease: 'power4.in' }, '-=0.04');
   }
 
-  /* ============================================================
-     CUSTOM LIQUID CURSOR (Single, Volume Dot)
-  ============================================================ */
   function initCursor(){
     if (isCoarsePointer) return null;
     var blob = document.querySelector('#cursor-wrap .blob');
     var pos = { x: window.innerWidth/2, y: window.innerHeight/2 };
     var mouse = { x: pos.x, y: pos.y };
 
-    window.addEventListener('mousemove', function(e){
-      mouse.x = e.clientX;
-      mouse.y = e.clientY;
-    });
+    window.addEventListener('mousemove', function(e){ mouse.x = e.clientX; mouse.y = e.clientY; });
 
     return function tick(){
       pos.x = lerp(pos.x, mouse.x, 0.2);
@@ -987,17 +831,10 @@
     };
   }
 
-  /* ============================================================
-     KINETIC TYPOGRAPHY
-  ============================================================ */
   function initKineticType(){
     var els = document.querySelectorAll('.kinetic');
-    var skewSetters = Array.prototype.map.call(els, function(el){
-      return gsap.quickTo(el, 'skewY', { duration: 0.5, ease: 'power3' });
-    });
-    var stretchSetters = Array.prototype.map.call(els, function(el){
-      return gsap.quickTo(el, 'scaleY', { duration: 0.5, ease: 'power3' });
-    });
+    var skewSetters = Array.prototype.map.call(els, function(el){ return gsap.quickTo(el, 'skewY', { duration: 0.5, ease: 'power3' }); });
+    var stretchSetters = Array.prototype.map.call(els, function(el){ return gsap.quickTo(el, 'scaleY', { duration: 0.5, ease: 'power3' }); });
     return function update(velocity){
       if (reducedMotion) return;
       var skew = clamp(velocity * 0.6, -14, 14);
@@ -1007,72 +844,37 @@
     };
   }
 
-  /* ============================================================
-     HUD COUNTERS
-  ============================================================ */
   function initHud(){
     document.querySelectorAll('.hud-card').forEach(function(card){
       var finalSeconds = parseFloat(card.getAttribute('data-final'));
       var finalLabel = card.getAttribute('data-label');
       var valEl = card.querySelector('.hud-v');
       ScrollTrigger.create({
-        trigger: card,
-        start: 'top 85%',
-        once: true,
+        trigger: card, start: 'top 85%', once: true,
         onEnter: function(){
           var obj = { t: 0 };
-          gsap.to(obj, {
-            t: finalSeconds,
-            duration: reducedMotion ? 0.4 : 1.6,
-            ease: 'power3.out',
-            onUpdate: function(){ valEl.textContent = formatTime(obj.t); },
-            onComplete: function(){ valEl.textContent = finalLabel; }
-          });
+          gsap.to(obj, { t: finalSeconds, duration: reducedMotion ? 0.4 : 1.6, ease: 'power3.out', onUpdate: function(){ valEl.textContent = formatTime(obj.t); }, onComplete: function(){ valEl.textContent = finalLabel; } });
         }
       });
     });
   }
 
-  /* ============================================================
-     MEDIA PIPELINE (MatchMedia Breakpoints)
-  ============================================================ */
   function initMedia(){
     if (!window.ScrollTrigger || !ScrollTrigger.matchMedia) return;
     var track = document.getElementById('media-track');
-
     ScrollTrigger.matchMedia({
       '(min-width: 901px)': function(){
-        var getDistance = function(){
-          return Math.max(0, track.scrollWidth - window.innerWidth + window.innerWidth * 0.05);
-        };
+        var getDistance = function(){ return Math.max(0, track.scrollWidth - window.innerWidth + window.innerWidth * 0.05); };
         var tween = gsap.to(track, {
-          x: function(){ return -getDistance(); },
-          ease: 'none',
-          scrollTrigger: {
-            trigger: '#media',
-            start: 'top top',
-            end: function(){ return '+=' + getDistance(); },
-            scrub: true,
-            pin: '.media-pin',
-            invalidateOnRefresh: true
-          }
+          x: function(){ return -getDistance(); }, ease: 'none',
+          scrollTrigger: { trigger: '#media', start: 'top top', end: function(){ return '+=' + getDistance(); }, scrub: true, pin: '.media-pin', invalidateOnRefresh: true }
         });
-
-        return function(){
-          if (tween.scrollTrigger) tween.scrollTrigger.kill();
-          tween.kill();
-          gsap.set(track, { clearProps: 'transform' });
-        };
+        return function(){ if (tween.scrollTrigger) tween.scrollTrigger.kill(); tween.kill(); gsap.set(track, { clearProps: 'transform' }); };
       },
-      '(max-width: 900px)': function(){
-        gsap.set(track, { clearProps: 'transform' });
-      }
+      '(max-width: 900px)': function(){ gsap.set(track, { clearProps: 'transform' }); }
     });
   }
 
-  /* ============================================================
-     SCROLL PROGRESS RING
-  ============================================================ */
   var CIRC = 87.9646;
   function updateProgressRing(){
     var ring = document.getElementById('progress-ring');
@@ -1083,81 +885,37 @@
     label.textContent = String(Math.round(p * 100)).padStart(2, '0');
   }
 
-  /* ============================================================
-     SCROLL ENGINE
-  ============================================================ */
   function initScroll(onVelocity){
-    var lastScroll = window.scrollY;
-
-    function handle(scroll, velocity){
-      if (window.ScrollTrigger) ScrollTrigger.update();
-      onVelocity(velocity);
-      updateProgressRing();
-    }
-
+    var lenis;
     if (typeof Lenis !== 'undefined'){
-      var lenis = new Lenis({
-        duration: 1.2,
-        easing: function(t){ return Math.min(1, 1.001 - Math.pow(2, -10 * t)); }
-      });
+      lenis = new Lenis({ lerp: 0.08, smoothWheel: true });
       lenis.on('scroll', function(e){
-        var v = (e && typeof e.velocity === 'number') ? e.velocity : (e.scroll - lastScroll);
-        lastScroll = e.scroll;
-        handle(e.scroll, v);
+        if (window.ScrollTrigger) ScrollTrigger.update();
+        onVelocity(e.velocity);
+        updateProgressRing();
       });
-      return lenis;
     }
-
-    window.addEventListener('scroll', function(){
-      var cur = window.scrollY;
-      var v = cur - lastScroll;
-      lastScroll = cur;
-      handle(cur, v);
-    }, { passive: true });
-
-    return { raf: function(){} };
+    return lenis;
   }
 
-  /* ============================================================
-     BOOT
-  ============================================================ */
-  var fontsReady = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
-  var bootDone = false, counterDone = false;
-
-  function tryReveal(){
-    if (bootDone && counterDone) openShutter();
-  }
-
-  fontsReady.then(function(){
-    var hasGsap = !!window.gsap;
-    var hasScrollTrigger = hasGsap && !!window.ScrollTrigger;
-    if (hasScrollTrigger) gsap.registerPlugin(ScrollTrigger);
-
-    try { initHero(); } catch (err) { console.warn('WebGL hero unavailable:', err); }
+  window.addEventListener('load', function(){
+    gsap.registerPlugin(ScrollTrigger);
+    initHero();
     initHeroVisibility();
-
     var cursorTick = initCursor();
-    var updateKinetic = hasGsap ? initKineticType() : function(){};
-    if (hasScrollTrigger) { initHud(); initMedia(); }
+    var updateKinetic = initKineticType();
+    initHud(); initMedia();
     var lenis = initScroll(updateKinetic);
     updateProgressRing();
 
-    if (hasGsap){
-      gsap.ticker.add(function(time){
-        if (lenis && lenis.raf) lenis.raf(time * 1000);
-        tickHero(time);
-        if (cursorTick) cursorTick();
-      });
-      gsap.ticker.lagSmoothing(0);
-    } else {
-      var start = performance.now();
-      (function rafLoop(now){
-        if (lenis && lenis.raf) lenis.raf(now);
-        tickHero((now - start) / 1000);
-        if (cursorTick) cursorTick();
-        requestAnimationFrame(rafLoop);
-      })(start);
-    }
+    gsap.ticker.add(function(time){
+      if (lenis && lenis.raf) lenis.raf(time * 1000);
+      tickHero(time);
+      if (cursorTick) cursorTick();
+    });
+    
+    // CRITICAL FIX: Disables lag smoothing to perfectly sync GSAP pinning with Lenis smooth scroll
+    gsap.ticker.lagSmoothing(0); 
 
     var resizeTimer = null;
     window.addEventListener('resize', function(){
@@ -1165,20 +923,12 @@
       resizeTimer = setTimeout(function(){
         resizeHero();
         if (lenis && lenis.resize) lenis.resize();
-        if (hasScrollTrigger) ScrollTrigger.refresh();
+        if (window.ScrollTrigger) ScrollTrigger.refresh();
       }, 150);
     });
 
-    bootDone = true;
-    tryReveal();
-  }).catch(function(err){
-    console.warn('Boot error:', err);
-    bootDone = true;
-    tryReveal();
+    runPreloader(openShutter);
   });
-
-  runPreloader(function(){ counterDone = true; tryReveal(); });
-
 })();
 </script>
 </body>

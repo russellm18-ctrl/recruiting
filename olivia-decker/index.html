@@ -44,7 +44,7 @@
     --black:#050505;
     --black-2:#0a0a0a;
     --white:#f5f5f3;
-    --volt:#0B3C26; /* Shorewood Forest Green - Used for data accent */
+    --volt:#2ECC71; /* Shorewood Forest Green - brightened for legibility on dark UI */
     --accent:#0033A0; /* Shorewood Royal Blue - Used for subtle structure & cursor */
     --line:#1c1c1c;
     --muted:#7a7a7a;
@@ -105,7 +105,8 @@
     #cursor-wrap .blob{
       position:absolute;top:0;left:0;
       width:12px;height:12px;
-      margin:-6px 0 0 -6px;border-radius:50%;background:var(--accent);
+      margin:-6px 0 0 -6px;border-radius:50%;
+      background:var(--accent); /* Royal Blue cursor */
       transition: transform 0.1s ease-out;
     }
   }
@@ -549,7 +550,6 @@
       <div class="c-role">Head Coach</div>
       <div class="c-name">P. Villanueva / J. Reese</div>
       <div class="c-detail">Shorewood High School</div>
-      <div class="c-detail">Phone: +1 206.393.4372</div>
       <a href="#" class="c-link">Email TBD →</a>
     </div>
 
@@ -557,7 +557,6 @@
       <div class="c-role">Head Coach (Club)</div>
       <div class="c-name">Matt Koenigs</div>
       <div class="c-detail">Bryant Bandits</div>
-      <div class="c-detail">Phone: +1 360.812.1459</div>
       <a href="mailto:bryantbandits@gmail.com" class="c-link">bryantbandits@gmail.com →</a>
     </div>
   </div>
@@ -584,12 +583,6 @@
   var lerp = function(a,b,t){ return a + (b - a) * t; };
   var isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  var pointer = { x: window.innerWidth/2, y: window.innerHeight/2 };
-  window.addEventListener('mousemove', function(e){ pointer.x = e.clientX; pointer.y = e.clientY; }, { passive:true });
-  window.addEventListener('touchmove', function(e){
-    if (e.touches && e.touches[0]) { pointer.x = e.touches[0].clientX; pointer.y = e.touches[0].clientY; }
-  }, { passive:true });
 
   function formatTime(totalSeconds){
     var m = Math.floor(totalSeconds / 60);
@@ -624,7 +617,7 @@
       var pulse = Math.sin(i * 12.9) * 0.5 + 0.5;
       var len = size * 0.2 + size * 0.42 * pulse;
       var x2 = Math.cos(a) * len, y2 = Math.sin(a) * len * 0.62;
-      ctx.strokeStyle = 'rgba(11, 60, 38, ' + (i % 5 === 0 ? 0.11 : 0.035) + ')';
+      ctx.strokeStyle = 'rgba(46, 204, 113, ' + (i % 5 === 0 ? 0.11 : 0.035) + ')';
       ctx.lineWidth = (i % 7 === 0) ? 2 : 1;
       ctx.beginPath();
       ctx.moveTo(Math.cos(a) * size * 0.05, Math.sin(a) * size * 0.05 * 0.62);
@@ -668,7 +661,7 @@
     ctx.fillStyle = 'rgba(245,245,243,0.42)';
     ctx.font = '600 16px "Roboto Mono", monospace';
     ctx.textAlign = 'center';
-    ctx.fillText('https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/8928e12c-6a01-4560-b72f-2f974a910d8b/Olivia-decker-shorewood-wiaa-state-1600m_-7.webp?content-type=image%2Fwebp', size*0.5, size*0.93);
+    ctx.fillText('ATHLETE PHOTO — PLACEHOLDER SLOT', size*0.5, size*0.93);
     ctx.restore();
 
     return c;
@@ -678,8 +671,7 @@
      THREE.JS HERO — liquid flow-map distortion
   ============================================================ */
   var renderer, mainScene, mainCamera, heroMat;
-  var simScene, simCam, simMat, rtRead, rtWrite;
-  var prevPointerUV = { x: 0.5, y: 0.5 };
+  var rtRead;
   var heroActive = false;
   var heroVisible = true;
 
@@ -733,35 +725,19 @@
     '}'
   ].join('\n');
 
-  var SIM_FRAG = [
-    'uniform sampler2D tDiffuse;',
-    'uniform vec2 uMouse;',
-    'uniform vec2 uVelocity;',
-    'uniform float uFalloff;',
-    'uniform float uDissipation;',
-    'uniform float uAspect;',
-    'varying vec2 vUv;',
-    'void main(){',
-    '  vec4 base = texture2D(tDiffuse, vUv);',
-    '  vec2 prevVel = (base.rg - 0.5) * 2.0;',
-    '  float prevAmt = base.b;',
-    '  prevVel *= uDissipation;',
-    '  prevAmt *= uDissipation;',
-    '  vec2 cursor = vUv - uMouse;',
-    '  cursor.x *= uAspect;',
-    '  float dist = length(cursor);',
-    '  float falloff = smoothstep(uFalloff, 0.0, dist);',
-    '  vec2 vel = prevVel + uVelocity * falloff;',
-    '  float amt = clamp(prevAmt + falloff, 0.0, 1.0);',
-    '  vec2 encoded = clamp(vel * 0.5 + 0.5, 0.0, 1.0);',
-    '  gl_FragColor = vec4(encoded, amt, 1.0);',
-    '}'
-  ].join('\n');
-
   /* ============================================================
-     ASSETS — Staging Placeholders
+     ASSETS — B-roll inherited from Catherine Harju's profile
+     (temporary pool for the mosh/glitch preloader cycle only;
+     the settled hero frame below is Olivia's own image)
   ============================================================ */
-  var bRollUrls = [];
+  var bRollUrls = [
+    'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/0203d110-79e1-4840-93b3-e804a7c7e6b8/06.jpg?content-type=image%2Fjpeg',
+    'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/06d1d518-b618-4643-8d3f-bf409e655090/09.jpg?content-type=image%2Fjpeg',
+    'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/69e436e8-bb9e-476f-a213-359639c0564a/04.jpg?content-type=image%2Fjpeg',
+    'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4c00c196-08e8-46b1-85b2-e6d2bd51c802/07.jpg?content-type=image%2Fjpeg',
+    'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/b3834e18-a7b3-4cf7-887c-5b40df4a86ff/05.jpg?content-type=image%2Fjpeg',
+    'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/1ee5b279-f6f7-49cb-be7b-3cd67345ea06/08.jpg?content-type=image%2Fjpeg'
+  ];
   var heroUrl = 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/8928e12c-6a01-4560-b72f-2f974a910d8b/Olivia-decker-shorewood-wiaa-state-1600m_-7.webp?content-type=image%2Fwebp';
 
   var bRollPool = [];
@@ -800,36 +776,21 @@
     });
     mainScene.add(new THREE.Mesh(new THREE.PlaneGeometry(2, 2), heroMat));
 
-    var simSize = isCoarsePointer ? 256 : 512;
-    rtRead = new THREE.WebGLRenderTarget(simSize, simSize);
-    rtWrite = new THREE.WebGLRenderTarget(simSize, simSize);
-
+    // Hover/liquid distortion permanently disabled at the source: rtRead is
+    // a 4x4 target cleared ONCE to a neutral value (zero velocity, zero
+    // intensity) and never written to again. There is no simulation pass,
+    // no ping-pong, and no feedback loop -- so the hero image cannot wobble
+    // or distort, regardless of cursor position, ever.
+    rtRead = new THREE.WebGLRenderTarget(4, 4);
     var neutral = new THREE.Color(0.5, 0.5, 0.0);
     var prevClear = new THREE.Color();
     renderer.getClearColor(prevClear);
     renderer.setClearColor(neutral, 1);
     renderer.setRenderTarget(rtRead); renderer.clear();
-    renderer.setRenderTarget(rtWrite); renderer.clear();
     renderer.setRenderTarget(null);
     renderer.setClearColor(prevClear, 1);
 
     heroMat.uniforms.uFlow.value = rtRead.texture;
-
-    simScene = new THREE.Scene();
-    simCam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
-    simMat = new THREE.ShaderMaterial({
-      uniforms: {
-        tDiffuse: { value: rtRead.texture },
-        uMouse: { value: new THREE.Vector2(0.5, 0.5) },
-        uVelocity: { value: new THREE.Vector2(0, 0) },
-        uFalloff: { value: 0.12 },
-        uDissipation: { value: 0.965 },
-        uAspect: { value: window.innerWidth / window.innerHeight }
-      },
-      vertexShader: PASS_VERT,
-      fragmentShader: SIM_FRAG
-    });
-    simScene.add(new THREE.Mesh(new THREE.PlaneGeometry(2, 2), simMat));
 
     heroActive = true;
   }
@@ -848,31 +809,17 @@
     if (!heroActive) return;
     renderer.setSize(window.innerWidth, window.innerHeight, false);
     heroMat.uniforms.uResolution.value.set(window.innerWidth, window.innerHeight);
-    simMat.uniforms.uAspect.value = window.innerWidth / window.innerHeight;
   }
 
   function tickHero(elapsedSeconds){
     if (!heroActive || !heroVisible) return;
     heroMat.uniforms.uTime.value = elapsedSeconds;
 
-    var uvx = pointer.x / window.innerWidth;
-    var uvy = 1 - (pointer.y / window.innerHeight);
-    var vx = uvx - prevPointerUV.x;
-    var vy = uvy - prevPointerUV.y;
-    prevPointerUV.x = uvx;
-    prevPointerUV.y = uvy;
-
-    simMat.uniforms.uMouse.value.set(uvx, uvy);
-    simMat.uniforms.uVelocity.value.set(clamp(vx * 6, -1, 1), clamp(vy * 6, -1, 1));
-    simMat.uniforms.tDiffuse.value = rtRead.texture;
-
-    renderer.setRenderTarget(rtWrite);
-    renderer.render(simScene, simCam);
-    renderer.setRenderTarget(null);
-
-    var tmp = rtRead; rtRead = rtWrite; rtWrite = tmp;
-    heroMat.uniforms.uFlow.value = rtRead.texture;
-
+    // No simulation pass runs here on purpose. uFlow stays locked to the
+    // neutral target cleared once in initHero, so vel/amt are always
+    // exactly zero in HERO_FRAG -- no liquid offset, no sine/cosine wobble,
+    // no dependency on mouse position. The preload mosh/glitch cycle is
+    // driven entirely by uTime/uGlitch below, untouched by this change.
     renderer.render(mainScene, mainCamera);
   }
 
@@ -949,7 +896,6 @@
         heroMat.uniforms.uGlitch.value = 2.0; 
         applyTexture(heroTexture || brandMarkTexture);
         gsap.to(heroMat.uniforms.uGlitch, { value: 0, duration: 1.0, ease: 'power3.out' });
-        if (simMat) simMat.uniforms.uFalloff.value = 0.0; 
       } else {
         applyTexture(heroTexture || brandMarkTexture);
       }
@@ -976,7 +922,6 @@
     });
 
     var heroPromise = new Promise(function(resolve){
-      if (!heroUrl) { resolve(null); return; }
       loader.load(
         heroUrl, 
         function(tex){

@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>[INSERT FIRST NAME] [INSERT LAST NAME] — [INSERT SPORT/POSITION] / [INSERT HIGH SCHOOL] [Recruiting Profile]</title>
+<meta name="description" content="Official athletic recruiting profile for [INSERT FIRST NAME] [INSERT LAST NAME]. Class of [INSERT YEAR] [INSERT SPORT] athlete for [INSERT HIGH SCHOOL] and [INSERT CLUB TEAM]." />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "[INSERT FIRST NAME] [INSERT LAST NAME]",
+  "jobTitle": "High School [INSERT SPORT] Athlete",
+  "description": "Elite high school [INSERT SPORT] athlete for [INSERT HIGH SCHOOL] and [INSERT CLUB TEAM]. Class of [INSERT YEAR].",
+  "image": "[INSERT HERO IMAGE URL]",
+  "url": "https://recruiting.russell-moore.com/[INSERT-SLUG]/",
+  "sameAs": [
+    "[INSERT ATHLETIC.NET / HUDL / MAXPREPS URL 1]",
+    "[INSERT MILESPLIT / STRAVA / SOCIAL URL 2]"
+  ],
+  "alumniOf": {
+    "@type": "HighSchool",
+    "name": "[INSERT HIGH SCHOOL]",
+    "location": {
+      "@type": "Place",
+      "address": "[INSERT CITY, STATE]"
+    }
+  },
+  "memberOf": [
+    {
+      "@type": "SportsTeam",
+      "name": "[INSERT HIGH SCHOOL] Athletics"
+    },
+    {
+      "@type": "SportsTeam",
+      "name": "[INSERT CLUB TEAM]"
+    }
+  ],
+  "knowsAbout": ["[INSERT SKILL 1]", "[INSERT SKILL 2]", "[INSERT SKILL 3]", "NCAA Recruiting"],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://recruiting.russell-moore.com/[INSERT-SLUG]/"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "Russell Moore Photography",
+    "url": "https://www.russell-moore.com"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --black:#050505;
+    --black-2:#0a0a0a;
+    --white:#f5f5f3;
+    
+    /* MASTER COLOR SYSTEM - SWAP THESE HEX CODES PER ATHLETE */
+    --volt: #FF0000;   /* PRIMARY COLOR (Data accents, buttons, preloader flash) */
+    --accent: #0000FF; /* SECONDARY COLOR (Subtle structure, split separators) */
+    --gold: #FFD700;   /* TERTIARY COLOR (Cursor, table highlights, timeline dots) */
+    
+    --line:#1c1c1c;
+    --muted:#7a7a7a;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{background:var(--black);}
+  html,body{width:100%;overflow-x:hidden;}
+  body{
+    background:var(--black);
+    color:var(--white);
+    font-family:'Inter',system-ui,sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--gold);color:#050505;}
+  a{color:inherit;text-decoration:none;}
+  img,canvas{display:block;max-width:100%;}
+
+  :focus-visible{outline:2px solid var(--volt);outline-offset:3px;}
+
+  @media (pointer: fine){
+    body{cursor:none;}
+  }
+
+  /* ---------------- grain overlay ---------------- */
+  .grain-overlay{
+    position:fixed;inset:0;z-index:40;pointer-events:none;
+    opacity:.05;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ---------------- preloader ---------------- */
+  #preloader{
+    position:fixed;inset:0;z-index:1000;
+    background: rgba(5, 5, 5, 0.4); 
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px);
+    display:flex;align-items:center;justify-content:center;
+    clip-path:polygon(0% 0%,100% 0%,100% 100%,0% 100%);
+  }
+
+  #preloader .flash{position:absolute;inset:0;background:var(--volt);opacity:0;pointer-events:none;}
+  #preloader .pre-inner{display:flex;flex-direction:column;align-items:center;gap:16px;}
+  #preloader .mark{font-family:'Roboto Mono';font-size:.7rem;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);}
+  #preloader .mark b{color:var(--volt);}
+  #preloader .pct{font-family:'Roboto Mono';font-weight:700;font-size:clamp(3rem,11vw,6.5rem);color:var(--white);letter-spacing:.01em;}
+  #preloader .pct::after{content:'%';color:var(--volt);margin-left:4px;}
+  #preloader .bar{width:240px;height:2px;background:#161616;margin-top:4px;overflow:hidden;}
+  #preloader .bar-fill{height:100%;width:0%;background:var(--volt);}
+
+  /* ---------------- custom cursor ---------------- */
+  @media (pointer: fine){
+    #cursor-wrap{
+      position:fixed;inset:0;z-index:9998;pointer-events:none;
+      mix-blend-mode:difference;
+    }
+    #cursor-wrap .blob{
+      position:absolute;top:0;left:0;
+      width:12px;height:12px;
+      margin:-6px 0 0 -6px;border-radius:50%;background:var(--gold);
+      transition: transform 0.1s ease-out;
+    }
+  }
+  @media (pointer: coarse){ #cursor-wrap{display:none;} }
+
+  /* ---------------- fixed HUD chrome ---------------- */
+  .chrome{
+    position:fixed;z-index:500;font-family:'Roboto Mono';font-size:.66rem;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+    mix-blend-mode:difference;
+  }
+  .chrome-tl{top:22px;left:22px;display:flex;align-items:center;gap:8px;}
+  .chrome-tl b{color:var(--volt);}
+  .chrome-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:blink 1.6s ease-in-out infinite;}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.15}}
+  .chrome-tr{top:20px;right:22px;display:flex;align-items:center;gap:10px;}
+
+  /* ---------------- hero ---------------- */
+  #hero{
+    position:relative;height:100vh;min-height:560px;width:100%;overflow:hidden;
+    background:radial-gradient(ellipse 80% 60% at 50% 38%, #141414 0%, var(--black) 72%);
+  }
+  #webgl-canvas{position:absolute;inset:0;width:100%;height:100%;}
+  .hero-overlay{
+    position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;
+    padding:0 5vw;mix-blend-mode:difference;pointer-events:none;
+    z-index: 10;
+  }
+  .hero-eyebrow{font-family:'Roboto Mono';color:var(--white);font-size:.7rem;letter-spacing:.34em;margin-bottom:20px;}
+  .kinetic-wrap{display:flex;flex-direction:column;line-height:.84;}
+  .kinetic{
+    font-family:'Oswald';font-weight:700;text-transform:uppercase;letter-spacing:-.01em;
+    font-size:clamp(3.2rem,13.5vw,9.5rem);color:var(--white);
+    will-change:transform;transform-origin:center left;
+  }
+  .hero-meta{
+    margin-top:28px;display:flex;flex-wrap:wrap;gap:10px;
+    font-family:'Roboto Mono';font-size:.78rem;letter-spacing:.06em;color:var(--white);
+  }
+  .hero-meta .sep{color:var(--accent);}
+  .scroll-cue{
+    position:absolute;bottom:26px;left:50%;transform:translateX(-50%);
+    font-family:'Roboto Mono';font-size:.64rem;letter-spacing:.34em;color:var(--muted);
+    animation:bob 2.4s ease-in-out infinite;pointer-events:none;
+  }
+  @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,7px)}}
+
+  /* ---------------- shared section chrome ---------------- */
+  .sec{position:relative;border-top:1px solid var(--line); padding: 100px 40px;}
+  .sec-eyebrow{font-family:'Roboto Mono';color:var(--volt);font-size:.7rem;letter-spacing:.32em;margin-bottom:16px; text-transform:uppercase;}
+  .sec-h{font-family:'Oswald';text-transform:uppercase;font-weight:600;font-size:clamp(1.8rem,4.4vw,3rem);letter-spacing:-.01em; margin-bottom: 50px;}
+
+  /* ---------------- quick stats grid ---------------- */
+  .profile-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 60px 40px 0; position:relative; z-index: 20;}
+  .profile-card { background: var(--black-2); padding: 24px 28px; }
+  .profile-k { font-family: 'Roboto Mono'; font-size: 0.64rem; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 8px; text-transform: uppercase; }
+  .profile-v { font-family: 'Inter'; font-weight: 500; font-size: 1.1rem; color: var(--white); }
+
+  /* ---------------- top telemetry ---------------- */
+  #data{
+    padding-top: 80px;
+    background: repeating-linear-gradient(0deg, rgba(255,255,255,.014) 0px, rgba(255,255,255,.014) 1px, transparent 1px, transparent 3px), var(--black);
+  }
+  .hud-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .hud-card{position:relative;background:var(--black-2);padding:36px 28px 30px;}
+  .hud-card::before,.hud-card::after{content:'';position:absolute;width:14px;height:14px;border:2px solid var(--volt);opacity:.75;}
+  .hud-card::before{top:10px;left:10px;border-right:none;border-bottom:none;}
+  .hud-card::after{bottom:10px;right:10px;border-left:none;border-top:none;}
+  .hud-k{font-family:'Roboto Mono';font-size:.72rem;letter-spacing:.22em;color:var(--muted);margin-bottom:16px;}
+  .hud-v{font-family:'Oswald';font-weight:700;font-size:clamp(2.3rem,6vw,3.5rem);color:var(--white);}
+  .hud-tag{margin-top:16px;font-family:'Roboto Mono';font-size:.64rem;letter-spacing:.1em;color:var(--volt); text-transform: uppercase;}
+
+  /* ---------------- full records table ---------------- */
+  .table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--line); background: var(--black-2); }
+  .data-table { width: 100%; border-collapse: collapse; text-align: left; font-family: 'Roboto Mono'; font-size: 0.8rem; white-space: nowrap;}
+  .data-table th { color: var(--muted); font-weight: 400; letter-spacing: 0.1em; padding: 18px 24px; border-bottom: 1px solid var(--line); text-transform: uppercase; background: #0c0c0c;}
+  .data-table td { padding: 18px 24px; border-bottom: 1px solid var(--line); color: var(--white); }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .data-table td:first-child { color: var(--gold); font-weight: 700; }
+
+  /* ---------------- media pipeline ---------------- */
+  #media{background:var(--black); padding: 0;}
+  .media-pin{height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding-left:40px;}
+  .media-head{margin-bottom:42px;padding-right:40px;}
+  .media-head .sec-h {margin-bottom: 0;}
+  .media-track{display:flex;gap:28px;align-items:stretch;}
+  .media-card{flex:0 0 auto;width:min(64vw,440px);display:flex;flex-direction:column;}
+  .media-plate{position:relative;width:100%;aspect-ratio:4/5;background-color:#121212;border:1px solid var(--line);overflow:hidden; background-size:cover; background-position:center;}
+  .media-plate::before{
+    content:'';position:absolute;inset:0;
+    background-image:repeating-linear-gradient(118deg, rgba(238,255,0,.05) 0 2px, transparent 2px 16px);
+    pointer-events: none;
+  }
+  .media-plate .corner-tag{
+    position:absolute;top:14px;left:14px;font-family:'Roboto Mono';font-size:.6rem;
+    letter-spacing:.16em;color:rgba(245,245,243,.8);
+    background: rgba(5,5,5,0.6); padding: 4px 8px; backdrop-filter: blur(4px);
+  }
+  .media-info{margin-top:16px;display:flex;flex-direction:column;gap:6px;}
+  .media-type{font-family:'Roboto Mono';font-size:.64rem;letter-spacing:.22em;color:var(--volt);}
+  .media-title{font-family:'Oswald';font-size:1.08rem;text-transform:uppercase;letter-spacing:.01em;}
+  
+  /* ---------------- split details layout ---------------- */
+  .split-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 6vw; }
+  .split-col { display: flex; flex-direction: column; }
+  
+  .acad-item { margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+  .acad-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .acad-k { font-family: 'Roboto Mono'; font-size: 0.7rem; color: var(--muted); margin-bottom: 8px; letter-spacing: 0.1em; text-transform: uppercase; }
+  .acad-v { font-family: 'Inter'; font-size: 1.25rem; font-weight: 500; color: var(--white);}
+  
+  .schedule-container { max-height: 520px; overflow-y: auto; padding-right: 14px; border-right: 1px solid var(--line); }
+  .schedule-item { padding-left: 24px; border-left: 1px solid var(--line); position: relative; margin-bottom: 32px; }
+  .schedule-item:last-child { border-left-color: transparent; margin-bottom: 0; }
+  .schedule-item::before { content: ''; position: absolute; top: 0; left: -4px; width: 7px; height: 7px; background: var(--gold); border-radius: 50%; }
+  .sch-date { font-family: 'Roboto Mono'; font-size: 0.7rem; color: var(--gold); margin-bottom: 6px; letter-spacing: 0.1em; text-transform: uppercase;}
+  .sch-name { font-family: 'Oswald'; font-size: 1.25rem; font-weight: 500; text-transform: uppercase; margin-bottom: 4px; letter-spacing: 0.02em;}
+  .sch-loc { font-family: 'Inter'; font-size: 0.85rem; color: var(--muted); }
+
+  /* ---------------- contact grid ---------------- */
+  .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .contact-card { padding: 40px 30px; background: var(--black-2); }
+  .c-role { font-family: 'Roboto Mono'; font-size: 0.65rem; color: var(--volt); letter-spacing: 0.2em; margin-bottom: 18px; text-transform: uppercase; }
+  .c-name { font-family: 'Oswald'; font-size: 1.6rem; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.01em;}
+  .c-detail { font-family: 'Inter'; font-size: 0.9rem; color: var(--muted); margin-bottom: 4px; }
+  .c-link { display: inline-block; margin-top: 20px; font-family: 'Roboto Mono'; font-size: 0.75rem; color: var(--white); text-decoration: underline; text-decoration-color: #333; text-underline-offset: 6px; letter-spacing: 0.05em; text-transform: uppercase;}
+  .c-link:hover { color: var(--volt); text-decoration-color: var(--volt); }
+
+  /* ---------------- footer ---------------- */
+  footer{padding:90px 40px 50px;text-align:center;border-top:1px solid var(--line); background: var(--black);}
+  .cta-line{font-family:'Roboto Mono';font-size:.72rem;letter-spacing:.2em;color:var(--muted);margin-bottom:26px;text-transform:uppercase;}
+  .cta-btn{
+    display:inline-flex;align-items:center;gap:10px;background:var(--volt);color:#050505;
+    font-family:'Oswald';text-transform:uppercase;font-weight:600;letter-spacing:.04em;
+    padding:18px 30px;font-size:1rem;
+  }
+  .credit{margin-top:46px;font-family:'Roboto Mono';font-size:.66rem;letter-spacing:.08em;color:var(--muted);}
+  .credit b{color:var(--white);}
+
+  @media (max-width: 900px) {
+    .profile-grid { grid-template-columns: 1fr 1fr; margin-top: 40px;}
+    .hud-grid { grid-template-columns: 1fr; }
+    .split-layout { grid-template-columns: 1fr; gap: 80px; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .media-pin{height:auto;padding:70px 40px;}
+    .media-track{overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;}
+    .media-card{scroll-snap-align:start;width:78vw;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .scroll-cue, .chrome-dot{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="grain-overlay" aria-hidden="true"></div>
+
+<div id="preloader" aria-hidden="true">
+  <div class="flash"></div>
+  <div class="pre-inner">
+    <div class="mark">Russell Moore Photography <b>·</b> Recruiting Profile</div>
+    <div class="pct" id="pre-pct">0</div>
+    <div class="bar"><div class="bar-fill" id="pre-bar"></div></div>
+  </div>
+</div>
+
+<div id="cursor-wrap" aria-hidden="true">
+  <div class="blob"></div>
+</div>
+
+<div class="chrome chrome-tl"><b>[INIT]</b> / [YR] — LIVE PROFILE <span class="chrome-dot"></span></div>
+<div class="chrome chrome-tr">
+  <span id="progress-pct">00</span>
+  <svg width="32" height="32" viewBox="0 0 34 34" aria-hidden="true">
+    <circle cx="17" cy="17" r="14" fill="none" stroke="#1c1c1c" stroke-width="2" />
+    <circle id="progress-ring" cx="17" cy="17" r="14" fill="none" stroke="var(--volt)" stroke-width="2"
+      stroke-dasharray="87.9646" stroke-dashoffset="87.9646" transform="rotate(-90 17 17)" />
+  </svg>
+</div>
+
+<section id="hero">
+  <canvas id="webgl-canvas" aria-hidden="true"></canvas>
+  <div class="hero-overlay">
+    <div class="hero-eyebrow">[ INTERACTIVE PROFILE — [INSERT SPORT] ]</div>
+    <h1 class="kinetic-wrap">
+      <span class="kinetic">[INSERT FIRST]</span>
+      <span class="kinetic">[INSERT LAST]</span>
+    </h1>
+    <div class="hero-meta">
+      <span>[INSERT POSITION 1] / [INSERT POSITION 2]</span>
+      <span class="sep">·</span>
+      <span>[INSERT HIGH SCHOOL], [STATE]</span>
+      <span class="sep">·</span>
+      <span>[INSERT CLUB TEAM]</span>
+    </div>
+  </div>
+  <div class="scroll-cue">[ SCROLL ]</div>
+</section>
+
+<div class="profile-grid">
+  <div class="profile-card">
+    <div class="profile-k">Grad Year</div>
+    <div class="profile-v">[INSERT YEAR]</div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-k">GPA</div>
+    <div class="profile-v">[INSERT GPA]</div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-k">NCAA ID</div>
+    <div class="profile-v">[INSERT ID OR TBD]</div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-k">Intended Major</div>
+    <div class="profile-v">[INSERT MAJOR]</div>
+  </div>
+</div>
+
+<section id="data" class="sec">
+  <div class="sec-eyebrow">[ 01 · TELEMETRY ]</div>
+  <h2 class="sec-h">TOP PERFORMANCES</h2>
+  <div class="hud-grid">
+    
+    <div class="hud-card" data-final="000.0" data-label="[STAT 1]">
+      <div class="hud-k">[EVENT / METRIC 1]</div>
+      <div class="hud-v">0:00.0</div>
+      <div class="hud-tag">PB · [YEAR] · [MEET NAME]</div>
+    </div>
+    
+    <div class="hud-card" data-final="000.0" data-label="[STAT 2]">
+      <div class="hud-k">[EVENT / METRIC 2]</div>
+      <div class="hud-v">0:00.0</div>
+      <div class="hud-tag">PB · [YEAR] · [MEET NAME]</div>
+    </div>
+    
+    <div class="hud-card" data-final="000.0" data-label="[STAT 3]">
+      <div class="hud-k">[EVENT / METRIC 3]</div>
+      <div class="hud-v">0:00.0</div>
+      <div class="hud-tag">PB · [YEAR] · [MEET NAME]</div>
+    </div>
+    
+  </div>
+</section>
+
+<section id="records" class="sec">
+  <div class="sec-eyebrow">[ 02 · DATABASE ]</div>
+  <h2 class="sec-h">FULL PERSONAL RECORDS</h2>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>Mark</th>
+          <th>Meet</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>[INSERT EVENT]</td>
+          <td>[INSERT MARK]</td>
+          <td>[INSERT MEET]</td>
+          <td>[INSERT YEAR]</td>
+        </tr>
+        <tr>
+          <td>[INSERT EVENT]</td>
+          <td>[INSERT MARK]</td>
+          <td>[INSERT MEET]</td>
+          <td>[INSERT YEAR]</td>
+        </tr>
+        <tr>
+          <td>[INSERT EVENT]</td>
+          <td>[INSERT MARK]</td>
+          <td>[INSERT MEET]</td>
+          <td>[INSERT YEAR]</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="media" class="sec">
+  <div class="media-pin">
+    <div class="media-head">
+      <div class="sec-eyebrow">[ 03 · ARCHIVE ]</div>
+      <h2 class="sec-h">RACE GALLERY</h2>
+    </div>
+    <div class="media-track" id="media-track">
+      
+      <article class="media-card">
+        <div class="media-plate" data-kind="image" style="background-image: url('[INSERT GALLERY IMAGE URL 1]');">
+          <span class="corner-tag">IMAGE · 01</span>
+        </div>
+        <div class="media-info"><span class="media-type">GALLERY</span><span class="media-title">[INSERT IMAGE CONTEXT]</span></div>
+      </article>
+
+      <article class="media-card">
+        <div class="media-plate" data-kind="image" style="background-image: url('[INSERT GALLERY IMAGE URL 2]');">
+          <span class="corner-tag">IMAGE · 02</span>
+        </div>
+        <div class="media-info"><span class="media-type">GALLERY</span><span class="media-title">[INSERT IMAGE CONTEXT]</span></div>
+      </article>
+
+      <article class="media-card">
+        <div class="media-plate" data-kind="image" style="background-image: url('[INSERT GALLERY IMAGE URL 3]');">
+          <span class="corner-tag">IMAGE · 03</span>
+        </div>
+        <div class="media-info"><span class="media-type">GALLERY</span><span class="media-title">[INSERT IMAGE CONTEXT]</span></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="details" class="sec">
+  <div class="split-layout">
+    
+    <div class="split-col">
+      <div class="sec-eyebrow">[ 04 · ACADEMICS ]</div>
+      <h2 class="sec-h">STUDENT PROFILE</h2>
+      
+      <div class="acad-item">
+        <div class="acad-k">GPA (Unweighted)</div>
+        <div class="acad-v">[INSERT GPA]</div>
+      </div>
+      <div class="acad-item">
+        <div class="acad-k">Test Scores</div>
+        <div class="acad-v">[INSERT SCORES OR TBD]</div>
+      </div>
+      <div class="acad-item">
+        <div class="acad-k">NCAA Eligibility</div>
+        <div class="acad-v">[INSERT STATUS]</div>
+      </div>
+    </div>
+
+    <div class="split-col">
+      <div class="sec-eyebrow">[ 05 · LOGISTICS ]</div>
+      <h2 class="sec-h">UPCOMING SCHEDULE</h2>
+      
+      <div class="schedule-container">
+        
+        <div class="schedule-item">
+          <div class="sch-date">[INSERT DATE]</div>
+          <div class="sch-name">[INSERT MEET NAME]</div>
+          <div class="sch-loc">[INSERT LOCATION / CONTEXT]</div>
+        </div>
+        
+        <div class="schedule-item">
+          <div class="sch-date">[INSERT DATE]</div>
+          <div class="sch-name">[INSERT MEET NAME]</div>
+          <div class="sch-loc">[INSERT LOCATION / CONTEXT]</div>
+        </div>
+
+        <div class="schedule-item">
+          <div class="sch-date">[INSERT DATE]</div>
+          <div class="sch-name">[INSERT MEET NAME]</div>
+          <div class="sch-loc">[INSERT LOCATION / CONTEXT]</div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="sec">
+  <div class="sec-eyebrow">[ 06 · NETWORK ]</div>
+  <h2 class="sec-h">DIRECT CONTACT</h2>
+  
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="c-role">Athlete</div>
+      <div class="c-name">[INSERT FIRST] [INSERT LAST]</div>
+      <div class="c-detail">Class of [INSERT YEAR]</div>
+      <div class="c-detail">[INSERT POSITION]</div>
+      <a href="mailto:[INSERT GENERIC EMAIL]" class="c-link">[INSERT GENERIC EMAIL] →</a>
+    </div>
+    
+    <div class="contact-card">
+      <div class="c-role">Head Coach</div>
+      <div class="c-name">[INSERT COACH NAME]</div>
+      <div class="c-detail">[INSERT HIGH SCHOOL]</div>
+      <div class="c-detail">Office: [INSERT PUBLIC PHONE]</div>
+      <a href="mailto:[INSERT COACH EMAIL]" class="c-link">[INSERT COACH EMAIL] →</a>
+    </div>
+
+    <div class="contact-card">
+      <div class="c-role">Head Coach (Club)</div>
+      <div class="c-name">[INSERT CLUB COACH NAME]</div>
+      <div class="c-detail">[INSERT CLUB NAME]</div>
+      <div class="c-detail">Office: [INSERT PUBLIC PHONE]</div>
+      <a href="mailto:[INSERT CLUB EMAIL]" class="c-link">[INSERT CLUB EMAIL] →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="cta-line">Interactive profile powered by custom WebGL</div>
+  <a class="cta-btn" data-magnetic href="https://recruiting.russell-moore.com">Get Your Athlete's Profile →</a>
+  <div class="credit">Profile system &amp; photography — <b>Russell Moore Photography</b> · russell-moore.com</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js"></script>
+<script>
+(function(){
+  'use strict';
+
+  var clamp = function(v,min,max){ return Math.min(max, Math.max(min, v)); };
+  var lerp = function(a,b,t){ return a + (b - a) * t; };
+  var isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var pointer = { x: window.innerWidth/2, y: window.innerHeight/2 };
+  window.addEventListener('mousemove', function(e){ pointer.x = e.clientX; pointer.y = e.clientY; }, { passive:true });
+  window.addEventListener('touchmove', function(e){
+    if (e.touches && e.touches[0]) { pointer.x = e.touches[0].clientX; pointer.y = e.touches[0].clientY; }
+  }, { passive:true });
+
+  function formatTime(totalSeconds){
+    var m = Math.floor(totalSeconds / 60);
+    var s = totalSeconds - m * 60;
+    var sStr = s.toFixed(1);
+    if (s < 10) sStr = '0' + sStr;
+    return m + ':' + sStr;
+  }
+
+  function buildBrandMarkTexture(){
+    var size = 1024;
+    var c = document.createElement('canvas');
+    c.width = c.height = size;
+    var ctx = c.getContext('2d');
+    var g = ctx.createRadialGradient(size*0.5, size*0.38, size*0.05, size*0.5, size*0.55, size*0.78);
+    g.addColorStop(0, '#161616');
+    g.addColorStop(1, '#040404');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, size, size);
+    ctx.save();
+    ctx.translate(size*0.5, size*0.46);
+    var lines = 56;
+    for (var i = 0; i < lines; i++){
+      var a = (i / lines) * Math.PI * 2;
+      var pulse = Math.sin(i * 12.9) * 0.5 + 0.5;
+      var len = size * 0.2 + size * 0.42 * pulse;
+      var x2 = Math.cos(a) * len, y2 = Math.sin(a) * len * 0.62;
+      ctx.strokeStyle = 'rgba(11, 60, 38, ' + (i % 5 === 0 ? 0.11 : 0.035) + ')';
+      ctx.lineWidth = (i % 7 === 0) ? 2 : 1;
+      ctx.beginPath();
+      ctx.moveTo(Math.cos(a) * size * 0.05, Math.sin(a) * size * 0.05 * 0.62);
+      ctx.lineTo(x2, y2);
+      ctx.stroke();
+    }
+    ctx.restore();
+    ctx.save();
+    ctx.globalAlpha = 0.92;
+    ctx.fillStyle = '#f5f5f3';
+    ctx.font = '700 ' + Math.floor(size * 0.32) + 'px Oswald, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('[IN]', size*0.5, size*0.47); /* INITIALS PLACEHOLDER */
+    ctx.restore();
+    ctx.save();
+    ctx.strokeStyle = 'rgba(245,245,243,0.16)';
+    ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.arc(size*0.5, size*0.46, size*0.29, 0, Math.PI*2); ctx.stroke();
+    ctx.beginPath(); ctx.arc(size*0.5, size*0.46, size*0.355, 0, Math.PI*2); ctx.stroke();
+    ctx.restore();
+    return c;
+  }
+
+  var renderer, mainScene, mainCamera, heroMat;
+  var heroActive = false;
+  var heroVisible = true;
+
+  var PASS_VERT = ['varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }'].join('\n');
+  
+  var HERO_FRAG = [
+    'uniform sampler2D uTexture;',
+    'uniform float uTime;',
+    'uniform float uGlitch;',
+    'uniform vec2 uResolution;',
+    'uniform vec2 uImageResolution;',
+    'varying vec2 vUv;',
+    'void main(){',
+    '  vec2 ratio = vec2(min((uResolution.x/uResolution.y) / (uImageResolution.x/uImageResolution.y), 1.0), min((uResolution.y/uResolution.x) / (uImageResolution.y/uImageResolution.x), 1.0));',
+    '  vec2 uv = vec2(vUv.x * ratio.x + (1.0 - ratio.x) * 0.5, vUv.y * ratio.y + (1.0 - ratio.y) * 1.0);',
+    '  float sliceSeed = fract(sin(floor(vUv.y*46.0)*91.345 + uTime*53.0) * 43758.5453);',
+    '  float sliceMask = step(0.84, sliceSeed) * uGlitch; uv.x += (sliceSeed - 0.5) * 0.06 * sliceMask;',
+    '  vec2 glitchOffset = vec2(0.05 * uGlitch, 0.0);',
+    '  float r = texture2D(uTexture, clamp(uv+glitchOffset, 0.0, 1.0)).r; float g = texture2D(uTexture, clamp(uv, 0.0, 1.0)).g; float b = texture2D(uTexture, clamp(uv-glitchOffset, 0.0, 1.0)).b;',
+    '  vec3 color = vec3(r,g,b); float vig = smoothstep(0.95, 0.35, length(vUv-0.5)); color *= mix(0.5, 1.0, vig); color = mix(color, vec3(dot(color, vec3(0.299,0.587,0.114))), sliceMask*0.6);',
+    '  float grain = fract(sin(dot(vUv, vec2(12.9898,78.233)) + uTime * 10.0) * 43758.5453); color += (grain - 0.5) * 0.025; gl_FragColor = vec4(color, 1.0);',
+    '}'
+  ].join('\n');
+
+  /* ASSET ARRAYS - DROP SQUARSPACE CDN LINKS HERE */
+  var bRollUrls = [
+    '[INSERT B-ROLL URL 1]',
+    '[INSERT B-ROLL URL 2]',
+    '[INSERT B-ROLL URL 3]',
+    '[INSERT B-ROLL URL 4]'
+  ];
+  var heroUrl = '[INSERT MAIN HERO URL]';
+
+  var bRollPool = [];
+  var heroTexture = null;
+  var brandMarkTexture = null;
+  var moshTween = null;
+
+  function initHero(){
+    var canvas = document.getElementById('webgl-canvas');
+    renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, powerPreference: 'high-performance' });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setSize(window.innerWidth, window.innerHeight, false);
+    
+    mainScene = new THREE.Scene();
+    mainCamera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+    
+    brandMarkTexture = new THREE.CanvasTexture(buildBrandMarkTexture());
+    heroMat = new THREE.ShaderMaterial({
+      uniforms: { 
+        uTexture: { value: brandMarkTexture }, 
+        uTime: { value: 0 }, 
+        uGlitch: { value: 0 }, 
+        uResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) }, 
+        uImageResolution: { value: new THREE.Vector2(1024, 1024) } 
+      },
+      vertexShader: PASS_VERT, fragmentShader: HERO_FRAG
+    });
+    
+    mainScene.add(new THREE.Mesh(new THREE.PlaneGeometry(2, 2), heroMat));
+    heroActive = true;
+  }
+
+  function initHeroVisibility(){
+    if (!('IntersectionObserver' in window)) return;
+    var heroEl = document.getElementById('hero');
+    var observer = new IntersectionObserver(function(entries){ heroVisible = entries[0].isIntersecting; }, { threshold: 0 });
+    observer.observe(heroEl);
+  }
+
+  function resizeHero(){
+    if(!heroActive) return;
+    renderer.setSize(window.innerWidth, window.innerHeight, false);
+    heroMat.uniforms.uResolution.value.set(window.innerWidth, window.innerHeight);
+  }
+
+  function tickHero(elapsedSeconds){
+    if (!heroActive || !heroVisible) return;
+    heroMat.uniforms.uTime.value = elapsedSeconds;
+    renderer.render(mainScene, mainCamera);
+  }
+
+  function applyTexture(tex){
+    if(!heroActive || !tex) return;
+    heroMat.uniforms.uTexture.value = tex;
+    heroMat.uniforms.uImageResolution.value.set(tex.image.width, tex.image.height);
+  }
+
+  function moshStep(){
+    if(!bRollPool.length) return;
+    var tex = bRollPool[Math.floor(Math.random() * bRollPool.length)];
+    applyTexture(tex);
+    heroMat.uniforms.uGlitch.value = 1;
+    gsap.to(heroMat.uniforms.uGlitch, { value: 0, duration: 0.14 });
+  }
+
+  function startMosh(){ moshTween = gsap.to({}, { duration: 0.09, repeat: -1, onRepeat: moshStep }); }
+
+  function runPreloader(onAllLoaded){
+    var pctEl = document.getElementById('pre-pct'), barEl = document.getElementById('pre-bar');
+    gsap.to({ v: 0 }, { v: 100, duration: 2.2, ease: 'power2.inOut', onUpdate: function(a){ pctEl.textContent = Math.floor(this.targets()[0].v); barEl.style.width = this.targets()[0].v + '%'; } });
+    var loader = new THREE.TextureLoader();
+    loader.crossOrigin = 'anonymous';
+    
+    // Safety check for empty arrays in the template
+    var validBRoll = bRollUrls.filter(function(u){ return u.startsWith('http'); });
+    
+    var bRollPromises = validBRoll.map(function(url){ return new Promise(function(resolve){ loader.load(url, function(tex){ bRollPool.push(tex); resolve(tex); }, null, function(){ resolve(null); }); }); });
+    var heroPromise = new Promise(function(resolve){ if(!heroUrl.startsWith('http')) { resolve(null); return; } loader.load(heroUrl, function(tex){ heroTexture = tex; resolve(tex); }, null, function(){ resolve(null); }); });
+    
+    if(validBRoll.length > 0) startMosh();
+    
+    Promise.all(bRollPromises.concat([heroPromise, new Promise(function(r) { setTimeout(r, 2200); })])).then(function(){
+      if(moshTween) moshTween.kill();
+      applyTexture(heroTexture || brandMarkTexture);
+      heroMat.uniforms.uGlitch.value = 2; gsap.to(heroMat.uniforms.uGlitch, { value: 0, duration: 1 });
+      onAllLoaded();
+    });
+  }
+
+  function openShutter(){
+    var pre = document.getElementById('preloader');
+    var flash = pre.querySelector('.flash');
+    gsap.timeline({ onComplete: function(){ pre.style.display = 'none'; } }).to(flash, { opacity: 1, duration: 0.06 }).to(flash, { opacity: 0, duration: 0.18 }).to(pre, { clipPath: 'polygon(0% 0%,100% 0%,100% 0%,0% 0%)', duration: 0.7, ease: 'power4.in' }, '-=0.04');
+  }
+
+  function initCursor(){
+    if (isCoarsePointer) return null;
+    var blob = document.querySelector('#cursor-wrap .blob');
+    var pos = { x: window.innerWidth/2, y: window.innerHeight/2 };
+    var mouse = { x: pos.x, y: pos.y };
+
+    window.addEventListener('mousemove', function(e){ mouse.x = e.clientX; mouse.y = e.clientY; });
+
+    return function tick(){
+      pos.x = lerp(pos.x, mouse.x, 0.2);
+      pos.y = lerp(pos.y, mouse.y, 0.2);
+      blob.style.transform = 'translate(' + pos.x + 'px,' + pos.y + 'px)';
+    };
+  }
+
+  function initKineticType(){
+    var els = document.querySelectorAll('.kinetic');
+    var skewSetters = Array.prototype.map.call(els, function(el){ return gsap.quickTo(el, 'skewY', { duration: 0.5, ease: 'power3' }); });
+    var stretchSetters = Array.prototype.map.call(els, function(el){ return gsap.quickTo(el, 'scaleY', { duration: 0.5, ease: 'power3' }); });
+    return function update(velocity){
+      if (reducedMotion) return;
+      var skew = clamp(velocity * 0.6, -14, 14);
+      var stretch = clamp(1 - velocity * 0.01, 0.85, 1.18);
+      skewSetters.forEach(function(s){ s(skew); });
+      stretchSetters.forEach(function(s){ s(stretch); });
+    };
+  }
+
+  function initHud(){
+    document.querySelectorAll('.hud-card').forEach(function(card){
+      var finalSeconds = parseFloat(card.getAttribute('data-final'));
+      var finalLabel = card.getAttribute('data-label');
+      var valEl = card.querySelector('.hud-v');
+      ScrollTrigger.create({
+        trigger: card, start: 'top 85%', once: true,
+        onEnter: function(){
+          if (isNaN(finalSeconds) || finalSeconds === 0) { valEl.textContent = finalLabel; return; }
+          var obj = { t: 0 };
+          gsap.to(obj, { t: finalSeconds, duration: reducedMotion ? 0.4 : 1.6, ease: 'power3.out', onUpdate: function(){ valEl.textContent = formatTime(obj.t); }, onComplete: function(){ valEl.textContent = finalLabel; } });
+        }
+      });
+    });
+  }
+
+  function initMedia(){
+    if (!window.ScrollTrigger || !ScrollTrigger.matchMedia) return;
+    var track = document.getElementById('media-track');
+    ScrollTrigger.matchMedia({
+      '(min-width: 901px)': function(){
+        var getDistance = function(){ return Math.max(0, track.scrollWidth - window.innerWidth + window.innerWidth * 0.05); };
+        var tween = gsap.to(track, {
+          x: function(){ return -getDistance(); }, ease: 'none',
+          scrollTrigger: { trigger: '#media', start: 'top top', end: function(){ return '+=' + getDistance(); }, scrub: true, pin: '.media-pin', invalidateOnRefresh: true }
+        });
+        return function(){ if (tween.scrollTrigger) tween.scrollTrigger.kill(); tween.kill(); gsap.set(track, { clearProps: 'transform' }); };
+      },
+      '(max-width: 900px)': function(){ gsap.set(track, { clearProps: 'transform' }); }
+    });
+  }
+
+  var CIRC = 87.9646;
+  function updateProgressRing(){
+    var ring = document.getElementById('progress-ring');
+    var label = document.getElementById('progress-pct');
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    var p = max > 0 ? clamp(window.scrollY / max, 0, 1) : 0;
+    ring.style.strokeDashoffset = String(CIRC * (1 - p));
+    label.textContent = String(Math.round(p * 100)).padStart(2, '0');
+  }
+
+  function initScroll(onVelocity){
+    var lenis;
+    if (typeof Lenis !== 'undefined'){
+      lenis = new Lenis({ lerp: 0.08, smoothWheel: true });
+      lenis.on('scroll', function(e){
+        if (window.ScrollTrigger) ScrollTrigger.update();
+        onVelocity(e.velocity);
+        updateProgressRing();
+      });
+    }
+    return lenis;
+  }
+
+  window.addEventListener('load', function(){
+    gsap.registerPlugin(ScrollTrigger);
+    initHero();
+    initHeroVisibility();
+    var cursorTick = initCursor();
+    var updateKinetic = initKineticType();
+    initHud(); initMedia();
+    var lenis = initScroll(updateKinetic);
+    updateProgressRing();
+
+    gsap.ticker.add(function(time){
+      if (lenis && lenis.raf) lenis.raf(time * 1000);
+      tickHero(time);
+      if (cursorTick) cursorTick();
+    });
+    
+    gsap.ticker.lagSmoothing(0); 
+
+    var resizeTimer = null;
+    window.addEventListener('resize', function(){
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function(){
+        resizeHero();
+        if (lenis && lenis.resize) lenis.resize();
+        if (window.ScrollTrigger) ScrollTrigger.refresh();
+      }, 150);
+    });
+
+    runPreloader(openShutter);
+  });
+})();
+</script>
+</body>
+</html>

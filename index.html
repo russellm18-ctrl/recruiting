@@ -1,45 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-  ============================================================================
-  RECRUITING PROFILES — SALES PAGE  (FINAL)
-  Russell Moore Photography · recruiting.russell-moore.com
-  ----------------------------------------------------------------------------
-  ALL LINKS WIRED:
-    $499  Profile        -> /recruiting/p/recruiting-profile
-    $795  Profile+Shoot  -> Acuity 94245272
-    $1,250 All-American  -> Acuity 94245393
-    $129  Season Update  -> /recruiting/p/recruiting-profile-update
-    $150  Priority       -> /recruiting/p/priority-deployment
-    $50   Spike Update   -> /recruiting/p/mid-season-spike-update
-    $125  Custom Domain  -> /recruiting/p/custproom-domain
-
-  SAMPLE PROFILE: now points to Ephraim Moore's live pilot profile
-  (recruiting.russell-moore.com/ephraim-moore) — real athlete, real data.
-  "Sample athlete, sample data" wording removed accordingly.
-
-  GTM-MPGDW4QD installed, per-tier click events fire to dataLayer.
-  ============================================================================
--->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-MPGDW4QD');</script>
-  <!-- End Google Tag Manager -->
-
   <title>College Recruiting Profiles for Athletes | Russell Moore Photography</title>
-  <meta name="description" content="Custom recruiting profile pages that get athletes found by college coaches — PRs, film, academics, and contact in one searchable page. Built by a credentialed Washington sports photographer. From $349." />
+  <meta name="description" content="Custom recruiting profile pages that get athletes found by college coaches — PRs, film, academics, and contact in one searchable page. Built by a credentialed Washington sports photographer. From $499." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://recruiting.russell-moore.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="College Recruiting Profiles | Russell Moore Photography" />
-  <meta property="og:description" content="A recruiting profile coaches can actually find. PRs, film, academics, and contact in one fast, search-optimized page. From $349." />
+  <meta property="og:description" content="A recruiting profile coaches can actually find. PRs, film, academics, and contact in one fast, search-optimized page. From $499." />
   <meta property="og:image" content="https://static1.squarespace.com/static/65c46be8ea98cb3bb888691a/694327c8b81c15304428e68a/6a272b6e9d129d02efd8430f/1780952512722/russell-moore-class-2027-senior-portrait-gig-harbor-wa-002.webp?format=1500w" />
   <meta property="og:url" content="https://recruiting.russell-moore.com/" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -65,6 +41,7 @@
       { "@type": "Offer", "name": "Profile",           "price": "499.00",  "priceCurrency": "USD", "url": "https://www.russell-moore.com/recruiting/p/recruiting-profile" },
       { "@type": "Offer", "name": "Profile + Shoot",   "price": "795.00",  "priceCurrency": "USD", "url": "https://bookrussell.as.me/?appointmentType=94245272" },
       { "@type": "Offer", "name": "All-American",      "price": "1250.00", "priceCurrency": "USD", "url": "https://bookrussell.as.me/?appointmentType=94245393" },
+      { "@type": "Offer", "name": "V2 Template Upgrade","price": "250.00", "priceCurrency": "USD", "url": "https://www.russell-moore.com/recruiting/p/recruiting-profile-v2" },
       { "@type": "Offer", "name": "Season Update",     "price": "129.00",  "priceCurrency": "USD", "url": "https://www.russell-moore.com/recruiting/p/recruiting-profile-update" },
       { "@type": "Offer", "name": "Priority Deployment","price": "150.00", "priceCurrency": "USD", "url": "https://www.russell-moore.com/recruiting/p/priority-deployment" },
       { "@type": "Offer", "name": "Mid-Season Spike",  "price": "50.00",   "priceCurrency": "USD", "url": "https://www.russell-moore.com/recruiting/p/mid-season-spike-update" },
@@ -163,6 +140,8 @@
     @media(max-width:680px){.addons .ao-grid{grid-template-columns:1fr}}
     .ao-item{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:13px 16px;text-decoration:none;transition:border-color .2s}
     .ao-item:hover{border-color:var(--volt)}
+    .ao-item.premium{grid-column: 1 / -1; border-color: rgba(204,255,0,0.4); background: rgba(204,255,0,0.02);}
+    .ao-item.premium:hover{border-color: var(--volt);}
     .ao-item .ao-name{font-family:'Oswald';text-transform:uppercase;font-weight:500;font-size:.95rem;color:var(--ink)}
     .ao-item .ao-price{font-family:'Roboto Mono';font-size:.82rem;color:var(--volt);white-space:nowrap}
 
@@ -182,9 +161,10 @@
     .trust .v{font-family:'Oswald';font-weight:600;font-size:1.05rem;margin-top:6px;letter-spacing:.01em}
 
     /* SAMPLE */
-    .sample{background:linear-gradient(135deg,rgba(204,255,0,.06),rgba(25,227,192,.04));border:1px solid var(--line);border-radius:14px;padding:30px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
+    .sample{background:linear-gradient(135deg,rgba(204,255,0,.06),rgba(25,227,192,.04));border:1px solid var(--line);border-radius:14px;padding:30px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
     .sample .st{font-family:'Oswald';text-transform:uppercase;font-weight:600;font-size:1.4rem}
     .sample .sd{color:var(--muted);font-size:.92rem;margin-top:4px;max-width:46ch}
+    .sample .actions{display:flex;gap:12px;flex-wrap:wrap}
 
     /* FAQ */
     .faq{display:flex;flex-direction:column;gap:10px}
@@ -251,7 +231,6 @@
     </div>
   </header>
 
-  <!-- WHY -->
   <section id="why" class="why reveal">
     <div class="wrap">
       <div class="sec-h"><span class="num">01</span><h2>A Snapshot Isn't a Profile</h2></div>
@@ -260,7 +239,6 @@
     </div>
   </section>
 
-  <!-- TIERS -->
   <section id="tiers" class="reveal">
     <div class="wrap">
       <div class="sec-h"><span class="num">02</span><h2>Choose Your Tier</h2></div>
@@ -272,7 +250,7 @@
           <div class="price">$499</div>
           <div class="blurb">Built from photos you already have.</div>
           <ul class="feat">
-            <li>Custom page at recruiting.russell-moore.com/yourname</li>
+            <li>Custom page at recruiting.russell-moore.com</li>
             <li>PRs, film, academics &amp; target schools</li>
             <li>Search-optimized schema so coaches find you</li>
             <li>Coach &amp; athlete contact built in</li>
@@ -315,7 +293,6 @@
         </div>
       </div>
 
-      <!-- SEASON UPDATE -->
       <div class="update">
         <div class="ux">
           <div class="un">Season Update</div>
@@ -326,10 +303,15 @@
            data-tier="season_update" data-value="129">Add Season Update</a>
       </div>
 
-      <!-- ADD-ONS -->
       <div class="addons">
-        <div class="ao-label">Add-Ons — available separately or at checkout</div>
+        <div class="ao-label">Add-Ons & Upgrades — available separately or at checkout</div>
         <div class="ao-grid">
+          
+          <a class="ao-item premium" href="https://www.russell-moore.com/recruiting/p/recruiting-profile-v2" data-tier="v2_template_upgrade" data-value="250">
+            <span class="ao-name">V2 Interactive WebGL Template Upgrade</span>
+            <span class="ao-price">+$250</span>
+          </a>
+
           <a class="ao-item" href="https://www.russell-moore.com/recruiting/p/priority-deployment"
              data-tier="priority_deployment" data-value="150">
             <span class="ao-name">Priority Deployment</span>
@@ -350,7 +332,6 @@
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
   <section id="how" class="reveal">
     <div class="wrap">
       <div class="sec-h"><span class="num">03</span><h2>How It Works</h2></div>
@@ -363,7 +344,6 @@
     </div>
   </section>
 
-  <!-- TRUST -->
   <section id="trust" class="reveal">
     <div class="wrap">
       <div class="sec-h"><span class="num">04</span><h2>Why Me</h2></div>
@@ -377,22 +357,24 @@
     </div>
   </section>
 
-  <!-- SAMPLE -->
   <section id="sample" class="reveal">
     <div class="wrap">
-      <div class="sec-h"><span class="num">05</span><h2>See a Live Profile</h2></div>
+      <div class="sec-h"><span class="num">05</span><h2>Compare the Templates</h2></div>
       <div class="sample">
-        <div>
-          <div class="st">Walk through a live page</div>
-          <div class="sd">PRs, film, academics, schedule, and coach contact — exactly what a college coach sees when they open your athlete's link.</div>
+        <div style="flex: 1 1 300px;">
+          <div class="st">The Standard vs. The Premium</div>
+          <div class="sd">See exactly what a college coach sees. Choose our lightning-fast standard database layout, or upgrade to the interactive fluid WebGL experience.<br><br><em><small>*More templates currently in development.</small></em></div>
         </div>
-        <a class="cta" href="https://recruiting.russell-moore.com/ephraim-moore/"
-           data-tier="view_sample" data-value="0">View a Live Profile →</a>
+        <div class="actions">
+          <a class="cta ghost" href="https://recruiting.russell-moore.com/ephraim-moore.html"
+             data-tier="view_sample_v1" data-value="0">View V1 Standard</a>
+          <a class="cta" href="https://recruiting.russell-moore.com/ephraim-moore-v2.html"
+             data-tier="view_sample_v2" data-value="0">View V2 Premium</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
   <section id="faq" class="reveal">
     <div class="wrap">
       <div class="sec-h"><span class="num">06</span><h2>Questions</h2></div>
@@ -421,7 +403,6 @@
     </div>
   </section>
 
-  <!-- FINAL CTA -->
   <section class="final">
     <div class="wrap">
       <h2>Put Your Athlete <span class="v">On the Radar.</span></h2>

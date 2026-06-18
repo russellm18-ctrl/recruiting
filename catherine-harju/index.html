@@ -175,8 +175,12 @@
   .media-track{display:flex;gap:28px;align-items:stretch;}
   .media-card{flex:0 0 auto;width:min(64vw,440px);display:flex;flex-direction:column;}
   .media-plate{position:relative;width:100%;aspect-ratio:4/5;background:linear-gradient(160deg,#121212 0%,#020202 75%);border:1px solid var(--line);overflow:hidden;}
-  .media-plate::before{
-    content:'';position:absolute;inset:0;
+  .media-plate img{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    filter:grayscale(.08) contrast(1.06);
+  }
+  .media-plate::after{
+    content:'';position:absolute;inset:0;pointer-events:none;
     background-image:repeating-linear-gradient(118deg, rgba(238,255,0,.05) 0 2px, transparent 2px 16px);
   }
   .media-plate[data-kind="film"] .play-icon{
@@ -395,21 +399,29 @@
     <div class="media-track" id="media-track">
       <article class="media-card">
         <div class="media-plate" data-kind="film">
+          <img src="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/a2bf3f6d-2ff1-42db-a641-e4cfbed5d8dd/05282026_Catherine-Harju_Stadium_1600M.jpg?content-type=image%2Fjpeg" alt="Catherine Harju racing the 1600m final at WIAA State, Stadium HS" loading="lazy" />
           <span class="corner-tag">REEL · 01</span>
           <span class="play-icon">▶</span>
         </div>
         <div class="media-info"><span class="media-type">FILM REEL</span><span class="media-title">1600M Final — WIAA 4A State</span></div>
       </article>
       <article class="media-card">
-        <div class="media-plate" data-kind="gallery"><span class="corner-tag">GALLERY · 02</span></div>
-        <div class="media-info"><span class="media-type">GALLERY</span><span class="media-title">NXR Northwest — 5K Course</span></div>
+        <div class="media-plate" data-kind="gallery">
+          <img src="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/5869c07c-b97c-4a37-8063-5773498c9981/Catherine-Harju_WIAA-Cross-Country-State-Championships.jpg?content-type=image%2Fjpeg" alt="Catherine Harju competing at the WIAA Cross Country State Championships" loading="lazy" />
+          <span class="corner-tag">GALLERY · 02</span>
+        </div>
+        <div class="media-info"><span class="media-type">GALLERY</span><span class="media-title">WIAA Cross Country State Championships</span></div>
       </article>
       <article class="media-card">
-        <div class="media-plate" data-kind="gallery"><span class="corner-tag">GALLERY · 03</span></div>
-        <div class="media-info"><span class="media-type">GALLERY</span><span class="media-title">USATF PNW — 2000m Steeplechase</span></div>
+        <div class="media-plate" data-kind="gallery">
+          <img src="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/d8059b12-fe5e-4115-bb49-25e4dcf229e3/Catherine-Harju_Stadium_South-Sound-Classic-2026.jpg?content-type=image%2Fjpeg" alt="Catherine Harju racing at the South Sound Classic, Stadium HS" loading="lazy" />
+          <span class="corner-tag">GALLERY · 03</span>
+        </div>
+        <div class="media-info"><span class="media-type">GALLERY</span><span class="media-title">South Sound Classic — Distance Field</span></div>
       </article>
       <article class="media-card">
         <div class="media-plate" data-kind="film">
+          <img src="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/ca4770b9-fe4a-4582-be9a-dd79562f8b02/20260119_harju-catherine_stadium_pretrack-track_003.webp?content-type=image%2Fwebp" alt="Catherine Harju, Stadium HS preseason track training" loading="lazy" />
           <span class="corner-tag">REEL · 04</span>
           <span class="play-icon">▶</span>
         </div>

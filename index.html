@@ -166,6 +166,19 @@
     .sample .sd{color:var(--muted);font-size:.92rem;margin-top:4px;max-width:46ch}
     .sample .actions{display:flex;gap:12px;flex-wrap:wrap}
 
+    /* SAMPLE GRID — two-athlete layout */
+    .sample-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+    @media(max-width:620px){.sample-grid{grid-template-columns:1fr}}
+    .sample-athlete{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+    .sample-athlete .sa-name{font-family:'Oswald';text-transform:uppercase;font-weight:600;font-size:1.05rem;letter-spacing:.02em;margin-bottom:14px;color:var(--ink)}
+    .sample-athlete .sa-links{display:flex;flex-direction:column;gap:10px}
+    .sa-link{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:11px 14px;text-decoration:none;transition:border-color .2s}
+    .sa-link:hover{border-color:var(--volt)}
+    .sa-link .sa-label{font-family:'Roboto Mono';font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+    .sa-link .sa-badge{font-family:'Roboto Mono';font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:20px}
+    .sa-badge.v1{color:var(--muted);border:1px solid var(--line)}
+    .sa-badge.v2{color:var(--volt);border:1px solid rgba(204,255,0,.4);background:rgba(204,255,0,.06)}
+
     /* FAQ */
     .faq{display:flex;flex-direction:column;gap:10px}
     .faq details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:0 18px}
@@ -365,11 +378,22 @@
           <div class="st">The Standard vs. The Premium</div>
           <div class="sd">See exactly what a college coach sees. Choose our lightning-fast standard database layout, or upgrade to the interactive fluid WebGL experience.<br><br><em><small>*More templates currently in development.</small></em></div>
         </div>
-        <div class="actions">
-          <a class="cta ghost" href="https://recruiting.russell-moore.com/ephraim-moore/"
-             data-tier="view_sample_v1" data-value="0">View V1 Standard</a>
-          <a class="cta" href="https://recruiting.russell-moore.com/ephraim-moore-v2/"
-             data-tier="view_sample_v2" data-value="0">View V2 Premium</a>
+      </div>
+      <div class="sample-grid">
+        <div class="sample-athlete">
+          <div class="sa-name">Maya Brennan</div>
+          <div class="sa-links">
+            <a class="sa-link" href="https://recruiting.russell-moore.com/maya-brennan"
+               data-tier="view_sample_v1_maya" data-value="0">
+              <span class="sa-label">V1 Standard</span>
+              <span class="sa-badge v1">Standard</span>
+            </a>
+            <a class="sa-link" href="https://recruiting.russell-moore.com/maya-brennan-v2/"
+               data-tier="view_sample_v2_maya" data-value="0">
+              <span class="sa-label">V2 Premium WebGL</span>
+              <span class="sa-badge v2">Premium</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>

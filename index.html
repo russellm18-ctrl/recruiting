@@ -166,7 +166,7 @@
     .sample .sd{color:var(--muted);font-size:.92rem;margin-top:4px;max-width:46ch}
     .sample .actions{display:flex;gap:12px;flex-wrap:wrap}
 
-    /* SAMPLE GRID — two-athlete layout */
+    /* SAMPLE GRID — athlete layout */
     .sample-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
     @media(max-width:620px){.sample-grid{grid-template-columns:1fr}}
     .sample-athlete{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
@@ -178,6 +178,7 @@
     .sa-link .sa-badge{font-family:'Roboto Mono';font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:20px}
     .sa-badge.v1{color:var(--muted);border:1px solid var(--line)}
     .sa-badge.v2{color:var(--volt);border:1px solid rgba(204,255,0,.4);background:rgba(204,255,0,.06)}
+    .sa-badge.v3{color:var(--violet);border:1px solid rgba(155,123,255,.4);background:rgba(155,123,255,.06)}
 
     /* FAQ */
     .faq{display:flex;flex-direction:column;gap:10px}
@@ -376,7 +377,7 @@
       <div class="sample">
         <div style="flex: 1 1 300px;">
           <div class="st">The Standard vs. The Premium</div>
-          <div class="sd">See exactly what a college coach sees. Choose our lightning-fast standard database layout, or upgrade to the interactive fluid WebGL experience.<br><br><em><small>*More templates currently in development.</small></em></div>
+          <div class="sd">See exactly what a college coach sees. Choose our lightning-fast standard database layout, upgrade to the interactive fluid WebGL experience, or select our high-end Editorial spread.<br><br><em><small>*More templates currently in development.</small></em></div>
         </div>
       </div>
       <div class="sample-grid">
@@ -392,6 +393,11 @@
                data-tier="view_sample_v2_maya" data-value="0">
               <span class="sa-label">V2 Premium WebGL</span>
               <span class="sa-badge v2">Premium</span>
+            </a>
+            <a class="sa-link" href="https://recruiting.russell-moore.com/maya-brennan-v3/"
+               data-tier="view_sample_v3_maya" data-value="0">
+              <span class="sa-label">V3 Editorial</span>
+              <span class="sa-badge v3">Editorial</span>
             </a>
           </div>
         </div>

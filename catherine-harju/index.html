@@ -144,6 +144,45 @@
   .profile-k { font-family: 'Roboto Mono'; font-size: 0.64rem; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 8px; text-transform: uppercase; }
   .profile-v { font-family: 'Inter'; font-weight: 500; font-size: 1.1rem; color: var(--white); }
 
+  /* ---------------- announcement banner ---------------- */
+  .announce-banner{
+    margin:40px 40px 0;
+    position:relative;
+    z-index:20;
+    background: linear-gradient(135deg, rgba(255,215,0,.12) 0%, rgba(0,51,160,.10) 100%), var(--black-2);
+    border:1px solid var(--volt);
+    padding:34px 36px;
+    overflow:hidden;
+  }
+  .announce-banner::before{
+    content:'';position:absolute;inset:0;pointer-events:none;
+    background-image:repeating-linear-gradient(118deg, rgba(255,215,0,.05) 0 2px, transparent 2px 18px);
+  }
+  .announce-tag{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'Roboto Mono';font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;
+    color:#050505;background:var(--volt);padding:6px 12px;margin-bottom:18px;
+  }
+  .announce-tag .blink-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:blink 1.6s ease-in-out infinite;}
+  .announce-h{
+    font-family:'Oswald';font-weight:700;text-transform:uppercase;letter-spacing:-.005em;
+    font-size:clamp(1.8rem,5vw,3.1rem);line-height:1.02;color:var(--white);margin-bottom:14px;
+  }
+  .announce-h b{color:var(--volt);}
+  .announce-sub{
+    font-family:'Inter';font-size:1rem;color:#d8d8d4;max-width:62ch;margin-bottom:24px;
+  }
+  .announce-stats{display:grid;grid-template-columns:repeat(4,auto) 1fr;gap:28px;align-items:end;}
+  @media(max-width:900px){.announce-stats{grid-template-columns:repeat(2,1fr);}}
+  .announce-stat .as-k{font-family:'Roboto Mono';font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
+  .announce-stat .as-v{font-family:'Oswald';font-weight:700;font-size:1.6rem;color:var(--white);}
+  .announce-roster{
+    margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,215,0,.25);
+    font-family:'Roboto Mono';font-size:.78rem;color:var(--muted);letter-spacing:.02em;
+  }
+  .announce-roster b{color:var(--white);font-weight:600;}
+  .announce-roster .self{color:var(--volt);}
+
   /* ---------------- top telemetry ---------------- */
   #data{
     padding-top: 80px;
@@ -314,6 +353,19 @@
   </div>
 </div>
 
+<div class="announce-banner">
+  <div class="announce-tag"><span class="blink-dot"></span> Breaking — Nike Outdoor Nationals</div>
+  <div class="announce-h">Heat Winners. <b>6th in the Nation.</b></div>
+  <div class="announce-sub">Catherine and the Federal Way TC 4x800m Relay squad won their heat at Nike Outdoor Nationals and finished 6th overall in the country — a statement result against the deepest field in high school distance running.</div>
+  <div class="announce-stats">
+    <div class="announce-stat"><div class="as-k">Event</div><div class="as-v">4x800m Relay</div></div>
+    <div class="announce-stat"><div class="as-k">Result</div><div class="as-v">9:45.42</div></div>
+    <div class="announce-stat"><div class="as-k">Place</div><div class="as-v">6th Overall</div></div>
+    <div class="announce-stat"><div class="as-k">Heat</div><div class="as-v">Won Heat 1</div></div>
+  </div>
+  <div class="announce-roster">'A' Squad — R. Wessells, I. Quantz, <b class="self">C. Harju</b>, M. Blackwood · Federal Way TC, WA</div>
+</div>
+
 <section id="data" class="sec">
   <div class="sec-eyebrow">[ 01 · TELEMETRY ]</div>
   <h2 class="sec-h">TOP PERFORMANCES</h2>
@@ -350,6 +402,12 @@
         </tr>
       </thead>
       <tbody>
+        <tr>
+          <td>4x800m Relay</td>
+          <td>9:45.42</td>
+          <td>Nike Outdoor Nationals (6th, Won Heat 1)</td>
+          <td>2026</td>
+        </tr>
         <tr>
           <td>2000m Steeplechase</td>
           <td>7:38.22</td>

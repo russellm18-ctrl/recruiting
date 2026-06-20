@@ -54,7 +54,7 @@
     :root{
       --bg:#08090b; --bg-2:#0f1115; --card:#131519; --line:#23262d;
       --ink:#f3f3f0; --muted:#8b8f98;
-      --volt:#ccff00; --teal:#19e3c0; --violet:#9b7bff;
+      --volt:#ccff00; --teal:#19e3c0; --violet:#9b7bff; --orange:#ff5b1f;
     }
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
@@ -163,7 +163,7 @@
     /* SAMPLE */
     .sample{background:linear-gradient(135deg,rgba(204,255,0,.06),rgba(25,227,192,.04));border:1px solid var(--line);border-radius:14px;padding:30px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
     .sample .st{font-family:'Oswald';text-transform:uppercase;font-weight:600;font-size:1.4rem}
-    .sample .sd{color:var(--muted);font-size:.92rem;margin-top:4px;max-width:46ch}
+    .sample .sd{color:var(--muted);font-size:.92rem;margin-top:4px;max-width:60ch}
     .sample .actions{display:flex;gap:12px;flex-wrap:wrap}
 
     /* SAMPLE GRID — athlete layout */
@@ -179,6 +179,7 @@
     .sa-badge.v1{color:var(--muted);border:1px solid var(--line)}
     .sa-badge.v2{color:var(--volt);border:1px solid rgba(204,255,0,.4);background:rgba(204,255,0,.06)}
     .sa-badge.v3{color:var(--violet);border:1px solid rgba(155,123,255,.4);background:rgba(155,123,255,.06)}
+    .sa-badge.v4{color:var(--orange);border:1px solid rgba(255,91,31,.4);background:rgba(255,91,31,.06)}
 
     /* FAQ */
     .faq{display:flex;flex-direction:column;gap:10px}
@@ -376,8 +377,8 @@
       <div class="sec-h"><span class="num">05</span><h2>Compare the Templates</h2></div>
       <div class="sample">
         <div style="flex: 1 1 300px;">
-          <div class="st">The Standard vs. The Premium</div>
-          <div class="sd">See exactly what a college coach sees. Choose our lightning-fast standard database layout, upgrade to the interactive fluid WebGL experience, or select our high-end Editorial spread.<br><br><em><small>*More templates currently in development.</small></em></div>
+          <div class="st">Choose Your Look</div>
+          <div class="sd">See exactly what a college coach sees. Choose our lightning-fast standard database layout, upgrade to the interactive fluid WebGL experience, select our high-end Editorial spread, or bring the noise with our Urban Hype template.<br><br><em><small>*More templates currently in development.</small></em></div>
         </div>
       </div>
       <div class="sample-grid">
@@ -398,6 +399,11 @@
                data-tier="view_sample_v3_maya" data-value="0">
               <span class="sa-label">V3 Editorial</span>
               <span class="sa-badge v3">Editorial</span>
+            </a>
+            <a class="sa-link" href="https://recruiting.russell-moore.com/maya-brennan-v4/"
+               data-tier="view_sample_v4_maya" data-value="0">
+              <span class="sa-label">V4 Urban Hype</span>
+              <span class="sa-badge v4">Hype</span>
             </a>
           </div>
         </div>

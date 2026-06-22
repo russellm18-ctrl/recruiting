@@ -17,7 +17,7 @@ stat2_value: "3200: 11:13.79 SPSL 4A League Championship Date: 5/16/26"
 stat3_label: 'Event'
 stat3_value: "5k: 20:10.8  SPSL 4A League Championship Date: 10/23/25"
 gpa: 3.98
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: '[https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png](https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/f169f423-dae0-45d4-a7e4-d5547339dce4/south-kitsap-track-athlete-olympia-bear-relays-portrait.jpg?content-type=image%2Fjpeg)'
 coach_name: "Ed Santos "
 coach_email: "santosjr@skschools.org"
 parent_name: "Janice Riley "

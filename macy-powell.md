@@ -17,7 +17,7 @@ stat2_value: "1600M"
 stat3_label: 'Event'
 stat3_value: "3200M"
 gpa: 3.8
-hero_image: '[https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png](https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/3a04feb9-dfd3-4525-b9f3-2c3bfeb77339/macy-powell-seattle-prep-800m-wiaa-state-2026.jpg?content-type=image%2Fjpeg)'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/3a04feb9-dfd3-4525-b9f3-2c3bfeb77339/macy-powell-seattle-prep-800m-wiaa-state-2026.jpg?content-type=image%2Fjpeg'
 coach_name: "Aimee Corr"
 coach_email: "acorr@seaprep.org"
 parent_name: "James Powell"

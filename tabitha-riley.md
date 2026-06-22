@@ -26,15 +26,15 @@ about_p1: "I am a discipline student athlete going into my sophomore year of hig
 about_p2: ''
 personal_records:
   - event: "1600: 5:12.13 3A/4A Districts 3/4 Championships  Date: 5/20/26"
-    mark: '-'
-    meet: '-'
-    date: '-'
+    mark: '5:12.13'
+    meet: '3A/4A Districts 3/4 Championships'
+    date: '5/20/26'
   - event: "3200: 11:13.79 SPSL 4A League Championship Date: 5/16/26"
-    mark: '-'
-    meet: '-'
-    date: '-'
+    mark: '11:13.79'
+    meet: 'SPSL 4A League Championship'
+    date: '5/16/26'
   - event: "5k: 20:10.8  SPSL 4A League Championship Date: 10/23/25"
-    mark: '-'
-    meet: '-'
-    date: '-'
+    mark: '20:10.8'
+    meet: 'SPSL 4A League Championship'
+    date: '10/23/25'
 ---

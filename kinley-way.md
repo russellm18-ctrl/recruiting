@@ -17,7 +17,7 @@ stat2_value: "2:27"
 stat3_label: 'Event'
 stat3_value: "19:58"
 gpa: 3.856
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/7e59fa6b-0a25-419c-8742-9a9b87ded037/auburn-high-school-female-runner-bear-relays-olympia.webp?content-type=image%2Fwebp'
 coach_name: "Lacey Way (xc)"
 coach_email: "lway@auburn.wednet.edu"
 parent_name: "Lacey Way"

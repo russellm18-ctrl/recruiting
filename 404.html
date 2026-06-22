@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Unclaimed | Russell Moore Recruiting</title>
+  <meta name="robots" content="noindex" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;500&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #08090b; 
+      --card: #131519; 
+      --line: #23262d;
+      --ink: #f3f3f0; 
+      --muted: #8b8f98;
+      --volt: #ccff00; 
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      padding: 24px;
+    }
+    body::before {
+      content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background: radial-gradient(800px 600px at 50% 0%, rgba(204,255,0,0.05), transparent 70%);
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 540px;
+      width: 100%;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 48px 40px;
+      text-align: center;
+    }
+    .eyebrow {
+      font-family: 'Roboto Mono';
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-family: 'Oswald';
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      font-size: clamp(2.2rem, 6vw, 3rem);
+      margin-bottom: 16px;
+    }
+    h1 span {
+      color: var(--volt);
+    }
+    p {
+      color: #d7d9dd;
+      font-size: 1.05rem;
+      margin-bottom: 32px;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--volt);
+      color: #0a0a0a;
+      font-family: 'Oswald';
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      padding: 16px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.05rem;
+      transition: filter 0.2s;
+      width: 100%;
+    }
+    .cta:hover {
+      filter: brightness(1.1);
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 24px;
+      font-family: 'Roboto Mono';
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: color 0.2s;
+    }
+    .back-link:hover {
+      color: var(--ink);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="eyebrow">404 // Directory Not Found</div>
+    <h1>Profile <span>Unclaimed</span></h1>
+    <p>This athlete is ranked on WA State Watch, but their collegiate recruiting profile hasn't been built yet. Claim this URL and get added to the verified directory for free.</p>
+    
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzyVQqAsl9-ysNcwrg5n6buae7Ny8jimpWFuCESaeVwtg5kw/viewform?usp=header" class="cta">Build Free Profile</a>
+    
+    <br>
+    <a href="https://www.russell-moore.com/state-watch-2026" class="back-link">← Return to Rankings</a>
+  </div>
+</body>
+</html>

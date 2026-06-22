@@ -25,16 +25,16 @@ parent_email: "jwbpowell@gmail.com"
 about_p1: "Hi I'm Macy and I run cross country and track at Seattle prep in Seattle. I am a hard worker and I love to see my work pay off in races. I also love the team culture at Seattle prep and I think building a team culture is a super important aspect to any team with big goals. Some of my goals include running in collage and being a part of a team that has a good dynamic and a positive environment. "
 about_p2: ''
 personal_records:
-  - event: "800M, 2:14.17, Metro league meet 2, 4/2/26"
-    mark: '-'
-    meet: '-'
-    date: '-'
-  - event: "1600M, 5:11.24, liberty twilight, 5/9/26"
-    mark: '-'
-    meet: '-'
-    date: '-'
-  - event: "3200M, 11:05.45, issaquah icebreaker, 3/28/26"
-    mark: '-'
-    meet: '-'
-    date: '-'
+  - event: "800m"
+    mark: "2:14.17"
+    meet: "Metro League Meet 2"
+    date: "4/2/26"
+  - event: "1600m"
+    mark: "5:11.24"
+    meet: "Liberty Twilight"
+    date: "5/9/26"
+  - event: "3200m"
+    mark: "11:05.45"
+    meet: "Issaquah Icebreaker"
+    date: "3/28/26"
 ---

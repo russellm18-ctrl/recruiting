@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MPGDW4QD');</script>
+
+  <!-- SEO & PROPERTIES (DYNAMIC) -->
+  <title>{{ page.athlete_name }} — {{ page.school_name }} Athlete Profile</title>
+  <meta name="description" content="Athletic profile for {{ page.athlete_name }}, Class of {{ page.grad_year }} at {{ page.school_name }}." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://recruiting.russell-moore.com/{{ page.slug }}" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{--bg:#08090b;--bg-2:#0f1115;--card:#131519;--line:#23262d;--ink:#f3f3f0;--muted:#8b8f98;--volt:#5b8def;--teal:#d8dce3;--gold:#f59e0b}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(900px 500px at 85% -5%,rgba(91,141,239,.12),transparent 60%),radial-gradient(700px 600px at -10% 30%,rgba(216,220,227,.06),transparent 55%)}
+    .grain{position:fixed;inset:0;z-index:5;pointer-events:none;opacity:.05;mix-blend-mode:overlay;background-image:url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27120%27 height=%27120%27%3E%3Cfilter id=%27n%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%270.9%27 numOctaves=%273%27 stitchTiles=%27stitch%27/%3E%3C/filter%3E%3Crect width=%27100%25%27 height=%27100%25%27 filter=%27url(%23n)%27/%3E%3C/svg%3E')}
+    .scroll-bar{position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,var(--volt),var(--teal));z-index:100;transition:width .08s linear}
+    .wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px}
+    nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);background:rgba(8,9,11,.85);border-bottom:1px solid var(--line)}
+    nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+    nav .name{font-family:'Oswald';text-transform:uppercase;font-weight:600;letter-spacing:.08em;font-size:.95rem}
+    nav .name b{color:var(--volt)}
+    nav .links{display:flex;gap:22px}
+    nav .links a{position:relative;color:var(--muted);text-decoration:none;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;font-family:'Roboto Mono';padding-bottom:4px}
+    nav .links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--volt);transition:width .25s ease}
+    nav .links a:hover{color:var(--ink)}
+    nav .links a:hover::after{width:100%}
+    @media(max-width:720px){nav .links{display:none}}
+    .ticker{overflow:hidden;border-bottom:1px solid var(--line);background:var(--bg-2);white-space:nowrap;position:relative;z-index:1}
+    .ticker-track{display:inline-flex;width:max-content;animation:ticker-scroll 32s linear infinite}
+    .ticker-seg{display:inline-flex;align-items:center;gap:60px;padding:9px 30px 9px 0}
+    .ticker span{font-family:'Roboto Mono';font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+    .ticker span b{color:var(--volt)}
+    @keyframes ticker-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    header{position:relative;padding:64px 0 40px;overflow:hidden}
+    .eyebrow{font-family:'Roboto Mono';color:var(--volt);font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+    .pulse-dot{width:7px;height:7px;border-radius:50%;background:var(--volt);box-shadow:0 0 0 0 rgba(91,141,239,.6);animation:pulse 1.8s infinite}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(91,141,239,.55)}70%{box-shadow:0 0 0 9px rgba(91,141,239,0)}100%{box-shadow:0 0 0 0 rgba(91,141,239,0)}}
+    h1{font-family:'Oswald';font-weight:700;text-transform:uppercase;line-height:.92;letter-spacing:-.01em;font-size:clamp(3.2rem,11vw,7rem)}
+    h1 .last{background:linear-gradient(110deg,var(--volt) 20%,var(--teal) 45%,var(--volt) 70%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 7s linear infinite}
+    @keyframes shimmer{to{background-position:-220% 0}}
+    .subline{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--muted);font-family:'Roboto Mono';font-size:.82rem;letter-spacing:.04em}
+    .subline span{display:inline-flex;align-items:center;gap:8px}
+    .subline b{color:var(--ink);font-weight:500}
+    .dot{width:5px;height:5px;border-radius:50%;background:var(--teal)}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:end;margin-top:36px}
+    @media(max-width:820px){.hero-grid{grid-template-columns:1fr}}
+    .img-frame{position:relative;width:100%;aspect-ratio:4/5;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+    .img-frame img{width:100%;height:100%;object-fit:cover;display:block}
+    .marquee{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media(max-width:480px){.marquee{grid-template-columns:1fr}}
+    .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 16px;position:relative;overflow:hidden}
+    .stat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--volt)}
+    .stat .ev{font-family:'Roboto Mono';font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+    .stat .mk{font-family:'Oswald';font-weight:700;font-size:2.3rem;line-height:1;margin-top:8px}
+    .stat .tag{display:inline-block;font-family:'Roboto Mono';font-size:.62rem;color:var(--teal);margin-top:6px;letter-spacing:.08em;border:1px solid var(--teal);border-radius:20px;padding:2px 8px}
+    .credbar{margin-top:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    .credbar > div{background:var(--bg-2);padding:14px 16px}
+    .credbar .k{font-family:'Roboto Mono';font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+    .credbar .v{font-family:'Oswald';font-weight:600;font-size:1.2rem;margin-top:4px}
+    section{padding:54px 0;border-top:1px solid var(--line);position:relative}
+    .sec-h{display:flex;align-items:baseline;gap:14px;margin-bottom:26px}
+    .sec-h .num{font-family:'Roboto Mono';font-size:.72rem;color:var(--volt);letter-spacing:.2em}
+    .sec-h h2{font-family:'Oswald';text-transform:uppercase;font-weight:600;font-size:clamp(1.5rem,4vw,2.1rem);letter-spacing:.02em}
+    .board{width:100%;border-collapse:collapse;font-family:'Roboto Mono'}
+    .board thead th{text-align:left;font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding:0 14px 12px}
+    .board tbody tr{border-top:1px solid var(--line)}
+    .board td{padding:16px 14px;vertical-align:middle}
+    .board .ev{font-family:'Oswald';font-weight:600;font-size:1.05rem;letter-spacing:.02em;text-transform:uppercase}
+    .board .mk{font-weight:700;font-size:1.15rem;color:var(--volt)}
+    .board .meta{color:var(--muted);font-size:.8rem}
+    .about p{max-width:68ch;color:#d7d9dd;font-size:1.05rem}
+    .about p + p{margin-top:16px}
+    
+    /* PREMIUM CONVERSION CTA BOX */
+    .cta-box{background:linear-gradient(135deg,#11141b,rgba(91,141,239,0.06));border:1px solid rgba(91,141,239,0.3);border-radius:14px;padding:32px;margin-top:40px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+    @media(max-width:680px){.cta-box{grid-template-columns:1fr;text-align:center}}
+    .cta-title{font-family:'Oswald';font-size:1.6rem;text-transform:uppercase;letter-spacing:.02em}
+    .cta-title b{color:var(--gold)}
+    .cta-desc{font-size:.9rem;color:var(--muted);margin-top:6px;max-width:60ch}
+    .cta-btn{background:var(--volt);color:var(--ink);text-decoration:none;font-family:'Roboto Mono';font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:14px 24px;border-radius:8px;transition:background .2s}
+    .cta-btn:hover{background:#477be0}
+
+    .contact{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    @media(max-width:760px){.contact{grid-template-columns:1fr}}
+    .ccard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
+    .ccard .role{font-family:'Roboto Mono';font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+    .ccard .who{font-family:'Oswald';font-weight:600;font-size:1.25rem}
+    .ccard a{color:var(--volt);text-decoration:none;font-family:'Roboto Mono';font-size:.84rem;word-break:break-all}
+    .ccard .line{color:var(--muted);font-size:.84rem;margin-top:4px}
+    footer{border-top:1px solid var(--line);padding:36px 0 60px;margin-top:20px}
+    footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+    footer .by{font-family:'Roboto Mono';font-size:.74rem;letter-spacing:.06em;color:var(--muted)}
+    footer .by b{color:var(--volt)}
+  </style>
+  <link rel="icon" href="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png?content-type=image%2Fpng" type="image/png">
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPGDW4QD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <div class="grain"></div>
+  <div class="scroll-bar" id="scrollBar"></div>
+
+  <nav>
+    <div class="wrap">
+      <div class="name">{{ page.first_name }} <b>{{ page.last_name }}</b> · '{{ page.grad_year | slice: -2, 2 }}</div>
+      <div class="links">
+        <a href="#records">Records</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="ticker">
+    <div class="ticker-track">
+      <div class="ticker-seg">
+        <span>CLASS OF <b>{{ page.grad_year }}</b></span>
+        <span>{{ page.school_name }} — <b>{{ page.mascot }}</b></span>
+        <span>EVENTS: <b>{{ page.ticker_events }}</b></span>
+      </div>
+      <div class="ticker-seg">
+        <span>CLASS OF <b>{{ page.grad_year }}</b></span>
+        <span>{{ page.school_name }} — <b>{{ page.mascot }}</b></span>
+        <span>EVENTS: <b>{{ page.ticker_events }}</b></span>
+      </div>
+    </div>
+  </div>
+
+  <header id="hero">
+    <div class="wrap">
+      <div class="eyebrow"><span class="pulse-dot"></span>Verified Athlete Directory Profile</div>
+      <h1>{{ page.first_name }}<br><span class="last">{{ page.last_name }}</span></h1>
+      <div class="subline">
+        <span><span class="dot"></span> <b>{{ page.discipline }}</b> — {{ page.ticker_events }}</span>
+        <span><span class="dot"></span> {{ page.school_name }}, <b>{{ page.state_abbr }}</b></span>
+      </div>
+      <div class="hero-grid">
+        <div>
+          <div class="marquee">
+            <div class="stat"><div class="ev">{{ page.stat1_label }}</div><div class="mk">{{ page.stat1_value }}</div><div class="tag">PR</div></div>
+            <div class="stat"><div class="ev">{{ page.stat2_label }}</div><div class="mk">{{ page.stat2_value }}</div><div class="tag">PR</div></div>
+            <div class="stat"><div class="ev">{{ page.stat3_label }}</div><div class="mk">{{ page.stat3_value }}</div><div class="tag">PR</div></div>
+          </div>
+          <div class="credbar">
+            <div><div class="k">Grad Year</div><div class="v">{{ page.grad_year }}</div></div>
+            <div><div class="k">GPA</div><div class="v">{{ page.gpa }}</div></div>
+            <div><div class="k">Status</div><div class="v" style="font-size:1rem;color:var(--teal)">NCAA Active</div></div>
+          </div>
+        </div>
+        <div class="img-frame">
+          <img src="{{ page.hero_image }}" alt="{{ page.athlete_name }} competition photograph" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="records">
+    <div class="wrap">
+      <div class="sec-h"><span class="num">01</span><h2>Personal Records</h2></div>
+      <table class="board">
+        <thead><tr><th>Event</th><th>Mark</th><th>Meet</th><th>Date</th></tr></thead>
+        <tbody>
+          {% for record in page.personal_records %}
+          <tr>
+            <td class="ev">{{ record.event }}</td>
+            <td class="mk">{{ record.mark }}</td>
+            <td class="meta">{{ record.meet }}</td>
+            <td class="meta">{{ record.date }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <!-- UPSELL BANNER -->
+      <div class="cta-box">
+        <div>
+          <div class="cta-title">Unlock Full <b>College Recruiting</b> Features</div>
+          <div class="cta-desc">Upgrade this profile to link unedited performance film, download verified scholastic transcripts, log cross-platform coach view histories, and instantly alert college recruiters.</div>
+        </div>
+        <div>
+          <a href="https://russell-moore.com/recruiting-upgrade" class="cta-btn">Upgrade Profile</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap">
+      <div class="sec-h"><span class="num">02</span><h2>About</h2></div>
+      <p>{{ page.about_p1 }}</p>
+      {% if page.about_p2 %}<p>{{ page.about_p2 }}</p>{% endif %}
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-h"><span class="num">03</span><h2>Contact</h2></div>
+      <div class="contact">
+        <div class="ccard">
+          <div class="role">Head Coach — {{ page.school_name }}</div>
+          <div class="who">{{ page.coach_name }}</div>
+          <a href="mailto:{{ page.coach_email }}">{{ page.coach_email }}</a>
+        </div>
+        <div class="ccard">
+          <div class="role">Parent / Guardian Connection</div>
+          <div class="who">{{ page.parent_name }}</div>
+          <div class="line">General Recruiting Inquiries</div>
+          <a href="mailto:{{ page.parent_email }}">{{ page.parent_email }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="by">Profile &amp; photography by <b>Russell Moore Photography</b> · russell-moore.com</div>
+    </div>
+  </footer>
+
+  <script>
+    const scrollBar = document.getElementById('scrollBar');
+    window.addEventListener('scroll', ()=>{
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+      scrollBar.style.width = pct + '%';
+    });
+  </script>
+</body>
+</html>

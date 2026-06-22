@@ -17,7 +17,7 @@ stat2_value: "3200m"
 stat3_label: 'Event'
 stat3_value: "5k"
 gpa: 4
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/b18c61d8-fd87-4ca9-a545-d5a4cb4f17cd/lucy-fraser-skyline-track-field-state-2026.jpg?content-type=image%2Fjpeg'
 coach_name: "Samuel Symmes "
 coach_email: "Samsymmes@gmail.com"
 parent_name: "Beth Fraser"

@@ -17,7 +17,7 @@ stat2_value: "800m"
 stat3_label: 'Event'
 stat3_value: "5k"
 gpa: 4
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/d7eac6a3-425d-4c4a-8059-4476ecd1073e/maya-crane-gig-harbor-high-school-wiaa-state-2026.jpg?content-type=image%2Fjpeg'
 coach_name: "Patty Ley"
 coach_email: "leyp@psd401.net"
 parent_name: "Doug Crane "

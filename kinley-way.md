@@ -25,16 +25,16 @@ parent_email: "lway@auburn.wednet.edu"
 about_p1: "I am a hardworking and coachable athlete who is always willing to put in extra work to achieve my goals. My goal is to push myself to reach my highest potential both on and off the track. I aspire to compete at the next level while balancing academics, athletics, and leadership."
 about_p2: ''
 personal_records:
-  - event: "5:21, 1600M, 7th, NPSL 3A/4A Championships, May13"
-    mark: '-'
-    meet: '-'
-    date: '-'
-  - event: "2:27, 800, 10th, NPSL 3A/4A Championships May 13"
-    mark: '-'
-    meet: '-'
-    date: '-'
-  - event: "19:58, 5000M, 22nd, NIKE HOLE IN THE WALL XC INVITATIONAL - Women’s silver, October 11 "
-    mark: '-'
-    meet: '-'
-    date: '-'
+  - event: "1600m"
+    mark: "5:21"
+    meet: "NPSL 3A/4A Championships"
+    date: "5/13/26"
+  - event: "800m"
+    mark: "2:27"
+    meet: "NPSL 3A/4A Championships"
+    date: "5/13/26"
+  - event: "5000m"
+    mark: "19:58"
+    meet: "Nike Hole in the Wall XC Invitational"
+    date: "10/11/25"
 ---

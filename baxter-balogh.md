@@ -17,7 +17,7 @@ stat2_value: "1600m"
 stat3_label: 'Event'
 stat3_value: "4x400m 3:32.19 (51.4 individual split)"
 gpa: 3.67
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/1b09b801-fb40-4f2f-9602-7206dd0e90a8/Baxter-Balogh-Districts-Kent-wiaa-216.jpg?content-type=image%2Fjpeg'
 coach_name: "Tyler Nugent"
 coach_email: "nugentt@psd401.net"
 parent_name: "Joy Balogh"

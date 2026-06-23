@@ -17,7 +17,7 @@ stat2_value: "800m"
 stat3_label: 'Event'
 stat3_value: "5k(xc)"
 gpa: 3.7
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/47f43678-d87d-4899-a395-783ba4561712/Asher-Pepin_Curtis_SPSL-4A-League-Championship+Varsity_2025.jpg?content-type=image%2Fjpeg'
 coach_name: "Ben Mangrum "
 coach_email: "bmangrum@upsd83.org"
 parent_name: "Charley Pepin"

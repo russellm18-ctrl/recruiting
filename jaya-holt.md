@@ -17,7 +17,7 @@ stat2_value: "3200m"
 stat3_label: 'Event'
 stat3_value: "5000m"
 gpa: 4
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/902f5043-b48e-4bea-a476-1ca03143d0fd/project-29-jaya-holt-Glacier-peak-nxn-olympia-sports-photography+copy.webp?content-type=image%2Fwebp'
 coach_name: "David Weed"
 coach_email: "david@gprunners.com"
 parent_name: "Deepi Holt"

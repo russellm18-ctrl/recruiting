@@ -48,9 +48,9 @@
 
     --white:#f5f5f3;
 
-    --volt:#FFD700; /* Stadium Gold - Used for high-contrast data & text */
+    --volt:#FFD700;
 
-    --accent:#0033A0; /* Stadium Royal Blue - Used for subtle structure & cursor */
+    --accent:#0033A0;
 
     --line:#1c1c1c;
 
@@ -120,9 +120,9 @@
 
     position:fixed;inset:0;z-index:1000;
 
-    background: rgba(5, 5, 5, 0.4); 
+    background: rgba(5, 5, 5, 0.4);
 
-    backdrop-filter: blur(8px); 
+    backdrop-filter: blur(8px);
 
     -webkit-backdrop-filter: blur(8px);
 
@@ -152,7 +152,7 @@
 
 
 
-  /* ---------------- custom cursor (Refined Volume) ---------------- */
+  /* ---------------- custom cursor ---------------- */
 
   @media (pointer: fine){
 
@@ -172,7 +172,7 @@
 
       margin:-6px 0 0 -6px;border-radius:50%;
 
-      background:var(--accent); /* Royal Blue cursor */
+      background:var(--accent);
 
       transition: transform 0.1s ease-out;
 
@@ -268,7 +268,7 @@
 
 
 
-  /* ---------------- shared section chrome (Guttered) ---------------- */
+  /* ---------------- shared section chrome ---------------- */
 
   .sec{position:relative;border-top:1px solid var(--line); padding: 100px 40px;}
 
@@ -278,7 +278,7 @@
 
 
 
-  /* ---------------- quick stats grid (Guttered) ---------------- */
+  /* ---------------- quick stats grid ---------------- */
 
   .profile-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 60px 40px 0; position:relative; z-index: 20;}
 
@@ -468,7 +468,27 @@
 
   .media-title{font-family:'Oswald';font-size:1.08rem;text-transform:uppercase;letter-spacing:.01em;}
 
-  
+
+
+  /* ---- video plate variant (YouTube embed) ---- */
+
+  .media-plate--video::after { display: none; }
+
+  .media-plate--video iframe {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    border: 0;
+
+  }
+
+
 
   /* ---------------- split details layout ---------------- */
 
@@ -476,7 +496,7 @@
 
   .split-col { display: flex; flex-direction: column; }
 
-  
+
 
   /* Academics */
 
@@ -488,7 +508,7 @@
 
   .acad-v { font-family: 'Inter'; font-size: 1.25rem; font-weight: 500; color: var(--white);}
 
-  
+
 
   /* Schedule Timeline */
 
@@ -521,6 +541,10 @@
   .c-link { display: inline-block; margin-top: 20px; font-family: 'Roboto Mono'; font-size: 0.75rem; color: var(--white); text-decoration: underline; text-decoration-color: #333; text-underline-offset: 6px; letter-spacing: 0.05em; text-transform: uppercase;}
 
   .c-link:hover { color: var(--volt); text-decoration-color: var(--volt); }
+
+  .c-link--muted { color: var(--muted); text-decoration-color: transparent; cursor: default; }
+
+  .c-link--muted:hover { color: var(--muted); text-decoration-color: transparent; }
 
 
 
@@ -579,6 +603,10 @@
 </head>
 
 <body>
+
+
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPGDW4QD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
@@ -684,7 +712,7 @@
 
     <div class="profile-k">GPA</div>
 
-    <div class="profile-v">[INSERT GPA]</div>
+    <div class="profile-v">3.879</div>
 
   </div>
 
@@ -692,7 +720,7 @@
 
     <div class="profile-k">NCAA ID</div>
 
-    <div class="profile-v">TBD</div>
+    <div class="profile-v">N/A</div>
 
   </div>
 
@@ -700,7 +728,7 @@
 
     <div class="profile-k">Intended Major</div>
 
-    <div class="profile-v">[INSERT MAJOR]</div>
+    <div class="profile-v">Sports Psychology</div>
 
   </div>
 
@@ -914,19 +942,55 @@
 
     <div class="media-track" id="media-track">
 
+
+
+      <!-- 4x800m at Nike Outdoor Nationals — live YouTube embed -->
+
       <article class="media-card">
 
-        <div class="media-plate" data-kind="film">
+        <div class="media-plate media-plate--video" data-kind="video">
 
-          <img src="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/a2bf3f6d-2ff1-42db-a641-e4cfbed5d8dd/05282026_Catherine-Harju_Stadium_1600M.jpg?content-type=image%2Fjpeg" alt="Catherine Harju racing the 1600m final at WIAA State, Stadium HS" loading="lazy" />
+          <iframe
 
-          <span class="corner-tag">REEL · 01</span>
+            src="https://www.youtube.com/embed/_2ivyx14G48?rel=0&modestbranding=1"
 
-          <span class="play-icon">▶</span>
+            title="Catherine Harju — 4x800m Relay, Nike Outdoor Nationals 2026"
+
+            frameborder="0"
+
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+
+            allowfullscreen
+
+            loading="lazy">
+
+          </iframe>
 
         </div>
 
-        <div class="media-info"><span class="media-type">FILM REEL</span><span class="media-title">1600M Final — WIAA 4A State</span></div>
+        <div class="media-info">
+
+          <span class="media-type">RACE FILM</span>
+
+          <span class="media-title">4x800m Relay — Nike Outdoor Nationals</span>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="media-card">
+
+        <div class="media-plate" data-kind="gallery">
+
+          <img src="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/a2bf3f6d-2ff1-42db-a641-e4cfbed5d8dd/05282026_Catherine-Harju_Stadium_1600M.jpg?content-type=image%2Fjpeg" alt="Catherine Harju racing the 1600m final at WIAA State, Stadium HS" loading="lazy" />
+
+          <span class="corner-tag">GALLERY · 02</span>
+
+        </div>
+
+        <div class="media-info"><span class="media-type">GALLERY</span><span class="media-title">1600M — WIAA State Championships</span></div>
 
       </article>
 
@@ -936,7 +1000,7 @@
 
           <img src="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/5869c07c-b97c-4a37-8063-5773498c9981/Catherine-Harju_WIAA-Cross-Country-State-Championships.jpg?content-type=image%2Fjpeg" alt="Catherine Harju competing at the WIAA Cross Country State Championships" loading="lazy" />
 
-          <span class="corner-tag">GALLERY · 02</span>
+          <span class="corner-tag">GALLERY · 03</span>
 
         </div>
 
@@ -950,7 +1014,7 @@
 
           <img src="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/d8059b12-fe5e-4115-bb49-25e4dcf229e3/Catherine-Harju_Stadium_South-Sound-Classic-2026.jpg?content-type=image%2Fjpeg" alt="Catherine Harju racing at the South Sound Classic, Stadium HS" loading="lazy" />
 
-          <span class="corner-tag">GALLERY · 03</span>
+          <span class="corner-tag">GALLERY · 04</span>
 
         </div>
 
@@ -964,7 +1028,7 @@
 
           <img src="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/ca4770b9-fe4a-4582-be9a-dd79562f8b02/20260119_harju-catherine_stadium_pretrack-track_003.webp?content-type=image%2Fwebp" alt="Catherine Harju, Stadium HS preseason track training" loading="lazy" />
 
-          <span class="corner-tag">REEL · 04</span>
+          <span class="corner-tag">REEL · 05</span>
 
           <span class="play-icon">▶</span>
 
@@ -986,7 +1050,7 @@
 
   <div class="split-layout">
 
-    
+
 
     <div class="split-col">
 
@@ -994,13 +1058,13 @@
 
       <h2 class="sec-h">STUDENT PROFILE</h2>
 
-      
+
 
       <div class="acad-item">
 
-        <div class="acad-k">GPA (Unweighted)</div>
+        <div class="acad-k">GPA (Cumulative)</div>
 
-        <div class="acad-v">[INSERT GPA]</div>
+        <div class="acad-v">3.879</div>
 
       </div>
 
@@ -1020,6 +1084,14 @@
 
       </div>
 
+      <div class="acad-item">
+
+        <div class="acad-k">Division Interest</div>
+
+        <div class="acad-v">NCAA DI / DII / DIII</div>
+
+      </div>
+
     </div>
 
 
@@ -1030,7 +1102,7 @@
 
       <h2 class="sec-h">WHERE TO WATCH</h2>
 
-      
+
 
       <div class="schedule-item">
 
@@ -1078,7 +1150,7 @@
 
   <h2 class="sec-h">DIRECT CONTACT</h2>
 
-  
+
 
   <div class="contact-grid">
 
@@ -1092,23 +1164,23 @@
 
       <div class="c-detail">Distance / Steeple / XC</div>
 
-      <a href="#" class="c-link">Email TBD →</a>
+      <a href="mailto:catyliz10@gmail.com" class="c-link">catyliz10@gmail.com →</a>
 
     </div>
 
-    
+
 
     <div class="contact-card">
 
       <div class="c-role">Head Coach</div>
 
-      <div class="c-name">[INSERT COACH]</div>
+      <div class="c-name">CONTACT TBD</div>
 
       <div class="c-detail">Stadium High School</div>
 
-      <div class="c-detail">Track & Field / Cross Country</div>
+      <div class="c-detail">Track &amp; Field / Cross Country</div>
 
-      <a href="#" class="c-link">Email TBD →</a>
+      <a href="mailto:catyliz10@gmail.com" class="c-link">Reach athlete directly →</a>
 
     </div>
 
@@ -1122,7 +1194,7 @@
 
       <div class="c-detail">General Inquiries</div>
 
-      <div class="c-detail">Media & Scheduling</div>
+      <div class="c-detail">Media &amp; Scheduling</div>
 
       <a href="#" class="c-link">Email TBD →</a>
 
@@ -1208,11 +1280,7 @@
 
   /* ============================================================
 
-     BRAND-MARK TEXTURE — generated, not a real photo.
-
-     Used as the initial frame before any image has loaded, and
-
-     as a safe fallback if a real texture fails to fetch.
+     BRAND-MARK TEXTURE
 
   ============================================================ */
 
@@ -1474,6 +1542,22 @@
 
 
 
+  /*
+
+   * SIM_FRAG — flow-map simulation pass.
+
+   *
+
+   * BUG FIX: The original used smoothstep(uFalloff, 0.0, dist) which has
+
+   * undefined behaviour per the GLSL spec whenever edge0 >= edge1.
+
+   * Rewritten as (1.0 - smoothstep(0.0, uFalloff, dist)) which is
+
+   * mathematically equivalent and always well-defined.
+
+   */
+
   var SIM_FRAG = [
 
     'uniform sampler2D tDiffuse;',
@@ -1508,7 +1592,9 @@
 
     '  float dist = length(cursor);',
 
-    '  float falloff = smoothstep(uFalloff, 0.0, dist);',
+    /* Fixed: was smoothstep(uFalloff, 0.0, dist) — undefined when edge0 >= edge1 */
+
+    '  float falloff = 1.0 - smoothstep(0.0, uFalloff, dist);',
 
     '  vec2 vel = prevVel + uVelocity * falloff;',
 
@@ -1892,7 +1978,7 @@
 
       ease: 'power2.inOut',
 
-      onUpdate: function(){ 
+      onUpdate: function(){
 
         var val = Math.floor(displayPct.v);
 
@@ -1914,13 +2000,25 @@
 
         gsap.killTweensOf(heroMat.uniforms.uGlitch);
 
-        heroMat.uniforms.uGlitch.value = 2.0; 
+        heroMat.uniforms.uGlitch.value = 2.0;
 
         applyTexture(heroTexture || brandMarkTexture);
 
         gsap.to(heroMat.uniforms.uGlitch, { value: 0, duration: 1.0, ease: 'power3.out' });
 
-        if (simMat) simMat.uniforms.uFalloff.value = 0.0; 
+        /*
+
+         * NOTE: simMat.uniforms.uFalloff.value = 0.0 was intentionally
+
+         * removed. Setting falloff to 0 caused smoothstep(0,0,dist) which
+
+         * is undefined in GLSL and produced NaN → hero wobble artifact.
+
+         * The simulation continues at its normal falloff (0.12) so cursor
+
+         * interactivity is preserved after the preloader exits.
+
+         */
 
       } else {
 
@@ -1946,7 +2044,7 @@
 
         loader.load(
 
-          url, 
+          url,
 
           function(tex){
 
@@ -1958,11 +2056,11 @@
 
             resolve(tex);
 
-          }, 
+          },
 
-          undefined, 
+          undefined,
 
-          function(err){ resolve(null); }
+          function(){ resolve(null); }
 
         );
 
@@ -1976,7 +2074,7 @@
 
       loader.load(
 
-        heroUrl, 
+        heroUrl,
 
         function(tex){
 
@@ -1988,11 +2086,11 @@
 
           resolve(tex);
 
-        }, 
+        },
 
-        undefined, 
+        undefined,
 
-        function(err){ resolve(null); }
+        function(){ resolve(null); }
 
       );
 
@@ -2064,7 +2162,7 @@
 
   /* ============================================================
 
-     CUSTOM LIQUID CURSOR (Single, Volume Dot)
+     CUSTOM LIQUID CURSOR
 
   ============================================================ */
 
@@ -2494,5 +2592,4 @@
 
 </body>
 
-</html> 
-
+</html>

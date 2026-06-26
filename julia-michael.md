@@ -17,7 +17,7 @@ stat2_value: "Pole vault"
 stat3_label: 'Event'
 stat3_value: "Pole vault"
 gpa: 3.6
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/b3ee9fe5-3b27-43dd-9433-0828f0a24d6e/district-championships-track-and-field-2026-julia-michael.webp?content-type=image%2Fwebp'
 coach_name: "Gunner Argo "
 coach_email: "gunner_argo@enumclaw.wednet.edu"
 parent_name: "Paul Michael "

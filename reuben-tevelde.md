@@ -17,7 +17,7 @@ stat2_value: "Mile"
 stat3_label: 'Event'
 stat3_value: "5K XC"
 gpa: 4
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/83e9b64c-4dd8-459c-9b67-d7400283da1e/hoka-john-payne-invitational-2025-reuben-tevelde.webp?content-type=image%2Fwebp'
 coach_name: "Mike Holz"
 coach_email: "mholz@meridian.wednet.edu"
 parent_name: "Sarah TeVelde"

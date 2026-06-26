@@ -17,7 +17,7 @@ stat2_value: "3200m"
 stat3_label: 'Event'
 stat3_value: "5k XC"
 gpa: 4
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/cd9be91f-e59d-4f6d-947e-8e6c6327cad1/South-Sound-Classic-2026-Puyallup-Russell-Moore--81.webp?content-type=image%2Fwebp'
 coach_name: "Ryan Jobe"
 coach_email: "ryan_jobe@sumnersd.org"
 parent_name: "Andrea Rodgers"

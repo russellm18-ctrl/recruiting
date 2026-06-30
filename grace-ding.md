@@ -17,7 +17,7 @@ stat2_value: "1600M"
 stat3_label: 'Event'
 stat3_value: "5K (XC)"
 gpa: 3.99
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/9a8b2fc9-fd08-4694-9202-8bc913021067/wiaa-state-track-3a-1600m-preview-grace-ding.webp?content-type=image%2Fwebp'
 coach_name: "Kelly Richards"
 coach_email: "krichards@nsd.org"
 parent_name: "Jeff Ding"

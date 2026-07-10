@@ -15,7 +15,7 @@ stat1_value: "800M"
 stat2_label: 'Event'
 stat2_value: "1600M"
 stat3_label: 'Event'
-stat3_value: "4x800"
+stat3_value: "5K"
 gpa: 3.836
 hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/3ebbe810-e9d7-4c27-9d60-6f503b2d2aef/bear-relays-2026-cole-mausolf.webp?content-type=image%2Fwebp'
 coach_name: "Ed Santos"
@@ -33,8 +33,8 @@ personal_records:
     mark: "4:30.02"
     meet: "SK"
     date: "4/29/26"
-  - event: "4x800"
-    mark: "8:10.08"
-    meet: "SPSL League Championships"
-    date: "05/15/25"
+  - event: "5K XC"
+    mark: "17:23.0"
+    meet: "NXR NW"
+    date: "11/15/25"
 ---

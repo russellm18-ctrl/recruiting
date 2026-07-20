@@ -17,7 +17,7 @@ stat2_value: "800m"
 stat3_label: 'Event'
 stat3_value: "1600m"
 gpa: 4
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/61e18e0c-96d2-4c1d-9dd0-020056232188/cascadia-running-camp-2026_port-gamble_ephraim050.jpg?content-type=image%2Fjpeg'
 coach_name: "Neal Howard"
 coach_email: "nfhoward@seattleschools.org"
 parent_name: "Matthew Johnson"

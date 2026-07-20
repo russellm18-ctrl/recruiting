@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>OLIVIA DECKER — Distance Runner / Shorewood HS [Recruiting Profile]</title>
+<title>OLIVIA DECKER — Distance Runner / Shorewood HS (WA) [Recruiting Profile]</title>
 <meta name="description" content="Official athletic recruiting profile for Olivia Decker. Class of 2029 distance and cross country runner for Shorewood High School (WA) and Bryant Bandits." />
+<link rel="canonical" href="https://recruiting.russell-moore.com/olivia-decker/" />
 
 <link rel="preload" href="https://www.googletagmanager.com/gtm.js?id=GTM-MPGDW4QD" as="script">
 <script>
@@ -15,6 +16,20 @@
   })(window,document,'script','dataLayer','GTM-MPGDW4QD');
 </script>
 
+<!-- Open Graph -->
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Olivia Decker — Distance Runner, Shorewood HS (Class of 2029)" />
+<meta property="og:description" content="Official athletic recruiting profile for Olivia Decker — distance and cross country runner for Shorewood High School (Shoreline, WA) and Bryant Bandits." />
+<meta property="og:url" content="https://recruiting.russell-moore.com/olivia-decker/" />
+<meta property="og:image" content="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/8928e12c-6a01-4560-b72f-2f974a910d8b/Olivia-decker-shorewood-wiaa-state-1600m_-7.webp" />
+<meta property="og:site_name" content="Russell Moore Photography" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Olivia Decker — Distance Runner, Shorewood HS (Class of 2029)" />
+<meta name="twitter:description" content="Official athletic recruiting profile for Olivia Decker — Shorewood High School and Bryant Bandits distance runner." />
+<meta name="twitter:image" content="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/8928e12c-6a01-4560-b72f-2f974a910d8b/Olivia-decker-shorewood-wiaa-state-1600m_-7.webp" />
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -24,9 +39,20 @@
   "description": "Elite high school distance runner and cross country athlete for Shorewood High School and Bryant Bandits. Class of 2029.",
   "image": "https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/8928e12c-6a01-4560-b72f-2f974a910d8b/Olivia-decker-shorewood-wiaa-state-1600m_-7.webp",
   "url": "https://recruiting.russell-moore.com/olivia-decker/",
+  "homeLocation": {
+    "@type": "Place",
+    "name": "Shoreline, Washington",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Shoreline",
+      "addressRegion": "WA",
+      "addressCountry": "US"
+    }
+  },
   "sameAs": [
     "https://www.athletic.net/athlete/25376852/track-and-field/all",
-    "https://wa.milesplit.com/athletes/17049364-olivia-decker"
+    "https://wa.milesplit.com/athletes/17049364-olivia-decker",
+    "https://www.instagram.com/decker_swift_runner/"
   ],
   "alumniOf": {
     "@type": "HighSchool",
@@ -56,6 +82,44 @@
     "name": "Russell Moore Photography",
     "url": "https://www.russell-moore.com"
   }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Athlete Profiles",
+      "item": "https://recruiting.russell-moore.com/athlete-profiles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Olivia Decker",
+      "item": "https://recruiting.russell-moore.com/olivia-decker/"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Who is Olivia Decker, the Shorewood High School runner?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Olivia Decker is a Class of 2029 distance and cross country runner from Shoreline, Washington, competing for Shorewood High School and the Bryant Bandits club team. This page is her official athletic recruiting profile, verified against her Athletic.net and MileSplit results."
+      }
+    }
+  ]
 }
 </script>
 
@@ -153,7 +217,11 @@
     position:relative;height:100vh;min-height:560px;width:100%;overflow:hidden;
     background:radial-gradient(ellipse 80% 60% at 50% 38%, #141414 0%, var(--black) 72%);
   }
-  #webgl-canvas{position:absolute;inset:0;width:100%;height:100%;}
+  #hero-fallback-img{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;
+    z-index:1;
+  }
+  #webgl-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:2;}
   .hero-overlay{
     position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;
     padding:0 5vw;pointer-events:none;
@@ -225,6 +293,29 @@
   .rec-tag--championship{ color:var(--gold); }
   .rec-tag--showcase{ color:var(--accent); }
 
+  /* ---------------- about / prose ---------------- */
+  .about-copy p{max-width:70ch;color:#d7d9dd;font-size:1.05rem;font-family:'Inter';line-height:1.7;}
+  .about-copy p + p{margin-top:18px;}
+
+  /* ---------------- verified results / press module ---------------- */
+  .verified-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:1px;}
+  @media(max-width:760px){.verified-grid{grid-template-columns:1fr;}}
+  .verified-card{background:var(--black-2);padding:26px 28px;display:flex;flex-direction:column;gap:8px;}
+  .verified-k{font-family:'Roboto Mono';font-size:.64rem;letter-spacing:.2em;color:var(--volt);text-transform:uppercase;}
+  .verified-name{font-family:'Oswald';font-size:1.15rem;text-transform:uppercase;letter-spacing:.02em;}
+  .verified-desc{font-family:'Inter';font-size:.85rem;color:var(--muted);}
+  .verified-link{margin-top:6px;font-family:'Roboto Mono';font-size:.75rem;color:var(--white);text-decoration:underline;text-decoration-color:#333;text-underline-offset:5px;}
+  .verified-link:hover{color:var(--volt);text-decoration-color:var(--volt);}
+  .press-list{margin-top:1px;}
+  .press-item{background:var(--black-2);padding:22px 28px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:6px;}
+  .press-source{font-family:'Roboto Mono';font-size:.62rem;letter-spacing:.18em;color:var(--accent);text-transform:uppercase;}
+  .press-title{font-family:'Inter';font-size:.95rem;color:var(--white);}
+  .press-title a{text-decoration:underline;text-decoration-color:#333;text-underline-offset:4px;}
+  .press-title a:hover{color:var(--volt);text-decoration-color:var(--volt);}
+
+  .film{aspect-ratio:16/9;width:100%;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#000}
+  .film iframe{width:100%;height:100%;border:0;display:block}
+
   /* ---------------- media pipeline ---------------- */
   #media{background:var(--black); padding: 0;}
   .media-pin{height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding-left:40px;}
@@ -232,16 +323,18 @@
   .media-head .sec-h {margin-bottom: 0;}
   .media-track{display:flex;gap:28px;align-items:stretch;}
   .media-card{flex:0 0 auto;width:min(64vw,440px);display:flex;flex-direction:column;}
-  .media-plate{position:relative;width:100%;aspect-ratio:4/5;background-color:#121212;border:1px solid var(--line);overflow:hidden; background-size:cover; background-position:center;}
+  .media-plate{position:relative;width:100%;aspect-ratio:4/5;background-color:#121212;border:1px solid var(--line);overflow:hidden;}
   .media-plate::before{
     content:'';position:absolute;inset:0;
     background-image:repeating-linear-gradient(118deg, rgba(238,255,0,.05) 0 2px, transparent 2px 16px);
     pointer-events: none;
+    z-index: 10;
   }
   .media-plate .corner-tag{
     position:absolute;top:14px;left:14px;font-family:'Roboto Mono';font-size:.6rem;
     letter-spacing:.16em;color:var(--white);
     background: rgba(5,5,5,0.85); padding: 4px 8px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    z-index: 10;
   }
   .media-info{margin-top:16px;display:flex;flex-direction:column;gap:6px;}
   .media-type{font-family:'Roboto Mono';font-size:.64rem;letter-spacing:.22em;color:var(--volt);}
@@ -272,6 +365,7 @@
   .c-detail { font-family: 'Inter'; font-size: 0.9rem; color: var(--muted); margin-bottom: 4px; }
   .c-link { display: inline-block; margin-top: 20px; font-family: 'Roboto Mono'; font-size: 0.75rem; color: var(--white); text-decoration: underline; text-decoration-color: #333; text-underline-offset: 6px; letter-spacing: 0.05em; text-transform: uppercase;}
   .c-link:hover { color: var(--volt); text-decoration-color: var(--volt); }
+  .c-link.is-loading{color:var(--muted);text-decoration:none;cursor:default;}
 
   /* ---------------- footer ---------------- */
   footer{padding:90px 40px 50px;text-align:center;border-top:1px solid var(--line); background: var(--black);}
@@ -283,12 +377,14 @@
   }
   .credit{margin-top:46px;font-family:'Roboto Mono';font-size:.66rem;letter-spacing:.08em;color:var(--muted);}
   .credit b{color:var(--white);}
+  .updated-line{margin-top:14px;font-family:'Roboto Mono';font-size:.62rem;letter-spacing:.14em;color:#5a5a5a;text-transform:uppercase;}
 
   @media (max-width: 900px) {
     .profile-grid { grid-template-columns: 1fr 1fr; margin-top: 40px;}
     .hud-grid { grid-template-columns: 1fr; }
     .split-layout { grid-template-columns: 1fr; gap: 80px; }
     .contact-grid { grid-template-columns: 1fr; }
+    .verified-grid { grid-template-columns: 1fr; }
     .media-pin{height:auto;padding:70px 40px;}
     .media-track{overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;}
     .media-card{scroll-snap-align:start;width:78vw;}
@@ -367,12 +463,22 @@
 </div>
 
 <section id="hero">
+  <img
+    id="hero-fallback-img"
+    src="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/8928e12c-6a01-4560-b72f-2f974a910d8b/Olivia-decker-shorewood-wiaa-state-1600m_-7.webp"
+    alt="Olivia Decker running the 1600m for Shorewood High School at WIAA State Championships"
+    loading="eager"
+    fetchpriority="high"
+  />
   <canvas id="webgl-canvas" aria-hidden="true"></canvas>
   <div class="hero-overlay">
     <div class="hero-eyebrow">[ INTERACTIVE PROFILE — DISTANCE / XC ]</div>
     <h1 class="kinetic-wrap">
-      <span class="kinetic">OLIVIA</span>
-      <span class="kinetic">DECKER</span>
+      <span style="position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0;">
+        Olivia Decker - Distance Runner for Shorewood High School
+      </span>
+      <span class="kinetic" aria-hidden="true">OLIVIA</span>
+      <span class="kinetic" aria-hidden="true">DECKER</span>
     </h1>
     <div class="hero-meta">
       <span>CLASS OF 2029</span>
@@ -430,8 +536,15 @@
   </div>
 </div>
 
+<section id="about" class="sec about-copy">
+  <div class="sec-eyebrow">[ 02 · PROFILE ]</div>
+  <h2 class="sec-h">ABOUT OLIVIA</h2>
+  <p>Olivia Decker is a Class of 2029 distance runner from Shoreline, Washington, racing for Shorewood High School and training year-round with the Bryant Bandits club program. Across her freshman season she moved through the 1600m, 3200m, and 5000m cross country distances with a steady drop in times, highlighted by a personal best in the 3200m at the WIAA 3A State Championships and a 16-second PR at the Nike Cross Country Northwest Regional in Spokane.</p>
+  <p>Running under the Shorewood banner alongside teammates Violet Koslowsky and Cleo Dalasta, Decker has built a reputation for closing hard in championship-tier races — Birger Solberg, Oregon Relays, and NXR Northwest among them. Academically she carries a 4.0 GPA and intends to pursue pre-med. Coaches Paul Villanueva and Joel Reese lead the Shorewood program; Matt Koenigs coaches her club training with Bryant Bandits.</p>
+</section>
+
 <section id="records" class="sec">
-  <div class="sec-eyebrow">[ 02 · DATABASE ]</div>
+  <div class="sec-eyebrow">[ 03 · DATABASE ]</div>
   <h2 class="sec-h">FULL PERFORMANCE RECORDS</h2>
   <p class="sec-sub">Open marks only, one table, tagged where the mark came at a state, regional, or national-showcase meet. Relay legs and hand-timed splits are filed below for context.</p>
 
@@ -559,27 +672,76 @@
   </details>
 </section>
 
+<section id="verified" class="sec">
+  <div class="sec-eyebrow">[ 04 · VERIFICATION ]</div>
+  <h2 class="sec-h">VERIFIED RESULTS &amp; COVERAGE</h2>
+  <p class="sec-sub">Every mark on this page is corroborated by a third-party results database or independent press coverage — no self-reported times.</p>
+
+  <div class="verified-grid">
+    <div class="verified-card">
+      <div class="verified-k">Results Database</div>
+      <div class="verified-name">Athletic.net</div>
+      <div class="verified-desc">Full meet-by-meet track &amp; field results, verified times, and season progression.</div>
+      <a class="verified-link" href="https://www.athletic.net/athlete/25376852/track-and-field/all" target="_blank" rel="noopener">View Athletic.net Profile →</a>
+    </div>
+    <div class="verified-card">
+      <div class="verified-k">Results Database</div>
+      <div class="verified-name">MileSplit Washington</div>
+      <div class="verified-desc">Cross country and track results, rankings, and race history for WA distance runners.</div>
+      <a class="verified-link" href="https://wa.milesplit.com/athletes/17049364-olivia-decker" target="_blank" rel="noopener">View MileSplit Profile →</a>
+    </div>
+  </div>
+
+  <div class="press-list">
+    <div class="press-item">
+      <div class="press-source">HeraldNet</div>
+      <div class="press-title">
+        <a href="https://www.heraldnet.com/2025/09/23/shorewood-dominates-league-meet/" target="_blank" rel="noopener">Shorewood dominates league meet (Featuring Olivia Decker) →</a>
+      </div>
+    </div>
+    <div class="press-item">
+      <div class="press-source">Shoreline Area News</div>
+      <div class="press-title">
+        <a href="https://www.shorelineareanews.com/2025/11/shoreline-youth-compete-at-nike-cross.html" target="_blank" rel="noopener">Shoreline youth compete at Nike Cross Country NW Regionals (Featuring Olivia Decker) →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RACE FILM SECTION (HIDDEN UNTIL VIDEO IS UPLOADED) -->
+<!-- Remove style="display:none;" from the section tag below once you have a real YouTube ID to replace INSERT_VIDEO_ID_HERE -->
+<section id="film" class="sec" style="display:none;">
+  <div class="sec-eyebrow">[ 05 · FILM ]</div>
+  <h2 class="sec-h">RACE FILM</h2>
+  <div class="film">
+    <iframe src="https://www.youtube.com/embed/INSERT_VIDEO_ID_HERE" title="Olivia Decker — Shorewood HS Cross Country Highlight" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</section>
+
 <section id="media" class="sec">
   <div class="media-pin">
     <div class="media-head">
-      <div class="sec-eyebrow">[ 03 · ARCHIVE ]</div>
+      <div class="sec-eyebrow">[ 06 · ARCHIVE ]</div>
       <h2 class="sec-h">RACE GALLERY</h2>
     </div>
     <div class="media-track" id="media-track">
       <article class="media-card">
-        <div class="media-plate" data-kind="image" style="background-image: url('https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/82d78c93-5070-438a-9acd-eab623da6340/Olivia-decker-shorewood-wiaa-state-1600m_-8.webp');">
+        <div class="media-plate" data-kind="image">
+          <img src="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/82d78c93-5070-438a-9acd-eab623da6340/Olivia-decker-shorewood-wiaa-state-1600m_-8.webp" alt="Olivia Decker running the 1600m for Shorewood High School at WIAA State - Frame 8" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0;">
           <span class="corner-tag">IMAGE · 01</span>
         </div>
         <div class="media-info"><span class="media-type">GALLERY</span><span class="media-title">WIAA State 1600m — Frame 8</span></div>
       </article>
       <article class="media-card">
-        <div class="media-plate" data-kind="image" style="background-image: url('https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4da2aabd-35e7-4b66-95ed-5bd0254b7454/Olivia-decker-shorewood-wiaa-state-1600m_-9.webp');">
+        <div class="media-plate" data-kind="image">
+          <img src="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4da2aabd-35e7-4b66-95ed-5bd0254b7454/Olivia-decker-shorewood-wiaa-state-1600m_-9.webp" alt="Olivia Decker running the 1600m for Shorewood High School at WIAA State - Frame 9" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0;">
           <span class="corner-tag">IMAGE · 02</span>
         </div>
         <div class="media-info"><span class="media-type">GALLERY</span><span class="media-title">WIAA State 1600m — Frame 9</span></div>
       </article>
       <article class="media-card">
-        <div class="media-plate" data-kind="image" style="background-image: url('https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/0f4cc6c2-0b72-4cea-81ff-933e443816da/Olivia-decker-shorewood-wiaa-state-1600m_-10.webp');">
+        <div class="media-plate" data-kind="image">
+          <img src="https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/0f4cc6c2-0b72-4cea-81ff-933e443816da/Olivia-decker-shorewood-wiaa-state-1600m_-10.webp" alt="Olivia Decker running the 1600m for Shorewood High School at WIAA State - Frame 10" style="width:100%; height:100%; object-fit:cover; position:absolute; inset:0;">
           <span class="corner-tag">IMAGE · 03</span>
         </div>
         <div class="media-info"><span class="media-type">GALLERY</span><span class="media-title">WIAA State 1600m — Frame 10</span></div>
@@ -592,7 +754,7 @@
   <div class="split-layout">
     
     <div class="split-col">
-      <div class="sec-eyebrow">[ 04 · ACADEMICS ]</div>
+      <div class="sec-eyebrow">[ 07 · ACADEMICS ]</div>
       <h2 class="sec-h">STUDENT PROFILE</h2>
       
       <div class="acad-item">
@@ -614,7 +776,7 @@
     </div>
 
     <div class="split-col">
-      <div class="sec-eyebrow">[ 05 · LOGISTICS ]</div>
+      <div class="sec-eyebrow">[ 08 · LOGISTICS ]</div>
       <h2 class="sec-h">2026 XC SCHEDULE</h2>
       <p class="sec-sub">Championship and national-showcase tier only — full WESCO dual/league calendar available on request.</p>
 
@@ -656,16 +818,16 @@
 </section>
 
 <section id="contact" class="sec">
-  <div class="sec-eyebrow">[ 06 · NETWORK ]</div>
+  <div class="sec-eyebrow">[ 09 · NETWORK ]</div>
   <h2 class="sec-h">DIRECT CONTACT</h2>
   
   <div class="contact-grid">
     <div class="contact-card">
-      <div class="c-role">Athlete</div>
+      <div class="c-role">Athlete (via Parent)</div>
       <div class="c-name">Olivia Decker</div>
       <div class="c-detail">Class of 2029</div>
-      <div class="c-detail">Distance / XC / T&F Relays</div>
-      <a href="mailto:phillipdecker854@gmail.com" class="c-link">phillipdecker854@gmail.com →</a>
+      <div class="c-detail">C/O Phil Decker</div>
+      <a href="#" class="c-link is-loading" data-email="cGhpbGxpcGRlY2tlcjg1NEBnbWFpbC5jb20=">Loading contact →</a>
     </div>
     
     <div class="contact-card">
@@ -673,14 +835,14 @@
       <div class="c-name">P. Villanueva / J. Reese</div>
       <div class="c-detail">Shorewood High School</div>
       <div class="c-detail">Office: +1 206.393.4372</div>
-      <a href="mailto:paul.villanueva@ssd412.org" class="c-link">paul.villanueva@ssd412.org →</a>
+      <a href="#" class="c-link is-loading" data-email="cGF1bC52aWxsYW51ZXZhQHNzZDQxMi5vcmc=">Loading contact →</a>
     </div>
 
     <div class="contact-card">
       <div class="c-role">Head Coach (Club)</div>
       <div class="c-name">Matt Koenigs</div>
       <div class="c-detail">Bryant Bandits</div>
-      <a href="mailto:bryantbandits@gmail.com" class="c-link">bryantbandits@gmail.com →</a>
+      <a href="#" class="c-link is-loading" data-email="YnJ5YW50YmFuZGl0c0BnbWFpbC5jb20=">Loading contact →</a>
     </div>
   </div>
 </section>
@@ -689,6 +851,7 @@
   <div class="cta-line">Interactive profile powered by custom WebGL</div>
   <a class="cta-btn" data-magnetic href="https://www.russell-moore.com/contact">Contact for Custom Profile →</a>
   <div class="credit">Profile system &amp; photography — <b>Russell Moore Photography</b> · <a href="https://www.russell-moore.com">russell-moore.com</a></div>
+  <div class="updated-line" id="updated-line">Last updated July 2026</div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -709,6 +872,21 @@
   window.addEventListener('touchmove', function(e){
     if (e.touches && e.touches[0]) { pointer.x = e.touches[0].clientX; pointer.y = e.touches[0].clientY; }
   }, { passive:true });
+
+  /* ---------------- obfuscated contact emails ----------------
+     Emails are stored base64-encoded in data-email attributes and
+     assembled into real mailto: links here at render time, so plain-text
+     addresses never sit directly in the page source for scrapers to harvest. */
+  function initContactLinks(){
+    document.querySelectorAll('.c-link[data-email]').forEach(function(link){
+      try {
+        var real = atob(link.getAttribute('data-email'));
+        link.href = 'mailto:' + real;
+        link.textContent = real + ' →';
+        link.classList.remove('is-loading');
+      } catch(e){ /* fail silently, leave placeholder */ }
+    });
+  }
 
   function formatTime(totalSeconds){
     var m = Math.floor(totalSeconds / 60);
@@ -764,6 +942,7 @@
   var renderer, mainScene, mainCamera, heroMat;
   var heroActive = false;
   var heroVisible = true;
+  var heroFallbackImg = null;
 
   var PASS_VERT = ['varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }'].join('\n');
   
@@ -965,8 +1144,13 @@
     return lenis;
   }
 
+  // Contact links get decoded as soon as the DOM is parsed — no need to
+  // wait on WebGL/hero assets, since this is independent of that pipeline.
+  document.addEventListener('DOMContentLoaded', initContactLinks);
+
   window.addEventListener('load', function(){
     gsap.registerPlugin(ScrollTrigger);
+    heroFallbackImg = document.getElementById('hero-fallback-img');
     initHero();
     initHeroVisibility();
     var cursorTick = initCursor();
@@ -979,6 +1163,12 @@
       if (lenis && lenis.raf) lenis.raf(time * 1000);
       tickHero(time);
       if (cursorTick) cursorTick();
+      // Once the WebGL canvas has begun rendering real frames, hide the
+      // static <img> fallback that carried initial paint/LCP.
+      if (heroFallbackImg && heroActive) {
+        heroFallbackImg.style.display = 'none';
+        heroFallbackImg = null;
+      }
     });
     
     gsap.ticker.lagSmoothing(0); 

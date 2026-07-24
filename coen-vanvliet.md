@@ -17,7 +17,7 @@ stat2_value: "800m"
 stat3_label: 'Event'
 stat3_value: "5000m"
 gpa: 3.85
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/2aaf7078-7657-4b03-a0ac-74517e678315/coen-van-vliet-kingston-runner.webp?content-type=image%2Fwebp'
 coach_name: "Spencer Hunt "
 coach_email: "shunt@nkschools.org"
 parent_name: "Jennifer Van Vliet"

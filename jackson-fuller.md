@@ -17,7 +17,7 @@ stat2_value: "3200M"
 stat3_label: 'Event'
 stat3_value: "5000M"
 gpa: 3.63
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: '[https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png](https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/ec6a0b6f-3458-43de-8c10-7fe62f96c75f/jackson-fuller_west-side-classic_bellarmine-prep_2025.webp?content-type=image%2Fwebp)'
 coach_name: "Matthew Ellis"
 coach_email: "ellism@bellarmineprep.prg"
 parent_name: "Charlene Fuller"

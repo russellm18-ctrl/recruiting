@@ -11,11 +11,11 @@ state_abbr: "Wa"
 discipline: "Xc"
 ticker_events: "Xc, 3200,1600"
 stat1_label: 'Top Event'
-stat1_value: "Xc - Hole in the wall 19:39"
+stat1_value: "5k"
 stat2_label: 'Event'
-stat2_value: "Liberty invention 1600m 5:38"
+stat2_value: "1600m"
 stat3_label: 'Event'
-stat3_value: "3200m 12:19 at auburn high school"
+stat3_value: "3200m"
 gpa: 3.8
 hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
 coach_name: "Lacy way "

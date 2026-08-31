@@ -25,7 +25,7 @@ parent_email: "Luchyaabraha2@gmail.com"
 about_p1: "My work ethic is built on discipline, great consistency, and showing up ready to work hard every single day. My main goal for this season is to break 19 minutes and stay completely focused on my progression"
 about_p2: ''
 personal_records:
-  - event: "5k 19:39"
+  - event: "5k"
     mark: "19:39"
     meet: "Nike Hole in the Wall"
     date: "-"

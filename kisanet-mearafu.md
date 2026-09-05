@@ -17,7 +17,7 @@ stat2_value: "1600m"
 stat3_label: 'Event'
 stat3_value: "3200m"
 gpa: 3.8
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: '[https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png](https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/6100e6f2-1594-4dd0-929d-6df1eae1ee58/kisanet-mearafu-hero-xc2025.jpg?content-type=image%2Fjpeg)'
 coach_name: "Lacy way "
 coach_email: "Lway@auburn.wednet.edu"
 parent_name: "Luchya Abraha "

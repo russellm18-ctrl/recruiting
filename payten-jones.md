@@ -17,7 +17,7 @@ stat2_value: "1600"
 stat3_label: 'Event'
 stat3_value: "800"
 gpa: 3.67
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/e3f7a47d-0646-46c0-b5b5-c78904e2f3ba/payten-jones-camas-south-sound-classic-2026.jpg?content-type=image%2Fjpeg'
 coach_name: "Matt LeGrand"
 coach_email: "mlegrand@gmail.com"
 parent_name: "Katie Berry-Jones"

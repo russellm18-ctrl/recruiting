@@ -18,7 +18,7 @@
   "jobTitle": "High School Distance Athlete",
   "description": "FICTIONAL sample profile — Maya Brennan, Class of 2026 distance runner for Cascade Ridge HS and Sound Endurance TC. Demo for Russell Moore Photography recruiting product.",
   "image": "https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/cddbafa3-c05f-42ca-94a3-da6e2f28661e/Recruiting_Profile_Fictional-Runner_RMP.webp?content-type=image%2Fwebp",
-  "url": "https://recruiting.russell-moore.com/maya-brennan/",
+  "url": "https://profiles.russell-moore.com/maya-brennan/",
   "alumniOf": {
     "@type": "HighSchool",
     "name": "Cascade Ridge High School",
@@ -29,7 +29,7 @@
     { "@type": "SportsTeam", "name": "Sound Endurance TC" }
   ],
   "knowsAbout": ["800m", "1600m", "3200m", "Cross Country", "NCAA Recruiting"],
-  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://recruiting.russell-moore.com/maya-brennan/" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://profiles.russell-moore.com/maya-brennan/" },
   "creator": { "@type": "Organization", "name": "Russell Moore Photography", "url": "https://www.russell-moore.com" }
 }
 </script>
@@ -184,7 +184,7 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPGDW4QD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="sample-banner">
-  Sample Profile — Fictional Athlete &nbsp;·&nbsp; <a href="https://recruiting.russell-moore.com">Get your athlete's profile →</a>
+  Sample Profile — Fictional Athlete &nbsp;·&nbsp; <a href="https://profiles.russell-moore.com">Get your athlete's profile →</a>
 </div>
 
 <div class="grain-overlay" aria-hidden="true"></div>
@@ -391,7 +391,7 @@
 
 <footer>
   <div class="cta-line">Interactive profile powered by custom WebGL · Sample — Fictional Athlete</div>
-  <a class="cta-btn" href="https://recruiting.russell-moore.com" data-evt="coach_contact_click">Get Your Athlete's Profile →</a>
+  <a class="cta-btn" href="https://profiles.russell-moore.com" data-evt="coach_contact_click">Get Your Athlete's Profile →</a>
   <div class="credit">Profile system &amp; photography — <b>Russell Moore Photography</b> · russell-moore.com</div>
 </footer>
 

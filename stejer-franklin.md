@@ -17,7 +17,7 @@ stat2_value: "1600m"
 stat3_label: 'Event'
 stat3_value: "5k"
 gpa: 4
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/6b8c8080-0d6d-4bff-8682-fa40e6e2bdac/stejar-franklin-mead-cross-country-2026.jpg?content-type=image%2Fjpeg'
 coach_name: "Austin Stuchell"
 coach_email: "austin.stuch@gmail.com"
 parent_name: "adopted"

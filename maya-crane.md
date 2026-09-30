@@ -34,7 +34,7 @@ personal_records:
     meet: "State"
     date: "5/29/26"
   - event: "5k"
-    mark: "19:37.1"
-    meet: "NXR"
-    date: "9/15/25"
+    mark: "19:17.2"
+    meet: "Old School 5KM"
+    date: "9/25/26"
 ---

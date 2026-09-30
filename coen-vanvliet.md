@@ -34,7 +34,7 @@ personal_records:
     meet: "Districts"
     date: "5/22/26"
   - event: "5000m"
-    mark: "16:07"
-    meet: "Bainbridge league meet"
-    date: "10/5/25"
+    mark: "15:18.9"
+    meet: "Nike Portland XC"
+    date: "9/26/26"
 ---

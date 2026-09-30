@@ -33,8 +33,8 @@ personal_records:
     mark: "2:19.6"
     meet: "STCU West Coast Indoor"
     date: "2/22/26"
-  - event: "2 Mile XC"
-    mark: "11:45.9"
-    meet: "GearUp NW XC Preview"
-    date: "9/12/26"
+  - event: "5000M"
+    mark: "17:52.0"
+    meet: "Nike Bob Firman Invitational XC"
+    date: "9/26/26"
 ---

@@ -34,7 +34,7 @@ personal_records:
     meet: "Districts"
     date: "5/22/26"
   - event: "5000m"
-    mark: "18:32.4"
-    meet: "NXR"
-    date: "11/15/25"
+    mark: "18:09.10"
+    meet: "Nike Bob Firman Invitational XC"
+    date: "9/26/26"
 ---

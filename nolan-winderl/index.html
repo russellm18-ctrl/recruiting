@@ -43,6 +43,10 @@
   "description": "Class of 2029 distance and cross country runner for Peninsula High School in Washington. Events: 800m, 1600m, 3200m and 5K cross country.",
   "image": "https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4c75a3ee-d1d3-484c-945b-c140fa0b29ec/nolan-winderl-peninsula-cross-country-john-payne-chambers-bay-2026-191.jpg?content-type=image%2Fjpeg",
   "url": "https://profiles.russell-moore.com/nolan-winderl/",
+  "sameAs": [
+    "https://www.athletic.net/athlete/28169130/track-and-field/all",
+    "https://www.athletic.net/athlete/28169130/cross-country/all"
+  ],
   "affiliation": {
     "@type": "EducationalOrganization",
     "name": "Peninsula High School"
@@ -95,7 +99,7 @@
       "name": "Who is Nolan Winderl, the Peninsula High School runner?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nolan Winderl is a Class of 2029 distance and cross country runner competing for Peninsula High School (Seahawks) in Washington. This page is his official athlete profile, with marks drawn from published meet results: 4:33.37 in the 1600m, 15:53.4 in the 5K and 2:04.27 in the 800m."
+        "text": "Nolan Winderl is a Class of 2029 distance and cross country runner competing for Peninsula High School (Seahawks) in Washington. This page is his official athlete profile, with marks drawn from published meet results on Athletic.net: 4:33.37 in the 1600m, 15:53.4 in the 5K and 2:04.27 in the 800m."
       }
     }
   ]
@@ -339,9 +343,24 @@
     letter-spacing:.12em;text-transform:uppercase;vertical-align:middle;
     padding:3px 8px;border:1px solid currentColor;
   }
-  .schedule-item.tier-pr .sch-tag{color:var(--volt);border-color:rgba(52,211,153,.4);}
-  .schedule-item.tier-league .sch-tag{color:var(--gold);border-color:rgba(255,215,0,.4);}
-  .schedule-item.tier-league::before{background:var(--gold);width:9px;height:9px;left:-5.5px;box-shadow:0 0 0 3px rgba(255,215,0,.15);}
+  .sch-loc a{text-decoration:underline;text-decoration-color:#333;text-underline-offset:4px;}
+  .sch-loc a:hover{color:var(--volt);text-decoration-color:var(--volt);}
+  .schedule-item.tier-home .sch-tag{color:var(--volt);border-color:rgba(52,211,153,.4);}
+  .schedule-item.tier-showcase .sch-tag{color:var(--accent);border-color:rgba(96,165,250,.4);}
+  .schedule-item.tier-postseason .sch-tag{color:var(--gold);border-color:rgba(255,215,0,.4);}
+  .schedule-item.tier-postseason::before{
+    background:var(--gold);width:9px;height:9px;left:-5.5px;box-shadow:0 0 0 3px rgba(255,215,0,.15);
+  }
+
+  /* ---------------- verified results module ---------------- */
+  .verified-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  @media(max-width:760px){.verified-grid{grid-template-columns:1fr;}}
+  .verified-card{background:var(--black-2);padding:26px 28px;display:flex;flex-direction:column;gap:8px;}
+  .verified-k{font-family:'Roboto Mono';font-size:.64rem;letter-spacing:.2em;color:var(--volt);text-transform:uppercase;}
+  .verified-name{font-family:'Oswald';font-size:1.15rem;text-transform:uppercase;letter-spacing:.02em;}
+  .verified-desc{font-family:'Inter';font-size:.85rem;color:var(--muted);}
+  .verified-link{margin-top:6px;font-family:'Roboto Mono';font-size:.75rem;color:var(--white);text-decoration:underline;text-decoration-color:#333;text-underline-offset:5px;}
+  .verified-link:hover{color:var(--volt);text-decoration-color:var(--volt);}
 
   /* ---------------- contact grid ---------------- */
   .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
@@ -564,10 +583,31 @@
   </div>
 </section>
 
+<section id="verified" class="sec">
+  <div class="sec-eyebrow">[ 04 · VERIFICATION ]</div>
+  <h2 class="sec-h">VERIFIED RESULTS</h2>
+  <p class="sec-sub">Marks on this page are drawn from published meet results. Full meet-by-meet history is on Athletic.net.</p>
+
+  <div class="verified-grid">
+    <div class="verified-card">
+      <div class="verified-k">Results Database</div>
+      <div class="verified-name">Athletic.net — Track &amp; Field</div>
+      <div class="verified-desc">Meet-by-meet track results, verified times, and season progression.</div>
+      <a class="verified-link" href="https://www.athletic.net/athlete/28169130/track-and-field/all" target="_blank" rel="noopener" data-evt="verified_track_click">View Track Results →</a>
+    </div>
+    <div class="verified-card">
+      <div class="verified-k">Results Database</div>
+      <div class="verified-name">Athletic.net — Cross Country</div>
+      <div class="verified-desc">Cross country race results, placings, and season progression.</div>
+      <a class="verified-link" href="https://www.athletic.net/athlete/28169130/cross-country/all" target="_blank" rel="noopener" data-evt="verified_xc_click">View XC Results →</a>
+    </div>
+  </div>
+</section>
+
 <!-- RACE FILM SECTION (HIDDEN UNTIL VIDEO IS UPLOADED) -->
 <!-- Remove style="display:none;" from the section tag below once you have a real YouTube ID to replace INSERT_VIDEO_ID_HERE -->
 <section id="film" class="sec" style="display:none;">
-  <div class="sec-eyebrow">[ 04 · FILM ]</div>
+  <div class="sec-eyebrow">[ 05 · FILM ]</div>
   <h2 class="sec-h">RACE FILM</h2>
   <div class="film">
     <iframe src="https://www.youtube.com/embed/INSERT_VIDEO_ID_HERE" title="Nolan Winderl — Peninsula HS Race Film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -577,7 +617,7 @@
 <section id="media" class="sec">
   <div class="media-pin">
     <div class="media-head">
-      <div class="sec-eyebrow">[ 05 · ARCHIVE ]</div>
+      <div class="sec-eyebrow">[ 06 · ARCHIVE ]</div>
       <h2 class="sec-h">RACE GALLERY</h2>
     </div>
     <div class="media-track" id="media-track">
@@ -610,7 +650,7 @@
   <div class="split-layout">
 
     <div class="split-col">
-      <div class="sec-eyebrow">[ 06 · ACADEMICS ]</div>
+      <div class="sec-eyebrow">[ 07 · ACADEMICS ]</div>
       <h2 class="sec-h">STUDENT PROFILE</h2>
 
       <div class="acad-item">
@@ -632,40 +672,31 @@
     </div>
 
     <div class="split-col">
-      <div class="sec-eyebrow">[ 07 · LOG ]</div>
-      <h2 class="sec-h">2026 RACE LOG</h2>
-      <p class="sec-sub">Personal-best performances, most recent first.</p>
+      <div class="sec-eyebrow">[ 08 · LOGISTICS ]</div>
+      <h2 class="sec-h">2026 XC SCHEDULE</h2>
+      <p class="sec-sub">Upcoming 2026 cross country meets, from the home opener through regionals.</p>
 
       <div class="schedule-container">
-        <div class="schedule-item tier-pr">
-          <div class="sch-date">Oct 3, 2026</div>
-          <div class="sch-name">Hoka John Payne Invitational <span class="sch-tag">PR</span></div>
-          <div class="sch-loc">5K · 15:53.4 · 18th</div>
+        <div class="schedule-item tier-home">
+          <div class="sch-date">Wed, Oct 14, 2026</div>
+          <div class="sch-name">The Hawk's Next (4th Annual) <span class="sch-tag">Home</span></div>
+          <div class="sch-loc"><a href="https://www.google.com/maps/search/?api=1&amp;query=14105%20Purdy%20Dr%20NW%20Gig%20Harbor%20WA" target="_blank" rel="noopener">Peninsula High School · Gig Harbor, WA</a></div>
         </div>
-        <div class="schedule-item tier-pr">
-          <div class="sch-date">Sep 12, 2026</div>
-          <div class="sch-name">Olympia XC Classic <span class="sch-tag">PR</span></div>
-          <div class="sch-loc">2 Miles (Sophomores) · 10:45.9 · 3rd</div>
+        <div class="schedule-item tier-postseason">
+          <div class="sch-date">Sat, Oct 24, 2026</div>
+          <div class="sch-name">PSL/SPSL League Championships <span class="sch-tag">League</span></div>
         </div>
-        <div class="schedule-item tier-league">
-          <div class="sch-date">May 15, 2026</div>
-          <div class="sch-name">Puget Sound League Championships <span class="sch-tag">League</span></div>
-          <div class="sch-loc">800m · 2:04.27 PR · 11th</div>
+        <div class="schedule-item tier-showcase">
+          <div class="sch-date">Sat, Oct 31, 2026</div>
+          <div class="sch-name">Westside Classic <span class="sch-tag">Invitational</span></div>
         </div>
-        <div class="schedule-item tier-pr">
-          <div class="sch-date">May 2, 2026</div>
-          <div class="sch-name">South Sound Classic <span class="sch-tag">PR</span></div>
-          <div class="sch-loc">1600m · 4:33.37 · 34th</div>
+        <div class="schedule-item tier-postseason">
+          <div class="sch-date">Sat, Nov 7, 2026</div>
+          <div class="sch-name">2026 WIAA State XC Championships <span class="sch-tag">State Championship</span></div>
         </div>
-        <div class="schedule-item tier-pr">
-          <div class="sch-date">Apr 2, 2026</div>
-          <div class="sch-name">Peninsula · Central Kitsap @ Lincoln (Bowl) <span class="sch-tag">PR</span></div>
-          <div class="sch-loc">3200m · 10:24.14 · 2nd</div>
-        </div>
-        <div class="schedule-item tier-pr">
-          <div class="sch-date">Jan 30, 2026</div>
-          <div class="sch-name">UW Invite / Mile City <span class="sch-tag">PR</span></div>
-          <div class="sch-loc">Indoor Mile · 4:51.73 · 155th</div>
+        <div class="schedule-item tier-showcase">
+          <div class="sch-date">Fri, Nov 20 – Sat, Nov 21, 2026</div>
+          <div class="sch-name">NXR Northwest Regional Championships <span class="sch-tag">Regional</span></div>
         </div>
       </div>
     </div>
@@ -674,7 +705,7 @@
 </section>
 
 <section id="contact" class="sec">
-  <div class="sec-eyebrow">[ 08 · NETWORK ]</div>
+  <div class="sec-eyebrow">[ 09 · NETWORK ]</div>
   <h2 class="sec-h">DIRECT CONTACT</h2>
 
   <div class="contact-grid">

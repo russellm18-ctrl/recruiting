@@ -11,11 +11,11 @@ state_abbr: "WA"
 discipline: "X-Country"
 ticker_events: "5000M"
 stat1_label: 'Top Event'
-stat1_value: "5000M 15:30 Nike Portland 09/26/26"
+stat1_value: "5000M"
 stat2_label: 'Event'
-stat2_value: "5000m 15:33 Hooka 30th John Payne XC invite 10/03/26"
+stat2_value: "5000M"
 stat3_label: 'Event'
-stat3_value: "5000m 15:43 Westside Classics 10/31/2026"
+stat3_value: "5000M"
 gpa: 0
 hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/b42f9d48-6168-41fd-b42a-4615bc3a04bb/Marcos-Andujar-Yelm-Westside-Classic-2026-Boys-4A-Varsity-HM5_0349.jpg?content-type=image%2Fjpeg'
 coach_name: "Alex McIntire "

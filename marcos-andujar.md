@@ -17,24 +17,24 @@ stat2_value: "5000m 15:33 Hooka 30th John Payne XC invite 10/03/26"
 stat3_label: 'Event'
 stat3_value: "5000m 15:43 Westside Classics 10/31/2026"
 gpa: 0
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/b42f9d48-6168-41fd-b42a-4615bc3a04bb/Marcos-Andujar-Yelm-Westside-Classic-2026-Boys-4A-Varsity-HM5_0349.jpg?content-type=image%2Fjpeg'
 coach_name: "Alex McIntire "
 coach_email: "alexander_mcintire@ycs.wednet.edu"
 parent_name: "Amanda Andujar"
-parent_email: "Amandamandujar@hotmaik.com"
+parent_email: "Amandamandujar@hotmail.com"
 about_p1: "I believe in hard work and am dedicated to running and my future. My goals are to run in college while I finish my bachelors and then go to medical school. "
 about_p2: ''
 personal_records:
-  - event: "5000M 15:30 Nike Portland 09/26/26"
-    mark: "-"
-    meet: "-"
-    date: "-"
-  - event: "5000m 15:33 Hooka 30th John Payne XC invite 10/03/26"
-    mark: "-"
-    meet: "-"
-    date: "-"
-  - event: "5000m 15:43 Westside Classics 10/31/2026"
-    mark: "-"
-    meet: "-"
-    date: "-"
+  - event: "5000M"
+    mark: "15:30"
+    meet: "Nike Portland XC"
+    date: "09/26/26"
+  - event: "5000M"
+    mark: "15:33"
+    meet: "Hoka John Payne Invitational"
+    date: "10/03/26"
+  - event: "5000M"
+    mark: "15:43"
+    meet: "Westside Classic District Championships"
+    date: "10/31/26"
 ---

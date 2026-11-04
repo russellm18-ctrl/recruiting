@@ -7,8 +7,8 @@ last_name: "Stacey"
 grad_year: 2030
 school_name: "Lynden High School "
 mascot: "Lion"
-state_abbr: "EA"
-discipline: "Cross Country, Track & Fiele, Basketball"
+state_abbr: "WA"
+discipline: "Cross Country, Track & Field, Basketball"
 ticker_events: "1600M, 3200M, XC"
 stat1_label: 'Top Event'
 stat1_value: "5000M"

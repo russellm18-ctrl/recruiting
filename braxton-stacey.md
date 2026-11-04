@@ -17,7 +17,7 @@ stat2_value: "5000M"
 stat3_label: 'Event'
 stat3_value: "5000M"
 gpa: 4
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/682ed365-3e9a-4ebe-b084-a42f42a2a46a/lynden-logo.png?content-type=image%2Fpng'
 coach_name: "Elijah Varner"
 coach_email: "varnere@lynden.wednet.edu"
 parent_name: "Mike Stacey"

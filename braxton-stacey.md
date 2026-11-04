@@ -5,19 +5,21 @@ athlete_name: "Braxton Stacey"
 first_name: "Braxton"
 last_name: "Stacey"
 grad_year: 2030
-school_name: "Lynden High School "
+school_name: "Lynden High School"
 mascot: "Lion"
-state_abbr: "EA"
-discipline: "Cross Country, Track & Fiele, Basketball"
+state_abbr: "WA"
+discipline: "Cross Country, Track & Field, Basketball"
 ticker_events: "1600M, 3200M, XC"
-stat1_label: 'Top Event'
-stat1_value: "5000M"
-stat2_label: 'Event'
-stat2_value: "5000M"
-stat3_label: 'Event'
-stat3_value: "5000M"
-gpa: 4
+stat1_label: '5000M · Best'
+stat1_value: "16:15.4"
+stat2_label: '5000M'
+stat2_value: "16:29.9"
+stat3_label: '5000M'
+stat3_value: "16:35.4"
+gpa: "4.0"
 hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/682ed365-3e9a-4ebe-b084-a42f42a2a46a/lynden-logo.png?content-type=image%2Fpng'
+hero_fit: "logo"
+hero_logo_pad: "14%"
 coach_name: "Elijah Varner"
 coach_email: "varnere@lynden.wednet.edu"
 parent_name: "Mike Stacey"
@@ -35,6 +37,6 @@ personal_records:
     date: "10/21/2026"
   - event: "5000M"
     mark: "16:29.9"
-    meet: "Nike 18 Annual Twilight XC Invitational"
+    meet: "Nike 18th Annual Twilight XC Invitational"
     date: "-"
 ---

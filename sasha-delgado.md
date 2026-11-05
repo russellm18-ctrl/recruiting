@@ -5,7 +5,7 @@ athlete_name: "Sasha Delgado"
 first_name: "Sasha"
 last_name: "Delgado"
 grad_year: 2027
-school_name: "Thomas Jefferson High School "
+school_name: "Thomas Jefferson High School"
 mascot: "Raiders "
 state_abbr: "WA"
 discipline: "Cross Country and Track "

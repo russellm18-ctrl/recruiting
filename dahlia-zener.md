@@ -17,7 +17,7 @@ stat2_value: "800M"
 stat3_label: 'Event'
 stat3_value: "2 Mile XC"
 gpa: 4
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/d0300cd0-b8ee-416c-91b2-30c7441ea922/Aubrey-Wilems%2BDahlia-Zener-Eastlake%2BGlacier-Peak-State-Cross-Country-2026-Girls-4A-Varsity-HM5_4691.jpg?content-type=image%2Fjpeg'
 coach_name: "David Weed"
 coach_email: "david@gprunners.com"
 parent_name: "Colin Zener"

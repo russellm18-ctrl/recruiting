@@ -17,7 +17,7 @@ stat2_value: "5000M"
 stat3_label: 'Event'
 stat3_value: "5000M"
 gpa: 4
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/5a031620-56f8-4ad0-8db4-2322335d1998/Braxton-Stacey-Lynden-State-Cross-Country-2026-Boys-2A-Varsity-HM5_2913.jpg?content-type=image%2Fjpeg'
 coach_name: "Elijah Varner"
 coach_email: "varnere@lynden.wednet.edu"
 parent_name: "Mike Stacey"

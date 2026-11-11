@@ -17,7 +17,7 @@ stat2_value: "1600m: 3:59.999991"
 stat3_label: 'Event'
 stat3_value: "marathon: 1:59:59.991"
 gpa: 1.67
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/fa742998-7756-4664-84b4-51723de81740/Joshua-Whitney-Davis-State-Cross-Country-2026-Boys-4A-Varsity-B77I1645.jpg?content-type=image%2Fjpeg'
 coach_name: "Coach Mike"
 coach_email: "coachmike@gmail.com"
 parent_name: "Mommy and Daddy"

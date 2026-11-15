@@ -17,7 +17,7 @@ stat2_value: "1600m"
 stat3_label: 'Event'
 stat3_value: "XC"
 gpa: 3.9
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/086f73c1-f614-459a-812d-954b06615cec/Callie-Orcutt-West-Valley-%28Yakima%29-State-Cross-Country-2026-Girls-4A-Varsity-HM5_4707.jpg?content-type=image%2Fjpeg'
 coach_name: "Haley Moon"
 coach_email: "HaleyMoon@gmail.com"
 parent_name: "Teresa Mae Orcutt"

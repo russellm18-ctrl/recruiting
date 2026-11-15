@@ -17,7 +17,7 @@ stat2_value: "1600m"
 stat3_label: 'Event'
 stat3_value: "3200"
 gpa: 3.9
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/3fd3b71b-3316-46c2-b8ca-bc0a79b7b0ee/Maddi-Larson-White-River-Westside-Classic-2026-Girls-3A-Varsity-B77I4415.jpg?content-type=image%2Fjpeg'
 coach_name: "Damien Marlow"
 coach_email: "dmarlow@whiteriver.wednet.edu"
 parent_name: "Jenelle Larson"

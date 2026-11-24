@@ -34,7 +34,7 @@ personal_records:
     meet: "4A Districts"
     date: "5/23/26"
   - event: "5k"
-    mark: "18:28:60"
-    meet: "Nike Portland XC"
-    date: "9/27/25"
+    mark: "17:55:70"
+    meet: "Kingco Crest"
+    date: "10/14/26"
 ---

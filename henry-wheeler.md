@@ -17,7 +17,7 @@ stat2_value: "3200 10:48 1B District 5/21/2026"
 stat3_label: 'Event'
 stat3_value: "1600 5:05 LC Christian School Invite 4/21/2026"
 gpa: 4
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/d9676ab2-ea86-4134-950d-bcc218b8faaa/Henry-Wheeler-NXR-Northwest-2026-Boys-Open-1-B77I3968.jpg?content-type=image%2Fjpeg'
 coach_name: "Coach Pete "
 coach_email: "spshapete@gmail.com"
 parent_name: "Ben Wheeler "

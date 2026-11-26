@@ -17,7 +17,7 @@ stat2_value: "1600m"
 stat3_label: 'Event'
 stat3_value: "800m"
 gpa: 3.885
-hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/4ca8ba87-65a9-463c-8668-b7cd11a55a53/RussellMoore-favicon.png'
+hero_image: 'https://images.squarespace-cdn.com/content/65c46be8ea98cb3bb888691a/92c9c28c-d9e5-4269-a870-5de55d92fe22/Ella-Wylen-Shorecrest-State-Cross-Country-2026-Girls-3A-Varsity-HM5_3555.jpg?content-type=image%2Fjpeg'
 coach_name: "Shane Peterson "
 coach_email: "spshapete@gmail.com"
 parent_name: "Alys Wylen "
